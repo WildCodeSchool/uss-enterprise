@@ -1,0 +1,119 @@
+
+.contentQuizz {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-image: url("https://media.ouest-france.fr/v1/pictures/MjAxNTA0NTg0NzcxYzJmNjIzOTU3MTJkYmYzZGY4NDJjMDEwZjI?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=dc80e892eb7da754e306736a40629b8e87661d834cd603e4cc26f035d0483ac8");
+
+}
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.titleQuizz{
+    color: aliceblue;
+    
+}
+
+.questionQuizz{
+    background-color: #8cbdd0b3;;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.zoneReponse {
+    
+    border-radius: 20px;
+    
+}
+
+.proposition{
+    background-color: #c3cdcead;;
+    border-radius: 20px;
+    padding: 10px;
+}
+.proposition:hover{
+    background-color: #3ce2f1ad;;
+}
+
+
+
+.difficulteQuizz {
+    color: red;
+}
+
+.etoilePleine {
+    background-image: url(https://static.aliasdmc.fr/img/widgets/review.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 36px;
+    overflow: hidden;
+    text-indent: 999px;
+    width: 36px;
+    
+}
+
+.etoileMi {
+    background-position: -38px 0;
+    background-image: url(https://static.aliasdmc.fr/img/widgets/review.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 36px;
+    overflow: hidden;
+    text-indent: 999px;
+    width: 36px;
+}
+
+.etoileVide {
+    background-position: -76px 0;
+    background-image: url(https://static.aliasdmc.fr/img/widgets/review.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 36px;
+    overflow: hidden;
+    text-indent: 999px;
+    width: 36px;
+}
+
+
+.divEtoile{
+    align-self: center;
+    padding: 0px;
+}
+
+.buttonQuizz {
+    padding: 10px 20px;
+    background-color: #98bba97a;
+}
+
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
