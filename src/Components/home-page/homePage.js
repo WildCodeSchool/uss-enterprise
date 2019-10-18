@@ -7,11 +7,13 @@ const HomePage= () =>{
     return (
     <div className="space-container">
 
-        <h1 className="game-title">Game name</h1>
+        <div className='animation-container'>
+            <h1 className="game-title">{`Space \n Adventure`}</h1>
+        </div>
 
-        <div class="round-button">
-            <div class="round-button-circle">
-                <a href="#" class="round-button">START</a>
+        <div className="round-button">
+            <div className="round-button-circle">
+                <a href="#" className="round-button">START</a>
             </div>
         </div>
 
