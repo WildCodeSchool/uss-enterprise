@@ -3,12 +3,12 @@ import './homePage.css'
 
 const HomePage= () =>{
     //--obtenir une liste de planetes pour afficher random ;)
-    const planet = require('../img/Saturnx.png');
+    const planet = require('../img/5a00de530e8525eec2752fff.png');
     return (
     <div className="space-container">
 
         <div className='animation-container'>
-            <h1 className="game-title">{`Space \n Adventure`}</h1>
+            <h1 className="game-title">Space <br/>  Adventure</h1>
         </div>
 
         <div className="round-button">
@@ -17,8 +17,9 @@ const HomePage= () =>{
             </div>
         </div>
 
-       
+       <div className="planet-picture-div">
         <img className="planet-picture" src={planet} alt='planet'/>
+       </div>
        
         <footer className="footer">
             <p>Projet pour la Wild Code School</p>

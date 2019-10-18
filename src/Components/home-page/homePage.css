@@ -7,7 +7,7 @@ html, body{
 body{ 
     display:flex; 
     flex-direction:column;
-    background-color: #000;
+    background: #000;
 }
   
 .space-container{
@@ -20,7 +20,7 @@ body{
 .animation-container{
     
     color: white;
-    margin-top: 20%;
+    margin-top: 10%;
     font-family: 'Orbitron', sans-serif;
     
     /*--- flicker animation ----*/
@@ -56,6 +56,10 @@ body{
 	background:#30588e;
 }
 */
+.round-button-circle:active{
+    border:10px solid #1b7006;
+	background:#2ea709;
+}
 .round-button a {
     display:block;
 	float:left;
@@ -72,20 +76,22 @@ body{
     font-weight:bold;
     text-decoration:none;
 }
-
+.planet-picture-div{
+    padding-top: 10%;
+    overflow: hidden;
+    text-indent: -37px;
+    height: 200px;
+}
 .planet-picture{
-    margin-top: 10%;
-    width: 100%;
+    width: 120%;
     height: auto;
-
 }
 
 
 .footer{
     height:10%; 
-    background: #000;
+    background: hsla(0, 0%, 0%, 0.562) ;
     color: white;
-    position: absolute;
     bottom: 0;
     width: 100%;
 }
