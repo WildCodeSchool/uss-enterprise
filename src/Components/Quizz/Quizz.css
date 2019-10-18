@@ -92,6 +92,19 @@
     background-color: #98bba97a;
 }
 
+.afficheBonneRep{
+    background-color: rgb(40, 189, 40);
+    
+   
+    
+}
+.afficheMauvaiseRep{
+    background-color: rgb(149, 14, 93);
+   
+    
+}
+
+
  @-webkit-keyframes text-focus-in {
     0% {
       -webkit-filter: blur(12px);
