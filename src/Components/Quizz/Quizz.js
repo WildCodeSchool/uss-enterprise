@@ -8,42 +8,63 @@ class Quizz extends React.Component {
         question: null,
         correct_answer: null,
         incorrect_answers: null,
+        resultQuestion: null,
     }
 
+    bonneReponse() {
+        this.setState({
+            resultQuestion : true,
+        
+    })
+    }
 
+    getModal(){
+        if(this.state.resultQuestion === true){
+           return console.log('youpi')
+        }else{
+           return console.log('youpla')
+        }
+    }
 
-    getPlanets = () => {
-        fetch("https://opentdb.com/api.php?amount=10&category=11&difficulty=hard")
+    mauvaiseReponse() {
+        this.setState({
+            resultQuestion : false,
+        
+    })
+    }
+
+    getQuestions = () => {
+        fetch("https://opentdb.com/api.php?amount=10&category=11&difficulty=medium")
         .then(res => res.json())
         .then(res => this.setState({ ...res.results[0] }))
     }
 
     componentDidMount(){
-       this.getPlanets()
+       this.getQuestions()
     }
 
     
-
+    l
     render() {
         const {question, correct_answer,incorrect_answers,difficulty  } = this.state;
         let propositionRep = []
-        let bonneRep = <p className='proposition'>{correct_answer}</p>
-        let difficult
-        
+        let bonneRep = <p onClick={() => this.bonneReponse() } className='proposition'>{correct_answer}</p>
+        console.log(this.state.resultQuestion)
+        let difficult;
         
         if (incorrect_answers){
             propositionRep = incorrect_answers.map((reponse, index) =>
-                <p className='proposition' key={index}>
+                <p onClick={() => this.mauvaiseReponse() } className='proposition' key={index}>
                     {reponse}
                 </p>
                )}
-
+    
         if (difficulty === 'easy') {
             difficult =  <ul className='divEtoile'><li className='etoileVide'></li><li className='etoileVide'></li><li className='etoileVide'></li>
                             <li className='etoileVide'></li><li className='etoileVide'></li></ul>
         }
-
-
+    
+    
         if (difficulty === 'medium') {
             difficult =  <ul className='divEtoile'><li className='etoilePleine'></li><li className='etoilePleine'></li><li className='etoileMi'></li>
                             <li className='etoileVide'></li><li className='etoileVide'></li></ul>
@@ -52,10 +73,9 @@ class Quizz extends React.Component {
         if (difficulty === 'hard') {
             difficult =  <ul className='divEtoile'><li className='etoilePleine'></li><li className='etoilePleine'></li><li className='etoilePleine'></li>
                             <li className='etoilePleine'></li><li className='etoilePleine'></li></ul>
-        }  
+        } 
+    
         
-
-
 
         return (
         
@@ -66,7 +86,11 @@ class Quizz extends React.Component {
                     {propositionRep}
                     {bonneRep}
                 </div>
-                    <button className='buttonQuizz'>Valider votre réponse</button>
+                <div>
+                    {this.state.resultQuestion ? <div className='afficheBonneRep'><div>super</div></div> : <div className='afficheMauvaiseRep'><div>nul</div></div>}
+
+                </div>
+                    <button onClick={() => this.getModal() } className='buttonQuizz'>Valider votre réponse</button>
                     {difficult}
             </div>
         
