@@ -1,5 +1,6 @@
 import React from 'react';
 import './Quizz.css';
+import StarsQuizz from './StarsQuizz';
 
 
 class Quizz extends React.Component {
@@ -9,94 +10,81 @@ class Quizz extends React.Component {
         correct_answer: null,
         incorrect_answers: null,
         resultQuestion: null,
+        isValid: null
     }
 
-    bonneReponse() {
-        this.setState({
-            resultQuestion : true,
-        
-    })
-    }
-
-    getModal(){
-        if(this.state.resultQuestion === true){
-           return console.log('youpi')
-        }else{
-           return console.log('youpla')
-        }
-    }
-
-    mauvaiseReponse() {
-        this.setState({
-            resultQuestion : false,
-        
-    })
-    }
-
-    getQuestions = () => {
-        fetch("https://opentdb.com/api.php?amount=10&category=11&difficulty=medium")
+    getQuestions(){
+        fetch("https://opentdb.com/api.php?amount=10&category=11&difficulty=hard")
         .then(res => res.json())
         .then(res => this.setState({ ...res.results[0] }))
     }
 
     componentDidMount(){
-       this.getQuestions()
+        this.getQuestions()
+    }
+
+    bonneReponse() {
+        this.setState({
+            resultQuestion : true,
+            isValid : "validé",
+    })}
+
+    mauvaiseReponse() {
+        this.setState({
+            resultQuestion : false,
+            isValid : "pas validé"})
+    }
+
+    Message(){
+        if (this.state.resultQuestion === true){
+        let msgVictoire="SUPER !!! Vous Avez donné la Bonne Réponse !!!";
+        alert(msgVictoire);
+        }else   {
+        let msgDefaite=`PERDU !!! La Bonne Réponse était "${this.state.correct_answer}" `;
+        alert(msgDefaite);
+                }}
+
+    GetReponses(){
+        let bonneRep = <p onClick={() => this.bonneReponse()} className='proposition' key={4}>{this.state.correct_answer}</p>
+        let propositionReponses = []
+        
+        if (this.state.incorrect_answers){
+            propositionReponses = this.state.incorrect_answers.map((reponseFausse, index) =>
+                <p onClick={() => this.mauvaiseReponse() } className='proposition' key={index}>
+                    {reponseFausse}
+                </p>
+               )}
+
+        propositionReponses.push(bonneRep);
+        propositionReponses.sort(function(a,b) {
+            if (a.props.children < b.props.children){
+                return 1 
+            }if (a.props.children > b.props.children) {
+                return -1
+            }
+            return 0
+        })
+        return propositionReponses
     }
 
     
-    l
     render() {
-        const {question, correct_answer,incorrect_answers,difficulty  } = this.state;
-        let propositionRep = []
-        let bonneRep = <p onClick={() => this.bonneReponse() } className='proposition'>{correct_answer}</p>
-        console.log(this.state.resultQuestion)
-        let difficult;
+        const {question, difficulty} = this.state;
         
-        if (incorrect_answers){
-            propositionRep = incorrect_answers.map((reponse, index) =>
-                <p onClick={() => this.mauvaiseReponse() } className='proposition' key={index}>
-                    {reponse}
-                </p>
-               )}
-    
-        if (difficulty === 'easy') {
-            difficult =  <ul className='divEtoile'><li className='etoileVide'></li><li className='etoileVide'></li><li className='etoileVide'></li>
-                            <li className='etoileVide'></li><li className='etoileVide'></li></ul>
-        }
-    
-    
-        if (difficulty === 'medium') {
-            difficult =  <ul className='divEtoile'><li className='etoilePleine'></li><li className='etoilePleine'></li><li className='etoileMi'></li>
-                            <li className='etoileVide'></li><li className='etoileVide'></li></ul>
-        }
-         
-        if (difficulty === 'hard') {
-            difficult =  <ul className='divEtoile'><li className='etoilePleine'></li><li className='etoilePleine'></li><li className='etoilePleine'></li>
-                            <li className='etoilePleine'></li><li className='etoilePleine'></li></ul>
-        } 
-    
-        
-
         return (
         
             <div className='contentQuizz'>
+                {this.state.isValid === 'validé' ? <div>gagné</div> : <div>perdu</div>}
                 <h1 className='titleQuizz text-focus-in'>Voici la Question :</h1>
                 <p className='questionQuizz'>{question}</p>
                 <div className='zoneReponse'>
-                    {propositionRep}
-                    {bonneRep}
+                    {this.GetReponses()}
                 </div>
-                <div>
-                    {this.state.resultQuestion ? <div className='afficheBonneRep'><div>super</div></div> : <div className='afficheMauvaiseRep'><div>nul</div></div>}
-
-                </div>
-                    <button onClick={() => this.getModal() } className='buttonQuizz'>Valider votre réponse</button>
-                    {difficult}
+                    <button onClick={() => this.Message() } className='buttonQuizz'>Valider votre réponse</button>
+                    <StarsQuizz difficulty={difficulty} /> 
+                          
             </div>
-        
-        )
-    }
-}
+        )}}
 
 
 export default Quizz
