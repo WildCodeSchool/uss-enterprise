@@ -20,10 +20,12 @@ const HomePage= () =>{
        <div className="planet-picture-div">
         <img className="planet-picture" src={planet} alt='planet'/>
        </div>
-       
+
         <footer className="footer">
-            <p>Projet pour la Wild Code School</p>
+            <p>Wild Code School <br/>
+            Adrien, Eduardo, François, Sergio</p>
         </footer>
+       
 
     </div>);
 }
