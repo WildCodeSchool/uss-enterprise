@@ -1,0 +1,86 @@
+/*Positionnement des planetes*/
+
+.planets{
+    width: 65px;
+}
+.container{
+    display: flex;
+}
+
+.container:nth-child(1){
+    padding-left: 30%;
+}
+.container:nth-child(2){
+    padding-left: 50%;
+}
+.container:nth-child(3){
+    padding-left: 70%;
+}
+.container:nth-child(4){
+    padding-left: 50%;
+}
+.container:nth-child(5){
+    padding-left: 28%;
+}
+.container:nth-child(6){
+    padding-left: 15%;
+}
+.container:nth-child(7){
+    padding-left: 35%;
+}
+.container:nth-child(8){
+    padding-left: 50%;
+}
+/*Boutton planète */
+#planetclick{
+    padding: 0;
+    border: none;
+    background: none;
+}
+@media screen and (min-width: 768px){
+.planets{
+    width: 110px;
+    padding-top: 15%;
+}
+.container:hover{
+    transform: scale(1.2);
+    transition: transform .2s;
+    
+}
+.container:nth-child(1){
+    padding-left: 30%;
+}
+.container:nth-child(2){
+    padding-left: 50%;
+}
+.container:nth-child(3){
+    padding-left: 70%;
+}
+.container:nth-child(4){
+    padding-left: 50%;
+}
+.container:nth-child(5){
+    padding-left: 28%;
+}
+.container:nth-child(6){
+    padding-left: 15%;
+}
+.container:nth-child(7){
+    padding-left: 35%;
+}
+.container:nth-child(8){
+    padding-left: 50%;
+}
+  
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.planets{
+    width: 150px;
+}
+    
+}
+
