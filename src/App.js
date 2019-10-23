@@ -2,11 +2,15 @@ import React from 'react';
 import IntroPage from './components/IntroPage/IntroPage'
 import './App.css';
 import HomePage from './components/HomePage/HomePage';
+<<<<<<< HEAD
 import Quizz from './components/Quizz/Quizz';
 import { Route } from 'react-router-dom';
 import Info from './Components/Info/Info.js'
 import Intropage from './Components/Intropage/Intropage.js'
 
+=======
+import Intropage from './Components/Intropage/Intropage.js'
+>>>>>>> ipad ok
 
 function App() {
   return (
