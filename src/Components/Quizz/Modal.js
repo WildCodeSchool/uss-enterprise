@@ -16,15 +16,15 @@ const modal = (props) => {
                     opacity: props.show ? '1' : '0'
                 }}>
                  
-                        {(props.show) && (props.resultat) 
-                        ? <div>
-                             <img className='palpatine' src='https://www.stickpng.com/assets/images/580b57fbd9996e24bc43bdbe.png' alt='yoda'></img> 
-                             <audio autoPlay>
-                                <source src="http://lecrame.free.fr/sonsstarwars/Yoda7.mp3" type="audio/mpeg"/>
-                             </audio>
-                            </div>
-                        : <img className='palpatine' src='https://1.bp.blogspot.com/-6q8dKdCyYWs/XHFN1z41VQI/AAAAAAAAdMI/PnFkD3RBn_waSGpXFz4WFqLYr1EdIMS9ACLcBGAs/s1600/emperor-palpatine-deluxe-version_star-wars_silo.png' alt='anakine'></img>
-}
+                 {(props.show) && (props.resultat) 
+                    ? <div>
+                            <img className='palpatine' src='https://www.stickpng.com/assets/images/580b57fbd9996e24bc43bdbe.png' alt='yoda'></img> 
+                            <audio autoPlay>
+                            <source src="http://lecrame.free.fr/sonsstarwars/Yoda7.mp3" type="audio/mpeg"/>
+                            </audio>
+                        </div>
+                    : <img className='palpatine' src='https://1.bp.blogspot.com/-6q8dKdCyYWs/XHFN1z41VQI/AAAAAAAAdMI/PnFkD3RBn_waSGpXFz4WFqLYr1EdIMS9ACLcBGAs/s1600/emperor-palpatine-deluxe-version_star-wars_silo.png' alt='anakine'></img>
+                }
                 <div className="modal-header">
                     <h3>Résultat de votre Réponse</h3>
                     <span className="close-modal-btn" onClick={props.close}>×</span>
