@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
 import "./App.css";
 import HomePage from "./components/HomePage/HomePage";
@@ -15,6 +16,19 @@ class App extends Component {
     : difficulty === "hard" ? this.setState({ points: this.state.points + 300 })
     : console.log("je sait pas quoi faire")
     }
+=======
+import React from 'react';
+import './App.css';
+import HomePage from './components/homePage/homePage';
+
+function App() {
+  return (
+    <div className="App">
+      <HomePage />
+    </div>
+  );
+}
+>>>>>>> Add corrections demanded from first pull request
 
   render() {
     return (
