@@ -1,0 +1,31 @@
+.ul-nav {
+  margin-top: 0;
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  padding-left: inherit;
+  background-color: rgb(156, 151, 151);
+  border-bottom: 5px solid rgb(99, 88, 88);
+}
+.cadet-name-nav {
+  margin-left: 3%;
+  font-size: 2.5vh;
+  margin-top: 3%;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bolder;
+  align-self: flex-start;
+}
+.lifes-li-nav {
+  margin-top: 2%;
+  background-color: rgb(145, 139, 139);
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
+  align-self: flex-end;
+}
+.life-on-nav {
+  color: rgb(28, 243, 28);
+}
+.life-off-nav {
+  color: red;
+}
