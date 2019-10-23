@@ -35,18 +35,16 @@
 .proposition{
     background-color: #0004046b;
     border-radius: 20px;
+    border: black 3px solid;
     padding: 10px;
     color: aliceblue;
     font-weight: 500;
+    
     
 }
 .proposition:hover{
     background-color: #3ce2f12c;;
 }
-
-
-
-
 
 
 .buttonQuizz {
@@ -67,24 +65,6 @@
   color: black;
 }
 
-.afficheBonneRep{
-    background-color: rgb(40, 189, 40);
-    
-   
-    
-}
-.afficheMauvaiseRep{
-    background-color: rgb(149, 14, 93);
-   
-    
-}
-
-.gagne {
-    background-color: rgb(106, 243, 43);
-}
-.perd {
-    background-color: rgb(221, 60, 20);
-}
 
 
  @-webkit-keyframes text-focus-in {

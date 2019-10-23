@@ -1,0 +1,115 @@
+
+
+.contentModalP {
+
+    font-size: 1.7rem;
+    color:black;
+    padding-top: 20px;
+    font-family: 'Star Jedi',sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+.contentModalP:hover {
+
+    color: rgba(216, 194, 26, 0.95);
+}
+
+
+.ContentPicModalOff {
+    background-image: url('https://imgsrc.hubblesite.org/hvi/uploads/image/display_image/4569/STSCI-H-p1950a-d-1280x720.png');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.modal-wrapper {
+    position: relative;
+    background: white;
+    border: 1px solid #d0cccc;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+    margin: 0 auto 0;
+    transition: all .8s;
+    width: 65%;
+}
+.palpatine {
+    position: absolute;
+    bottom: 204px;
+    left: 1px;
+    height: 325px;
+    filter: drop-shadow(5px 5px 4px white);
+}
+.modal-header {
+    background: #263238;
+    height: 40px;
+    line-height: 40px;
+    padding: 5px 20px;
+    text-align: right;
+}
+
+.modal-header h3 {
+    color: white;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-body {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.modal-footer {
+    background: #263238;
+    height: 35px;
+    padding: 15px;
+}
+
+.close-modal-btn {
+    color: white;
+    cursor: pointer;
+    float: right;
+    font-size: 30px;
+    margin: 0;
+}
+
+.close-modal-btn:hover {
+    color: black;
+}
+
+.btn-cancel, .btn-continue {
+    background: coral;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    padding: 10px;
+}
+
+.btn-cancel {
+    background-color: #b71c1c;
+    float: left;
+}
+
+.btn-continue {
+    background-color: #1b5e20;
+    float: right;
+}
+
+.back-drop {
+    background-color: rgba(16, 16, 16, 0.82);
+    height: 100%;
+    position: absolute;
+    transition: all 1.3s;
+    width: 100%;
+    right: 0px;
+    
+}
+
+.open-modal-btn {
+    margin: 15px;
+    padding: 10px;
+    font-weight: bold;
+}

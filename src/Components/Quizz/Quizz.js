@@ -4,6 +4,7 @@ import StarsQuizz from './StarsQuizz';
 import PropositionsQuizz from './PropositionsQuizz';
 
 
+
 class Quizz extends React.Component {
     
     state = {
@@ -14,7 +15,7 @@ class Quizz extends React.Component {
     }
 
     getQuestions(){
-        fetch("https://opentdb.com/api.php?amount=20&category=11&difficulty=hard")
+        fetch("https://opentdb.com/api.php?amount=20&category=11&difficulty=easy")
         .then(res => res.json())
         .then(res => this.setState({ ...res.results[0] }))
     }
@@ -24,10 +25,6 @@ class Quizz extends React.Component {
     }
 
     
-
-   
-    
-
     
     render() {
         const {question, difficulty,correct_answer,incorrect_answers} = this.state;
@@ -40,7 +37,8 @@ class Quizz extends React.Component {
                 <div className='zoneReponse'>
                     <PropositionsQuizz bonneReponse={correct_answer} mauvaiseReponse={incorrect_answers} />
                 </div>
-                    <StarsQuizz difficulty={difficulty} /> 
+                    <StarsQuizz difficulty={difficulty} />
+                    
             </div>
         )}}
 

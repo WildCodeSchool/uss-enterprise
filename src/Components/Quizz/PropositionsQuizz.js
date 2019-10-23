@@ -1,10 +1,31 @@
 import React , {Component} from 'react';
-import './PropositionsQuizz.css'
+import './PropositionsQuizz.css';
+import Modal from './Modal'
 
 
 class PropositionsQuizz extends Component {
 
-    
+
+    constructor() {
+        super();
+
+        this.state = {
+            isShowing: false
+        }
+    }
+
+    openModalHandler = () => {
+        this.setState({
+            isShowing: true
+        });
+    }
+
+    closeModalHandler = () => {
+        this.setState({
+            isShowing: false
+        });
+    }
+
         state = {
           resultatQuestion : null,
           onClick: true,
@@ -18,34 +39,23 @@ class PropositionsQuizz extends Component {
             onClick: !this.state.onClick
 
     },
-
     )}
 
     mauvaiseReponse() {
         this.setState({
             resultatQuestion : false,
-            onClick: !this.state.onClick
-       })}
+            onClick: !this.state.onClick,
+            
+       })
+    }
 
-    Message(){
-        
-        if (this.state.resultatQuestion){
-        let msgVictoire="SUPER !!! Vous Avez donné la Bonne Réponse !!!";
-        
-        alert(msgVictoire);
-        } else   {
-        let msgDefaite=`PERDU !!! La Bonne Réponse était "${this.props.bonneReponse}" `;
-        
-        alert(msgDefaite);
-                }}
-
-   
 
     GetReponses(){
         let bonneRep = <p onClick={ (e) => {this.bonneReponse()
-            this.state.onClick ? e.currentTarget.style.backgroundColor = "rgba(20, 216, 20, 0.774)"  
-                : e.currentTarget.style.backgroundColor = null;;
+            this.state.onClick ? e.currentTarget.style.backgroundColor = "rgb(249, 253, 18)" :
+            e.currentTarget.style.backgroundColor = null 
             }}
+
             className={'proposition' }
             key={4}
             >
@@ -53,15 +63,14 @@ class PropositionsQuizz extends Component {
             </p>
         
         let propositionReponses = []
+        console.log(this.state.onClick)
         
         if (this.props.mauvaiseReponse){
             propositionReponses = this.props.mauvaiseReponse.map((reponseFausse, index) =>
-                <p onClick={ e => {this.mauvaiseReponse()
-                    this.state.onClick 
-                    ? e.currentTarget.style.backgroundColor = "rgba(20, 216, 20, 0.774)"
-                    : e.currentTarget.style.backgroundColor = null;
-                    console.log(this.state.onClick)
-                    ;}}
+                <p onClick={ (e) => {this.mauvaiseReponse()
+            this.state.onClick ? e.currentTarget.style.backgroundColor = "rgb(249, 253, 18)" :
+            e.currentTarget.style.backgroundColor = null 
+            }}
                     className='proposition' 
                     key={index} >
                     {reponseFausse}
@@ -84,10 +93,20 @@ class PropositionsQuizz extends Component {
         
         return (
             <div>
+                { this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
                 <div>
                     {this.GetReponses()}
-                </div>
-                    <button onClick={() => this.Message() } className='buttonQuizz'>Valid your answer</button>
+                    <button className="open-modal-btn buttonQuizz" onClick={this.openModalHandler}>Validez Votre Réponse</button>
+                
+                <Modal
+                    className="modal"
+                    show={this.state.isShowing}
+                    close={this.closeModalHandler}
+                    resultat={this.state.resultatQuestion}
+                    >
+                        {this.state.resultatQuestion ? <p>Félicitations !!! <br></br> Votre réponse est bonne !!!</p> :<p>NUL !!! <br></br> Germain Nul Nul Nul</p>}
+                </Modal>
+            </div>
             </div>
         )}
 }
