@@ -1,5 +1,5 @@
 import React from "react";
-import "./navBar.css";
+import "./NavBar.css";
 
 class NavBar extends React.Component {
   render() {
@@ -9,11 +9,11 @@ class NavBar extends React.Component {
           <li className="cadet-name-nav">
             &#10026; [Your name] - [Name or niveau]
           </li>
-          <li className="lifes-li-nav">
+          <div className="lifes-li-nav">
             <li className="life-on-nav">&#10084;</li>
             <li className="life-on-nav">&#10084;</li>
             <li className="life-off-nav">&#10084;</li>
-          </li>
+          </div>
         </ul>
       </div>
     );
