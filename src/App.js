@@ -16,8 +16,6 @@ class App extends Component {
     : console.log("je sait pas quoi faire")
     }
 
-  
-
   render() {
     return (
       <div className="App">
