@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import HomePage from './components/HomePage/HomePage';
-import NavBar from './components/navBar/navBar';
-import Quizz from './components/Quizz/Quizz';
 import { Route } from 'react-router-dom';
+import HomePage from './components/HomePage/HomePage';
+import NavBar from './components/NavBar/NavBar';
+import Quizz from './components/Quizz/Quizz';
 
 
 function App() {
