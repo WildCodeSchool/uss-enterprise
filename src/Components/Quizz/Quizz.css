@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-image: url("https://cdn.theatlantic.com/assets/media/img/photo/2018/12/2018-hubble-space-telescope-advent-3/a04_heic1118a/main_1200.jpg?1543936298");
+    background-image: url("http://blogs.discovermagazine.com/outthere/files/2019/07/cme_lg-1024x674.jpg");
     background-size: cover ;
   }
 
@@ -13,9 +13,12 @@
 	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 .titleQuizz{
-    color: aliceblue;
-    
+  color: #0a0a0a;
+  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold, -1px -1px 2px gold;
+  letter-spacing: 3px;
 }
+    
+
 
 .questionQuizz{
     background-color: #000000b3;
@@ -31,40 +34,6 @@
     border-radius: 20px;
     
 }
-
-.proposition{
-    background-color: #0004046b;
-    border-radius: 20px;
-    border: black 3px solid;
-    padding: 10px;
-    color: aliceblue;
-    font-weight: 500;
-    
-    
-}
-.proposition:hover{
-    background-color: #3ce2f12c;;
-}
-
-
-.buttonQuizz {
-    padding: 10px 20px;
-    background-color: #0004046b;
-    color: aliceblue;
-    width: 60%;
-    align-self: center;
-    border-radius: 20px ;
-    margin: 25px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    border: 0px;
-}
-.buttonQuizz:hover {
-  background-color: #f7f7f7d6;
-  color: black;
-}
-
 
 
  @-webkit-keyframes text-focus-in {

@@ -1,0 +1,42 @@
+.proposition{
+    background-color: #0004046b;
+    border-radius: 20px;
+    border: black 3px solid;
+    padding: 10px;
+    color: aliceblue;
+    font-weight: 500;
+    display: block;
+    margin: 10px; 
+}
+.proposition:hover{
+    background-color: #3ce2f12c;;
+}
+
+.buttonQuizz {
+    padding: 10px 20px;
+    background-color: #0004046b;
+    color: aliceblue;
+    width: 60%;
+    align-self: center;
+    border-radius: 20px ;
+    margin: 25px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: 0px;
+}
+.buttonQuizz:hover {
+  background-color: #f7f7f7d6;
+  color: black;
+}
+
+input {
+    position: absolute;
+    left: -9999px;
+}
+
+
+input:checked + label{
+    background-color: rgb(16, 14, 19);
+    color: gold
+}

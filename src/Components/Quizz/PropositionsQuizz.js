@@ -31,71 +31,52 @@ class PropositionsQuizz extends Component {
           onClick: true,
           
         }
-      
 
-    bonneReponse() {
-        this.setState({
-            resultatQuestion : true,
-            onClick: !this.state.onClick
+    hide(e){
+    
+    if (e.currentTarget.outerText === this.props.bonneReponse) {
+        this.setState({resultatQuestion:true})
+    } else {
+        this.setState({resultatQuestion:false})
 
-    },
-    )}
-
-    mauvaiseReponse() {
-        this.setState({
-            resultatQuestion : false,
-            onClick: !this.state.onClick,
-            
-       })
     }
+  }
+       
 
+   getReponse() {
+    if (!this.props.mauvaiseReponse) return null;
+    let totalReponse = [this.props.bonneReponse];
+    totalReponse.push(this.props.mauvaiseReponse[0],this.props.mauvaiseReponse[1],this.props.mauvaiseReponse[2]);
+    totalReponse.sort(function(a,b) {
+       if (a < b){
+           return 1 
+       }if (a > b) {
+           return -1
+       }
+       return 0
+   });
 
-    GetReponses(){
-        let bonneRep = <p onClick={ (e) => {this.bonneReponse()
-            this.state.onClick ? e.currentTarget.style.backgroundColor = "rgb(249, 253, 18)" :
-            e.currentTarget.style.backgroundColor = null 
-            }}
+   let propositionsReponses = [];
 
-            className={'proposition' }
-            key={4}
-            >
-            {this.props.bonneReponse}
-            </p>
-        
-        let propositionReponses = []
-        console.log(this.state.onClick)
-        
-        if (this.props.mauvaiseReponse){
-            propositionReponses = this.props.mauvaiseReponse.map((reponseFausse, index) =>
-                <p onClick={ (e) => {this.mauvaiseReponse()
-            this.state.onClick ? e.currentTarget.style.backgroundColor = "rgb(249, 253, 18)" :
-            e.currentTarget.style.backgroundColor = null 
-            }}
-                    className='proposition' 
-                    key={index} >
-                    {reponseFausse}
-                </p>
-               )}
+   if (this.props.mauvaiseReponse) {
+        propositionsReponses = totalReponse.map((reponses, index) =>
+            <div key={index}>
+                <input  type="radio" name="name" id={`propo ${index}`}/>
+                <label  onClick={this.hide.bind(this)} htmlFor={`propo ${index}`} className='proposition'>{reponses}</label></div>
+              )
+   } 
+   return propositionsReponses
+}
 
-        propositionReponses.push(bonneRep);
-        propositionReponses.sort(function(a,b) {
-            if (a.props.children < b.props.children){
-                return 1 
-            }if (a.props.children > b.props.children) {
-                return -1
-            }
-            return 0
-        })
-        return propositionReponses
-    }
 
     render(){
         
         return (
             <div>
                 { this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }
+                    
+                {this.getReponse()}
                 <div>
-                    {this.GetReponses()}
                     <button className="open-modal-btn buttonQuizz" onClick={this.openModalHandler}>Validez Votre Réponse</button>
                 
                 <Modal
@@ -104,9 +85,9 @@ class PropositionsQuizz extends Component {
                     close={this.closeModalHandler}
                     resultat={this.state.resultatQuestion}
                     >
-                        {this.state.resultatQuestion ? <p>Félicitations !!! <br></br> Votre réponse est bonne !!!</p> :<p>NUL !!! <br></br> Germain Nul Nul Nul</p>}
+                    {this.state.resultatQuestion ? <p>Félicitations !!! <br></br> Votre réponse est bonne !!!</p> :<p>NUL !!! <br></br> Germain Nul Nul Nul</p>}
                 </Modal>
-            </div>
+                </div>
             </div>
         )}
 }
