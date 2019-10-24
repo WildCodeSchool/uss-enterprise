@@ -1,5 +1,5 @@
 import React from "react";
-import "./homePage.css";
+import "./HomePage.css";
 import planet from "../img/earth.png";
 
 const HomePage = () => {
