@@ -1,33 +1,33 @@
 
 
 .contentModalP {
-
+    background-color: #1f222391;
     font-size: 1.7rem;
-    color:black;
-    padding-top: 20px;
+    color:rgba(0, 0, 0, 0.966);
     font-family: 'Star Jedi',sans-serif;
     letter-spacing: 1px;
     font-weight: 700;
     text-transform: uppercase;
-
-}
-.contentModalP:hover {
-
-    color: rgba(216, 194, 26, 0.95);
-}
-
-
-.ContentPicModalOff {
-    background-image: url('https://imgsrc.hubblesite.org/hvi/uploads/image/display_image/4569/STSCI-H-p1950a-d-1280x720.png');
-    background-size: cover;
-    background-position: center;
+    text-shadow:
+    1px  1px 2px gold,
+    1px -1px 2px gold,
+    -1px  1px 2px gold,
+    -1px -1px 2px gold;
+    font-stretch: extra-expanded;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
     
 }
+
+
 
 .modal-wrapper {
     position: relative;
     background: white;
-    border: 1px solid #d0cccc;
+    border: 1px solid gold;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
     margin: 0 auto 0;
     transition: all .8s;
@@ -41,7 +41,7 @@
     filter: drop-shadow(5px 5px 4px white);
 }
 .modal-header {
-    background: #263238;
+    background: #000000;
     height: 40px;
     line-height: 40px;
     padding: 5px 20px;
@@ -49,7 +49,7 @@
 }
 
 .modal-header h3 {
-    color: white;
+    color: gold;
     float: left;
     margin: 0;
     padding: 0;
@@ -61,7 +61,7 @@
 }
 
 .modal-footer {
-    background: #263238;
+    background: #000000;
     height: 35px;
     padding: 15px;
 }
@@ -105,7 +105,7 @@
     transition: all 1.3s;
     width: 100%;
     right: 0px;
-    
+    top: 30px;
 }
 
 .open-modal-btn {
