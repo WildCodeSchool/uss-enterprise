@@ -21,10 +21,6 @@
   -webkit-animation: flicker-1 2s linear infinite both;
   animation: flicker-1 2s linear infinite both;
 }
-.game-title {
-  word-break: break-word;
-  margin-left: 2%;
-}
 
 .animation-container .game-title {
   /*----enter animation --*/
@@ -66,12 +62,9 @@
     both;
   animation: slide-in-blurred-bottom 4s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
-.earth-picture {
+.planet-picture {
   width: 120%;
   height: auto;
-}
-.saturn-picture {
-  display: none;
 }
 
 .footer {
@@ -254,61 +247,5 @@
     -webkit-filter: blur(0);
     filter: blur(0);
     opacity: 1;
-  }
-}
-
-@media (min-width: 750px) {
-  .game-title {
-    font-size: 5vh;
-  }
-  .circle-button {
-    font-size: 3vh;
-    padding: 50px;
-  }
-  .planet-picture-div {
-    width: 100%;
-    padding-top: 10%;
-  }
-  .earth-picture {
-    display: none;
-  }
-
-  .saturn-picture {
-    display: inline-block;
-  }
-
-  .footer {
-    font-size: 2vh;
-  }
-}
-
-@media (min-width: 1200px) {
-  .animation-container {
-    margin-top: 5%;
-  }
-  .game-title {
-    word-break: normal;
-    margin-left: 0%;
-  }
-  .circle-button {
-    font-size: 2vh;
-    padding: 30px;
-  }
-  .circle-button:hover {
-    border: 10px solid #1b7006;
-    background: #2ea709;
-  }
-
-  .planet-picture-div {
-    width: 100%;
-    padding-top: 3%;
-    overflow: hidden;
-    text-indent: 0px;
-    height: 30px;
-    flex-grow: 2;
-  }
-  .saturn-picture {
-    display: inline-block;
-    width: 40%;
   }
 }
