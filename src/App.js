@@ -6,7 +6,6 @@ import SolarSystem from './Components/map_progression/SolarSystem.js';
 class App extends React.Component {
   render(){
     return (
-      
         <div className="App">
           <div className="stars">
           <div className="twinkling">
@@ -17,8 +16,8 @@ class App extends React.Component {
             <SolarSystem planetURL="http://pngimg.com/uploads/mars_planet/mars_planet_PNG27.png" />
             <SolarSystem planetURL="https://cdn.pixabay.com/photo/2018/10/22/01/00/blue-3764277_960_720.png" />
             <SolarSystem planetURL="https://space-facts.com/wp-content/uploads/mars-transparent.png" />
-            <SolarSystem planetURL="https://space-facts.com/wp/wp-content/uploads/mercury-transparent.png" />
-            <SolarSystem planetURL="http://assets.stickpng.com/thumbs/5a00de530e8525eec2752fff.png" />
+            <SolarSystem planetURL="https://space-facts.com/wp/wp-content/uploads/mercury-transparent.png" done/>
+            <SolarSystem planetURL="http://assets.stickpng.com/thumbs/5a00de530e8525eec2752fff.png" done />
           </div>
         </div>
         </div>

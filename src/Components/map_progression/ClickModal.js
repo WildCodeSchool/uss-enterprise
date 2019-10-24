@@ -14,7 +14,7 @@ class ClickModal extends React.Component {
                 </button>
                 </div>
                 <div className="modal-body">
-                Êtes-vous sûr(e) de vouloir y aller ?
+                Êtes-vous sûr(e) de vouloir faire ce quizz ?
                 </div>
                 <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Non</button>
