@@ -32,7 +32,7 @@ class Quizz extends React.Component {
         return (
         
             <div className='contentQuizz '>
-                <h1 className='titleQuizz text-focus-in'>Voici la Question :</h1>
+                <h1 className='titleQuizz text-focus-in'>Que la Force soit avec toi !!!</h1>
                 <p className='questionQuizz'>{question}</p>
                 <div className='zoneReponse'>
                     <PropositionsQuizz bonneReponse={correct_answer} mauvaiseReponse={incorrect_answers} />
