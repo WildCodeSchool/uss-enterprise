@@ -1,3 +1,8 @@
+@font-face{
+  font-family:"StarJedi";
+  src:local('StarJedi'),
+    url('./Components/helper/Starjedi.ttf') format('truetype');
+}
 
 body {
   margin: 0;
