@@ -5,17 +5,19 @@ import PropositionsQuizz from './PropositionsQuizz';
 
 
 
+
 class Quizz extends React.Component {
     
+
     state = {
         question: null,
         correct_answer: null,
         incorrect_answers: null,
-   
+        difficulty: 'easy'
     }
 
     getQuestions(){
-        fetch("https://opentdb.com/api.php?amount=20&category=11&difficulty=easy")
+        fetch("https://opentdb.com/api.php?amount=20&category=11&difficulty=" + this.state.difficulty)
         .then(res => res.json())
         .then(res => this.setState({ ...res.results[0] }))
     }
@@ -24,11 +26,9 @@ class Quizz extends React.Component {
         this.getQuestions()
     }
 
-    
-    
+
     render() {
-        const {question, difficulty,correct_answer,incorrect_answers} = this.state;
-        
+        const {question, correct_answer,incorrect_answers} = this.state;
         return (
         
             <div className='contentQuizz '>
@@ -37,7 +37,7 @@ class Quizz extends React.Component {
                 <div className='zoneReponse'>
                     <PropositionsQuizz bonneReponse={correct_answer} mauvaiseReponse={incorrect_answers} />
                 </div>
-                    <StarsQuizz difficulty={difficulty} />
+                    <StarsQuizz difficulty = {this.state.difficulty} />
                     
             </div>
         )}}

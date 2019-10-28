@@ -1,7 +1,7 @@
 
 
 .contentModalP {
-    background-color: #1f222391;
+    background-color: #000000d1;
     font-size: 1.7rem;
     color:rgba(0, 0, 0, 0.966);
     font-family: 'Star Jedi',sans-serif;
@@ -19,7 +19,8 @@
     left: 0;
     right: 0;
     position: absolute;
-    
+    padding: 10px;
+    font-Family: 'StarJedi'
 }
 
 
@@ -30,10 +31,10 @@
     border: 1px solid gold;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
     margin: 0 auto 0;
-    transition: all .8s;
-    width: 65%;
+    transition: all 2s;
+    width: 100%;
 }
-.palpatine {
+.herosModal {
     position: absolute;
     bottom: 204px;
     left: 1px;
