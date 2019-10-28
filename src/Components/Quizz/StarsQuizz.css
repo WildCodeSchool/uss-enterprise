@@ -45,3 +45,20 @@
 .divEtoile ul{
     padding: 0px;
 }
+
+.selectDifficulty {
+    align-self: center;
+    background-color: #191818a8;
+    color: gold;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    appearance: none;
+    padding: .6em 1.4em .5em .8em;
+    border-radius: 10px;
+}
+
+select:-internal-list-box {
+    background-color: red;
+}
