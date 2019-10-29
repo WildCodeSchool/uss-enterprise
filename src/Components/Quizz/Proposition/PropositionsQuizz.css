@@ -30,13 +30,13 @@
   color: black;
 }
 
-input {
+.champReponse {
     position: absolute;
     left: -9999px;
 }
 
 
-input:checked + label{
+.champReponse:checked + label{
     background-color: rgb(16, 14, 19);
     color: gold
 }
