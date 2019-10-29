@@ -8,14 +8,16 @@ class StarsQuizz extends Component {
     }
 
     render() {
-        const difHard = <ul><li className='etoilePleine'></li><li className='etoilePleine'></li><li className='etoilePleine'></li>
+        const difHard = <ul className='ulEtoile'><li className='etoilePleine'></li><li className='etoilePleine'></li><li className='etoilePleine'></li>
         <li className='etoilePleine'></li><li className='etoilePleine'></li></ul>;
-        const difMedium = <ul><li className='etoilePleine'></li><li className='etoilePleine'></li><li className='etoileMi'></li>
-        <li className='etoileVide'></li><li className='etoileVide'></li></ul>
-        const difEasy = <ul><li className='etoileVide'></li><li className='etoileVide'></li><li className='etoileVide'></li>
-        <li className='etoileVide'></li><li className='etoileVide'></li></ul>
 
-console.log(this.state.difficulty)
+        const difMedium = <ul className='ulEtoile'><li className='etoilePleine'></li><li className='etoilePleine'></li><li className='etoileMi'></li>
+        <li className='etoileVide'></li><li className='etoileVide'></li></ul>;
+
+        const difEasy = <ul className='ulEtoile'><li className='etoileVide'></li><li className='etoileVide'></li><li className='etoileVide'></li>
+        <li className='etoileVide'></li><li className='etoileVide'></li></ul>;
+
+
 
         return (
             <>
@@ -27,9 +29,9 @@ console.log(this.state.difficulty)
             </select> 
     
             <div className='divEtoile'>
-            { this.state.difficulty === 'easy' ? difEasy : <p></p> }
-            { this.state.difficulty === 'medium' ? difMedium : <p></p> }
-            { this.state.difficulty === 'hard' ? difHard : <p></p> }
+            { this.state.difficulty === 'easy' && difEasy  }
+            { this.state.difficulty === 'medium' && difMedium  }
+            { this.state.difficulty === 'hard' && difHard  }
             </div>
             </>
          )} 
