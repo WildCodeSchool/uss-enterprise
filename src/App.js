@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import HomePage from './components/HomePage/HomePage';
-import Intropage from './Components/Intropage/Intropage.js'
+import IntroPage from './components/IntroPage/IntroPage'
 
 function App() {
   return (
     <div className="App">
       <HomePage />
-      <Intropage/>
+      <IntroPage/>
     </div>
   );
 }
