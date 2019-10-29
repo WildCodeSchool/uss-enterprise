@@ -1,63 +1,43 @@
-
 .contentQuizz {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    background-image: url("http://blogs.discovermagazine.com/outthere/files/2019/07/cme_lg-1024x674.jpg");
-    background-size: cover ;
-  }
-
-
-.text-focus-in {
-	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-image: url("http://blogs.discovermagazine.com/outthere/files/2019/07/cme_lg-1024x674.jpg");
+  background-size: cover;
 }
-.titleQuizz{
+
+
+.titleQuizz {
   color: #0a0a0a;
-  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold, -1px -1px 2px gold;
+  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
+    -1px -1px 2px gold;
   letter-spacing: 3px;
+  font-family: "StarJedi";
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
-    
 
-
-.questionQuizz{
-    background-color: #000000b3;
-    border-radius: 20px;
-    padding: 20px;
-    color: aliceblue;
-    font-weight: 700;
-    
+.questionQuizz {
+  background-color: #000000b3;
+  border-radius: 20px;
+  padding: 20px;
+  color: aliceblue;
+  font-weight: 700;
 }
 
 .zoneReponse {
-    
-    border-radius: 20px;
-    
+  border-radius: 20px;
 }
 
 
- @-webkit-keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
   }
-  @keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
   }
-  
+}
