@@ -3,13 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "random-date": "^0.1.1",
-    "random-date-generator": "^1.0.2",
     "react": "^16.10.2",
-    "react-bubble": "^1.0.5",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0",
-    "video-react": "^0.14.1"
+    "react-scripts": "3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

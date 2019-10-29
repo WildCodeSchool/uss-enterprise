@@ -1,12 +1,11 @@
 import React from 'react';
+import IntroPage from './components/IntroPage/IntroPage'
 import './App.css';
-import Info from './Components/Info/Info.js'
-import Intropage from './Components/Intropage/Intropage.js'
 
 function App() {
   return (
-    <div>
-      <Intropage/>
+    <div className ="App">
+      <IntroPage/>
     </div>
   );
 }
