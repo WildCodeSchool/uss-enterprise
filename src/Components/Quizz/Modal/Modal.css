@@ -20,12 +20,13 @@
 
 .modal-wrapper {
   position: relative;
-  background: white;
-  border: 1px solid gold;
+  background: black;
+  border: 2px solid gold;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   margin: 0 auto 0;
   transition: all 2s;
   width: 100%;
+  border-radius: 50px;
 }
 .herosModal {
   position: absolute;
@@ -34,31 +35,24 @@
   height: 325px;
   filter: drop-shadow(5px 5px 4px white);
 }
-.modal-header {
-  background: #000000;
-  height: 40px;
-  line-height: 40px;
-  padding: 5px 20px;
-  text-align: right;
-}
-
-.modal-header-title {
-  color: gold;
-  float: left;
-  margin: 0;
-  padding: 0;
-}
 
 .modal-body {
   padding: 10px 15px;
   text-align: center;
+  color:black;
+  font-size: 1.7rem;
+  font-family: "StarJedi";
+  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
+    -1px -1px 2px gold;
 }
 
 .modal-footer {
-  background: #000000;
   height: 35px;
   padding: 15px;
+  margin: 15px 50px;
 }
+
+
 
 .close-modal-btn {
   color: white;
@@ -82,6 +76,7 @@
   outline: none;
   padding: 10px;
   text-transform: uppercase;
+  border-radius: 20px;
 }
 
 .btn-cancel {
