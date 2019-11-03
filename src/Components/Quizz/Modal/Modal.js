@@ -4,7 +4,7 @@ import "./Modal.css";
 import PalpatineSon1 from "./sound/palpatine.mp3";
 import YodaSon1 from "./sound/Yoda.mp3";
 
-const modal = ({ show, close, children, resultat }) => {
+const Modal = ({ show, close, resultat }) => {
   return (
     <div className="ContentPicModalOff">
       <p className="contentModalP">challenge 1</p>
@@ -38,18 +38,19 @@ const modal = ({ show, close, children, resultat }) => {
               <source src={PalpatineSon1} type="audio/mpeg" />
             </audio>
           </div>
-        ) : (
-          null
-        )}
+        ) : null}
 
-        <div className="modal-header">
-          <h3 className="modal-header-title">Result of your answer</h3>
-          <span className="close-modal-btn" onClick={close}>
-            ×
-          </span>
+        <div className="modal-body">
+          {resultat ? (
+            <p>
+              CoNGRaTuLaTioN !!! <br /> votre réponse est bonne !!!
+            </p>
+          ) : (
+            <p>
+              NUL !!! <br /> Germain Nul Nul Nul
+            </p>
+          )}
         </div>
-
-        <div className="modal-body">{children}</div>
 
         <div className="modal-footer">
           <button className="btn-cancel" onClick={close}>
@@ -62,4 +63,4 @@ const modal = ({ show, close, children, resultat }) => {
   );
 };
 
-export default modal;
+export default Modal;
