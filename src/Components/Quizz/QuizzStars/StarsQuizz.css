@@ -40,10 +40,8 @@
 .divEtoile {
     align-self: center;
     margin-bottom: 50px;
-    
-}
-.ulEtoile{
     padding: 0px;
+    
 }
 
 .selectDifficulty {
@@ -62,3 +60,4 @@
 select:-internal-list-box {
     background-color: red;
 }
+
