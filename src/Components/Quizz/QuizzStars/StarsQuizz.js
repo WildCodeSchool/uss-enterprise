@@ -11,18 +11,20 @@ const StarsQuizz = ({ difficulty, changeDiffculty }) => {
                     <option value="hard">hard</option>
             </select> 
 
-            <ul className="divEtoile ">
-                <li className='etoilePleine'></li>
-                <li className='etoilePleine'></li>
+            <ul className="divStars ">
+                <li className='starsFull'></li>
                 <li className={
                     difficulty === 'easy'
-                        ? 'etoileVide'
+                        ? 'starsEmpty' : 'starsFull' }></li>
+                <li className={
+                    difficulty === 'easy'
+                        ? 'starsEmpty'
                         : difficulty === 'medium'
-                            ? 'etoileMi'
-                            : 'etoilePleine'
+                            ? 'starsHalf'
+                            : 'starsFull'
                 }></li>
-                <li className={difficulty === 'hard' ? 'etoilePleine' : 'etoileVide'}></li>
-                <li className={difficulty === 'hard' ? 'etoilePleine' : 'etoileVide'}></li>
+                <li className={difficulty === 'hard' ? 'starsFull' : 'starsEmpty'}></li>
+                <li className={difficulty === 'hard' ? 'starsFull' : 'starsEmpty'}></li>
             </ul>
         </>
      )
