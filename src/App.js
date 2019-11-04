@@ -3,6 +3,7 @@ import "./App.css";
 import HomePage from "./components/HomePage/HomePage";
 import Quizz from "./components/Quizz/Quizz";
 import { Route } from "react-router-dom";
+import FactsNasa from './components/FactsNasa/FactsNasa';
 
 class App extends Component {
   state = {
