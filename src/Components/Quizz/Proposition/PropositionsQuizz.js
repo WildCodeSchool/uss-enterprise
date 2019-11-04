@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import './PropositionsQuizz.css';
-import Modal from '/home/eduardo/Quetes Wild Code School/projet-uss/uss-enterprise/src/Components/Quizz/Modal/Modal.js'
+import Modal from '../Modal/Modal'
 
 
 class PropositionsQuizz extends Component {
