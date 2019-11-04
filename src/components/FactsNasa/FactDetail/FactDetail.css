@@ -1,0 +1,41 @@
+.FactDetail {
+  background-color: #000;
+  color: #fff;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FactDetail__title {
+  width: 90%;
+  background-color: rgb(22, 21, 21);
+  padding-top: 5%;
+  padding-bottom: 3%;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bolder;
+
+  text-align: center;
+}
+
+.FactDetail__picture {
+  width: 90%;
+}
+
+.FactDetail__suggest{
+    font-family: "Orbitron", sans-serif;
+    font-weight: bolder;
+}
+
+
+.FactDetail__description {
+  font-size: 13px;
+  text-align: center;
+  margin: 5%;
+  padding-top: 5%;
+  background-color: rgb(22, 21, 21);
+}
+
+.FactDetail__explanation{
+    text-align: left;
+}
