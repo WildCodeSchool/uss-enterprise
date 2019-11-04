@@ -1,4 +1,5 @@
 import React from "react";
+import FactDetail from "./FactDetail";
 
 class FactsNasa extends React.Component {
   constructor(props) {
@@ -26,15 +27,14 @@ class FactsNasa extends React.Component {
 
     const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&&date=${date}`;
     fetch(url)
-      .then(function(response) {
+      .then(response => {
         return response.json();
       })
-      .then(function(fact) {
-        const profileHtml = `
-            <p><strong>${fact.explanation}</strong></p>
-            <img src="${fact.url}" />
-          `;
-        document.querySelector(".FactsNasa").innerHTML = profileHtml;
+      .then(nasaFact => {
+        //console.log(nasaFact);
+        this.setState({
+          fact: nasaFact
+        });
       });
   };
 
@@ -46,9 +46,9 @@ class FactsNasa extends React.Component {
     return (
       <div className="FactsNasa">
         {this.state.fact ? (
-          <div className="FactsNasa"></div>
+                <FactDetail {...this.state.fact}/>
         ) : (
-          <p>Loading...</p>
+          <p>Loading [Wrap space effect]...</p>
         )}
       </div>
     );
