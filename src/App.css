@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 * {
   box-sizing: border-box;
 }
 
-=======
->>>>>>> Correction 75% PullRequest
 .App {
   text-align: center;
 }
@@ -61,10 +58,7 @@
 	from {background-position:0 0;}
 	to {background-position:10000px 0;}
 }
-<<<<<<< HEAD
-=======
 
 .modal-backdrop{
     width: 0;
 }
->>>>>>> Correction 75% PullRequest
