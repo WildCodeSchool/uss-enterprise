@@ -46,7 +46,7 @@ class FactsNasa extends React.Component {
     return (
       <div className="FactsNasa">
         {this.state.fact ? (
-                <FactDetail {...this.state.fact}/>
+          <FactDetail {...this.state.fact} />
         ) : (
           <p>Loading [Wrap space effect]...</p>
         )}
