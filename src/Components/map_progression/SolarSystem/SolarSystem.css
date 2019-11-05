@@ -22,7 +22,7 @@
   border: solid 2px;
 }
 .status .done {
-  background: green;
+  background: #007bff;
 }
 
 .status .todo {

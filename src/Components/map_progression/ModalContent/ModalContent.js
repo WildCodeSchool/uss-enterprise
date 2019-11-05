@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
+import "./ModalContent.css";
 
 class ModalContent extends React.Component {
   constructor(props){
@@ -26,8 +27,8 @@ class ModalContent extends React.Component {
     return (
       <div id="modal__fade">
         <Button 
-        variant="light" 
-        onClick={this.handleShow}
+        variant="none" 
+        onClick={this.handleShow} 
           type="button"
           id="planetclick"
         >
@@ -36,14 +37,14 @@ class ModalContent extends React.Component {
   
         <Modal show={show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title className="Modal__header">Niveau = x</Modal.Title>
+            <Modal.Title >Niveau ?</Modal.Title>
           </Modal.Header>
           <Modal.Body className="Modal__Body">Est-tu prêt à voyager vers cette planète ? </Modal.Body>
-          <Modal.Footer className="Modal__Footer">
-            <Button variant="danger" onClick={this.handleClose}>
-              Non, pas encore
+          <Modal.Footer >
+            <Button variant="secondary" onClick={this.handleClose}>
+              Non...
             </Button>
-            <Button variant="success" onClick={this.handleClose}>
+            <Button variant="primary" onClick={this.handleClose}>
               Oui !
             </Button>
           </Modal.Footer>
