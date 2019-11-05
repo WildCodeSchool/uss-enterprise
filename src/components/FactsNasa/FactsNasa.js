@@ -1,5 +1,6 @@
 import React from "react";
 import FactDetail from "./FactDetail/FactDetail";
+import SpaceTravel from "../WarpSpeed/SpaceTravel";
 
 class FactsNasa extends React.Component {
   constructor(props) {
@@ -48,7 +49,7 @@ class FactsNasa extends React.Component {
         {this.state.fact ? (
           <FactDetail {...this.state.fact} />
         ) : (
-          <p>Loading [Wrap space effect]...</p>
+          <SpaceTravel/>
         )}
       </div>
     );
