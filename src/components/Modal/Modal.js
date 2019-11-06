@@ -1,47 +1,51 @@
 import React from "react";
+
 import "./Modal.css";
-import palpatineSound from "./sound/palpatine.mp3";
-import yodaSound from "./sound/Yoda.mp3";
-import classNames from "classnames";
+import PalpatineSon1 from "./sound/palpatine.mp3";
+import YodaSon1 from "./sound/Yoda.mp3";
 
-const Modal = ({ show, close, result }) => {
-  const data = result
-    ? {
-        image:
-          "https://www.stickpng.com/assets/images/580b57fbd9996e24bc43bdbe.png",
-        alt: "Yoda",
-        sound: yodaSound
-      }
-    : {
-        image:
-          "https://1.bp.blogspot.com/-6q8dKdCyYWs/XHFN1z41VQI/AAAAAAAAdMI/PnFkD3RBn_waSGpXFz4WFqLYr1EdIMS9ACLcBGAs/s1600/emperor-palpatine-deluxe-version_star-wars_silo.png",
-        alt: "Palpatine",
-        sound: palpatineSound
-      };
-
+const Modal = ({ show, close, resultat }) => {
   return (
     <div className="ContentPicModalOff">
       <div
-        className={classNames("modal-wrapper", { "modal-wrapper-shown": show })}
+        className="modal-wrapper"
+        style={{
+          transform: show ? "translateY(0vh)" : "translateY(-100vh)",
+          opacity: show ? "1" : "0"
+        }}
       >
-        {show && (
+        {show && resultat ? (
           <div>
-            <img className="herosModal" src={data.image} alt={data.alt}></img>
+            <img
+              className="herosModal"
+              src="https://www.stickpng.com/assets/images/580b57fbd9996e24bc43bdbe.png"
+              alt="yoda"
+            ></img>
             <audio autoPlay>
-              <source src={data.sound} type="audio/mpeg" />
+              <source src={YodaSon1} type="audio/mpeg" />
             </audio>
           </div>
-        )}
+        ) : resultat === false && show ? (
+          <div>
+            <img
+              className="herosModal"
+              src="https://1.bp.blogspot.com/-6q8dKdCyYWs/XHFN1z41VQI/AAAAAAAAdMI/PnFkD3RBn_waSGpXFz4WFqLYr1EdIMS9ACLcBGAs/s1600/emperor-palpatine-deluxe-version_star-wars_silo.png"
+              alt="palpatine"
+            ></img>
+            <audio autoPlay>
+              <source src={PalpatineSon1} type="audio/mpeg" />
+            </audio>
+          </div>
+        ) : null}
 
         <div className="modal-body">
-          {result ? (
+          {resultat ? (
             <p>
-              CoNGRaTuLaTioN !!! <br />
-              galaxy can still be saved !!!
+              CoNGRaTuLaTioN !!! <br /> votre réponse est bonne !!!
             </p>
           ) : (
             <p>
-              Bad aNswer !!! <br /> join the dark side of the Force !!!
+              NUL !!! <br /> Germain Nul Nul Nul
             </p>
           )}
         </div>

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./Quizz.css";
+
+import QuizzStars from "../QuizzStars/QuizzStars";
 import QuizzPropositions from "../QuizzPropositions/QuizzPropositions";
 
 class Quizz extends Component {
@@ -71,6 +73,10 @@ class Quizz extends Component {
             difficulty={this.state.difficulty}
           />
         </div>
+        <p>prochaine texte</p>
+        <QuizzStars
+          difficulty={difficulty}
+          changeDiffculty={this.changeDiffculty}
         />
       </div>
     );

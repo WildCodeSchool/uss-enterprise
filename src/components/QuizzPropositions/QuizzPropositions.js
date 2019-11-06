@@ -1,44 +1,39 @@
 import React, { Component } from "react";
 import "./QuizzPropositions.css";
 import Modal from "../Modal/Modal";
-import Answer from "../Answers/Answer";
-import Points from "../Points/Points";
-import QuizzStars from "../QuizzStars/QuizzStars";
 
 class QuizzPropositions extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       isShowing: false,
-      questionResult: false,
-      try: 0
+      questionResult: false
     };
   }
 
-  openModal = () => {
+  openModalHandler = () => {
     this.setState({
-      isShowing: true,
-      try: this.state.try + 1,
+      isShowing: true
     });
-    this.props.calcPoints(this.state.questionResult, this.props.difficulty)
   };
 
-  closeModal = () => {
+  closeModalHandler = () => {
     this.setState({
       isShowing: false
     });
   };
 
-  checkCorrectAnswer = e => {
+  hide = e => {
     const { correctAnswer } = this.props;
-
+    
     this.setState({
-      questionResult: e.currentTarget.outerText === correctAnswer
-    });
+        questionResult: e.currentTarget.outerText === correctAnswer
+    })
+    ;
   };
 
-  renderAnswers() {
+  renderReponse() {
     const { incorrectAnswers, correctAnswer } = this.props;
 
     if (!incorrectAnswers) return null;
@@ -53,12 +48,21 @@ class QuizzPropositions extends Component {
         return 0;
       })
       .map((answer, i) => (
-        <Answer
-          key={answer}
-          answer={answer}
-          id={`answer-${i}`}
-          checkCorrectAnswer={this.checkCorrectAnswer}
-        />
+        <div key={answer}>
+          <input
+            className="champReponse"
+            type="radio"
+            name="name"
+            id={`propo-${i}`}
+          />
+          <label
+            onClick={this.hide}
+            htmlFor={`propo-${i}`}
+            className="proposition"
+          >
+            {answer}
+          </label>
+        </div>
       ));
 
     return randomlySortedAnswers;
@@ -67,40 +71,26 @@ class QuizzPropositions extends Component {
   render() {
     const { isShowing, questionResult } = this.state;
     return (
-      <>
-        <div className="zoneReponse">
-          {isShowing && (
-            <div onClick={this.closeModal} className="back-drop"></div>
-          )}
-          {this.renderAnswers()}
-          
-        </div>
-        <Points points={this.props.points} NumberTry={this.state.try} calcPoints={this.props.calcPoints} questionResult={this.state.questionResult} difficulty={this.props.difficulty} />
+      <div>
+        {isShowing && (
+          <div onClick={this.closeModalHandler} className="back-drop"></div>
+        )}
+        {this.renderReponse()}
         <div>
-          <div>
-
           <button
             className="open-modal-btn buttonQuizz"
-            onClick={this.openModal}
+            onClick={this.openModalHandler}
           >
             submit your answer !
           </button>
-          </div>
-
-          <QuizzStars
-            difficulty={this.props.difficulty}
-            changeDifficulty={this.props.changeDifficulty}
-            NumberTry={this.state.try}
-          />
-
           <Modal
             className="modal"
             show={isShowing}
-            close={this.closeModal}
-            result={questionResult}
+            close={this.closeModalHandler}
+            resultat={questionResult}
           ></Modal>
         </div>
-      </>
+      </div>
     );
   }
 }
