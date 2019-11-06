@@ -75,7 +75,7 @@ class QuizzPropositions extends Component {
             className="modal"
             show={isShowing}
             close={this.closeModal}
-            resultat={questionResult}
+            result={questionResult}
           ></Modal>
         </div>
       </div>
