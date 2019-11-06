@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const Answer = ({ answer, id, checkCorrectAnswer }) => (
@@ -19,3 +20,31 @@ const Answer = ({ answer, id, checkCorrectAnswer }) => (
 );
 
 export default Answer;
+=======
+import React from "react";
+
+const Answer = ({ answer, id, checkCorrectAnswer }) => {
+    return (
+        <div key={answer}>
+          <input
+            className="champReponse"
+            type="radio"
+            name="name"
+            id={id}
+          />
+          <label
+            htmlFor={id}
+            className="proposition"
+            onClick={checkCorrectAnswer}
+          >
+            {answer}
+          </label>
+        </div>
+    )
+
+}
+
+
+
+export default Answer
+>>>>>>> modif quizz component
