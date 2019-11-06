@@ -31,6 +31,8 @@
   transform:translateY(-100vh);
   opacity:0;
   bottom: 240px;
+  transform:translateY(-100vh);
+  opacity:0;
 }
 
 .modal-wrapper-shown {
