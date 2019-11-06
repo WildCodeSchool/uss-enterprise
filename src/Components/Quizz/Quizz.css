@@ -6,7 +6,6 @@
   background-size: cover;
 }
 
-
 .titleQuizz {
   color: #0a0a0a;
   text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
@@ -29,7 +28,6 @@
 .zoneReponse {
   border-radius: 20px;
 }
-
 
 @keyframes text-focus-in {
   0% {
