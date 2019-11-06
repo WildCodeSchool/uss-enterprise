@@ -17,7 +17,6 @@
   left: 0px;
   width: 100%;
 }
-    
 
 .modal-wrapper {
   position: relative;
@@ -41,7 +40,7 @@
 .modal-body {
   padding: 10px 15px;
   text-align: center;
-  color:black;
+  color: black;
   font-size: 1.7rem;
   font-family: "StarJedi";
   text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
@@ -52,8 +51,6 @@
   height: 35px;
   margin: 15px 50px;
 }
-
-
 
 .close-modal-btn {
   color: white;
@@ -92,20 +89,16 @@
 
 .back-drop {
   background-color: rgba(16, 16, 16, 0.82);
-    height: 798px;
-    position: absolute;
-    transition: all 1.3s;
-    width: 100%;
-    right: 0px;
-    top: -10px;
+  height: 798px;
+  position: absolute;
+  transition: all 1.3s;
+  width: 100%;
+  right: 0px;
+  top: -10px;
 }
 
 .open-modal-btn {
   margin: 30px;
   padding: 10px;
   font-weight: bold;
-  
 }
-
-
-    
