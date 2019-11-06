@@ -11,10 +11,6 @@ class Quizz extends React.Component {
     difficulty: "easy"
   };
 
-  componentDidUpdate(preProps, preState) {
-    console.log(preProps);
-    console.log(preState);
-  }
 
   changeDiffculty = e => {
     this.setState({
