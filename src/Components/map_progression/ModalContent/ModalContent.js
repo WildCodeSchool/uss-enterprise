@@ -51,9 +51,6 @@ class ModalContent extends React.Component {
           </Button>
           );
         })}
-
-        
-
         <Modal show={show} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Niveau {this.state.idChoosen}</Modal.Title>
