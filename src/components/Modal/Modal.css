@@ -28,7 +28,15 @@
   width: 96%;
   border-radius: 50px;
   bottom: 240px;
+  transform:translateY(-100vh);
+  opacity:0;
 }
+
+.modal-wrapper-shown {
+  transform:translateY(0vh);
+  opacity:1;
+}
+
 .herosModal {
   position: absolute;
   bottom: 204px;
