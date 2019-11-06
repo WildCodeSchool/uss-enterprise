@@ -8,6 +8,7 @@ class ModalContent extends React.Component {
     super(props);
     this.state = {
       show : false
+
     }
   }
     
@@ -34,8 +35,8 @@ class ModalContent extends React.Component {
           id="planetclick"
         >
 
-          {console.log(this.props)}
-        <img className="planets" src={this.props.srcImage} alt="x"></img>
+          {console.log(this.props.planetList)}
+        <img className="planets" src={this.props.planetList.planetURL} alt="x"></img>
         </Button>
   
         <Modal show={show} onHide={this.handleClose}>
