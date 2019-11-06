@@ -1,20 +1,16 @@
 import React from "react";
-
 import "./Modal.css";
 import PalpatineSon1 from "./sound/palpatine.mp3";
 import YodaSon1 from "./sound/Yoda.mp3";
+import classNames from 'classnames';
 
-const Modal = ({ show, close, resultat }) => {
+const Modal = ({ show, close, result }) => {
   return (
     <div className="ContentPicModalOff">
       <div
-        className="modal-wrapper"
-        style={{
-          transform: show ? "translateY(0vh)" : "translateY(-100vh)",
-          opacity: show ? "1" : "0"
-        }}
+        className={classNames('modal-wrapper', { 'modal-wrapper-shown': show })}
       >
-        {show && resultat ? (
+        {show && result ? (
           <div>
             <img
               className="herosModal"
@@ -25,7 +21,7 @@ const Modal = ({ show, close, resultat }) => {
               <source src={YodaSon1} type="audio/mpeg" />
             </audio>
           </div>
-        ) : resultat === false && show ? (
+        ) : result === false && show ? (
           <div>
             <img
               className="herosModal"
@@ -39,7 +35,7 @@ const Modal = ({ show, close, resultat }) => {
         ) : null}
 
         <div className="modal-body">
-          {resultat ? (
+          {result ? (
             <p>
               CoNGRaTuLaTioN !!! <br /> votre réponse est bonne !!!
             </p>
