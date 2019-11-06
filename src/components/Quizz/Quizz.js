@@ -11,38 +11,36 @@ class Quizz extends React.Component {
     difficulty: "easy"
   };
 
+  componentDidMount() {
+    this.getQuestion();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    prevState.difficulty !== this.state.difficulty && this.getQuestion();
+  }
+
   changeDiffculty = e => {
     this.setState({
       difficulty: e.target.value
     });
   };
-  async getQuestions() {
+
+  async getQuestion() {
     const response = await fetch(
-      "https://opentdb.com/api.php?amount=20&category=11&difficulty=" +
-        this.state.difficulty
+      "https://opentdb.com/api.php?amount=20&category=11&difficulty=" + this.state.difficulty
     );
     const data = await response.json();
     const {
       question,
       correct_answer: correctAnswer,
       incorrect_answers: incorrectAnswers,
-      difficulty
     } = data.results[0];
 
     this.setState({
       question,
       correctAnswer,
       incorrectAnswers,
-      difficulty
     });
-  }
-
-  componentDidUpdate(prevState, choco) {
-    choco.difficulty !== this.state.difficulty && this.getQuestions();
-  }
-
-  componentDidMount() {
-    this.getQuestions();
   }
 
   render() {
