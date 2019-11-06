@@ -7,8 +7,6 @@ import YodaSon1 from "./sound/Yoda.mp3";
 const Modal = ({ show, close, resultat }) => {
   return (
     <div className="ContentPicModalOff">
-      <p className="contentModalP">challenge 1</p>
-
       <div
         className="modal-wrapper"
         style={{
