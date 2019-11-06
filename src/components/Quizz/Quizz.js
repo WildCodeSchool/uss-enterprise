@@ -1,7 +1,7 @@
 import React from "react";
 import "./Quizz.css";
-import StarsQuizz from "./QuizzStars/StarsQuizz";
-import PropositionsQuizz from "./Proposition/PropositionsQuizz";
+import QuizzStars from "../QuizzStars/QuizzStars";
+import QuizzPropositions from "../QuizzPropositions/QuizzPropositions";
 
 class Quizz extends React.Component {
   state = {
@@ -60,13 +60,13 @@ class Quizz extends React.Component {
         </h1>
         <p className="questionQuizz">{question}</p>
         <div className="zoneReponse">
-          <PropositionsQuizz
+          <QuizzPropositions
             correctAnswer={correctAnswer}
             incorrectAnswers={incorrectAnswers}
           />
         </div>
         <p>prochaine texte</p>
-        <StarsQuizz
+        <QuizzStars
           difficulty={difficulty}
           changeDiffculty={this.changeDiffculty}
         />
