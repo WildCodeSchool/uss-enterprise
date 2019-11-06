@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./QuizzPropositions.css";
 import Modal from "../Modal/Modal";
+import Answer from "../Answers/Answer";
 
 class QuizzPropositions extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       isShowing: false,
@@ -12,19 +13,19 @@ class QuizzPropositions extends Component {
     };
   }
 
-  openModalHandler = () => {
+  openModal = () => {
     this.setState({
       isShowing: true
     });
   };
 
-  closeModalHandler = () => {
+  closeModal = () => {
     this.setState({
       isShowing: false
     });
   };
 
-  hide = e => {
+  checkCorrectAnswer = e => {
     const { correctAnswer } = this.props;
     
     this.setState({
@@ -33,7 +34,7 @@ class QuizzPropositions extends Component {
     ;
   };
 
-  renderReponse() {
+  renderAnswers() {
     const { incorrectAnswers, correctAnswer } = this.props;
 
     if (!incorrectAnswers) return null;
@@ -48,22 +49,9 @@ class QuizzPropositions extends Component {
         return 0;
       })
       .map((answer, i) => (
-        <div key={answer}>
-          <input
-            className="champReponse"
-            type="radio"
-            name="name"
-            id={`propo-${i}`}
-          />
-          <label
-            onClick={this.hide}
-            htmlFor={`propo-${i}`}
-            className="proposition"
-          >
-            {answer}
-          </label>
-        </div>
+        <Answer key={answer} answer={answer} id={`answer-${i}`} checkCorrectAnswer={this.checkCorrectAnswer}/>
       ));
+      
 
     return randomlySortedAnswers;
   }
@@ -73,20 +61,20 @@ class QuizzPropositions extends Component {
     return (
       <div>
         {isShowing && (
-          <div onClick={this.closeModalHandler} className="back-drop"></div>
+          <div onClick={this.closeModal} className="back-drop"></div>
         )}
-        {this.renderReponse()}
+        {this.renderAnswers()}
         <div>
           <button
             className="open-modal-btn buttonQuizz"
-            onClick={this.openModalHandler}
+            onClick={this.openModal}
           >
             submit your answer !
           </button>
           <Modal
             className="modal"
             show={isShowing}
-            close={this.closeModalHandler}
+            close={this.closeModal}
             resultat={questionResult}
           ></Modal>
         </div>
