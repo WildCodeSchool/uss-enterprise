@@ -11,7 +11,6 @@ class Quizz extends React.Component {
     difficulty: "easy"
   };
 
-
   changeDiffculty = e => {
     this.setState({
       difficulty: e.target.value
@@ -38,6 +37,10 @@ class Quizz extends React.Component {
     });
   }
 
+  componentDidUpdate(prevState, choco) {
+    choco.difficulty !== this.state.difficulty && this.getQuestions();
+  }
+
   componentDidMount() {
     this.getQuestions();
   }
@@ -53,7 +56,7 @@ class Quizz extends React.Component {
     return (
       <div className="contentQuizz">
         <h1 className="titleQuizz text-focus-in">
-          que la Force soit avec toi !!!
+          may the force be with you !!!
         </h1>
         <p className="questionQuizz">{question}</p>
         <div className="zoneReponse">
