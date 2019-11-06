@@ -38,6 +38,6 @@
 }
 
 .champReponse:checked + label {
-  background-color: rgb(16, 14, 19);
+  background-color: rgba(10, 68, 117, 0.78);
   color: gold;
 }
