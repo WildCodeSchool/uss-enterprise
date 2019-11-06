@@ -62,8 +62,8 @@ class SolarSystem extends Component {
   render() {
     return (
       <div className="content-planet">
-        {this.state.planetList.map((planetList, id) => (
-        <ModalContent {...planetList} />))}
+        
+        <ModalContent planetsList={this.state.planetList} />
         <div className="status">
           <span className={this.props.done ? "done" : "todo"}> </span>
         </div>
