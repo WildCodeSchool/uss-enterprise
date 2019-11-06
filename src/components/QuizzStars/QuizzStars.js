@@ -1,7 +1,7 @@
 import React from "react";
-import "./StarsQuizz.css";
+import "./QuizzStars.css";
 
-const StarsQuizz = ({ difficulty, changeDiffculty }) => {
+const QuizzStars = ({ difficulty, changeDiffculty }) => {
   return (
     <>
       <select
@@ -35,4 +35,4 @@ const StarsQuizz = ({ difficulty, changeDiffculty }) => {
   );
 };
 
-export default StarsQuizz;
+export default QuizzStars;

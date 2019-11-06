@@ -1,13 +1,13 @@
 @font-face {
   font-family: "StarJedi";
   src: local("StarJedi"),
-    url("./Components/helper/Starjedi.ttf") format("truetype");
+    url("./fonts/Starjedi.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Starjout";
   src: local("Starjout"),
-    url("./Components/helper/Starjout.ttf") format("truetype");
+    url("./fonts/Starjout.ttf") format("truetype");
 }
 
 body {

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./PropositionsQuizz.css";
+import "./QuizzPropositions.css";
 import Modal from "../Modal/Modal";
 
-class PropositionsQuizz extends Component {
+class QuizzPropositions extends Component {
   constructor() {
     super();
 
@@ -95,4 +95,4 @@ class PropositionsQuizz extends Component {
   }
 }
 
-export default PropositionsQuizz;
+export default QuizzPropositions;
