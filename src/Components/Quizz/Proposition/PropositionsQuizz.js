@@ -26,9 +26,11 @@ class PropositionsQuizz extends Component {
 
   hide = e => {
     const { correctAnswer } = this.props;
+    
     this.setState({
-      questionResult: e.currentTarget.outerText === correctAnswer
-    });
+        questionResult: e.currentTarget.outerText === correctAnswer
+    })
+    ;
   };
 
   renderReponse() {
