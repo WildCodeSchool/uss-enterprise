@@ -10,6 +10,7 @@ const StarsQuizz = ({ difficulty, changeDiffculty }) => {
                     <option value="medium">medium</option>
                     <option value="hard">hard</option>
             </select> 
+      
 
             <ul className="divStars ">
                 <li className='starsFull'></li>

@@ -22,6 +22,8 @@
   padding: 20px;
   color: aliceblue;
   font-weight: 700;
+  border: 2px solid gold;
+  text-transform: uppercase;
 }
 
 .zoneReponse {
