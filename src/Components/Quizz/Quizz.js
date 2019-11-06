@@ -11,6 +11,14 @@ class Quizz extends React.Component {
         difficulty: "easy",
     }
 
+    componentDidUpdate(preProps, preState) {
+
+      console.log(preProps)
+      console.log(preState)
+      
+
+    }
+
     changeDiffculty = (e) => {
       this.setState({
         difficulty: e.target.value
@@ -40,6 +48,8 @@ class Quizz extends React.Component {
     }
 
     
+
+    
     
     render() {
         const { question, difficulty, correctAnswer, incorrectAnswers } = this.state;
@@ -51,6 +61,7 @@ class Quizz extends React.Component {
                 <div className='zoneReponse'>
                     <PropositionsQuizz correctAnswer={correctAnswer} incorrectAnswers={incorrectAnswers} />
                 </div>
+                <p>prochaine texte</p>
                     <StarsQuizz difficulty={difficulty} changeDiffculty={this.changeDiffculty} />
                     
             </div>

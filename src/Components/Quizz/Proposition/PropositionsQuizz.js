@@ -70,7 +70,7 @@ class PropositionsQuizz extends Component {
                         className="open-modal-btn buttonQuizz"
                         onClick={this.openModalHandler}
                     >
-                        Validez Votre Réponse
+                        validez votre réponse
                     </button>
                     <Modal
                         className="modal"
