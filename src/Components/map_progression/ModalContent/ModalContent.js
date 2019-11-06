@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import "./ModalContent.css";
+
 
 class ModalContent extends React.Component {
   constructor(props){
@@ -32,6 +33,8 @@ class ModalContent extends React.Component {
           type="button"
           id="planetclick"
         >
+
+          {console.log(this.props)}
         <img className="planets" src={this.props.srcImage} alt="x"></img>
         </Button>
   
