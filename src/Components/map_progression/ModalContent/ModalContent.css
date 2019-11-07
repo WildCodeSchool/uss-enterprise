@@ -99,7 +99,6 @@
   }
   #modal__fade {
     display: flex;
-    flex-direction: column-reverse;
     width: 100%;
     height: 100%;
     padding: 0% 20% 4% 0%;
@@ -138,14 +137,43 @@
 
 /*desktop*/
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
-  .content-planet {
-    flex-direction: row;
-  }
-  .content-planet:hover {
-    transform: scale(1.2);
-    transition: transform 0.2s;
-  }
   .planets {
-    width: 150px;
+    width: 130px;
+  }
+  #modal__fade {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0% 20% 4% 0%;
+  }
+  .modal-header {
+    display: flex;
+    align-items: center;
+    padding-left: 6rem;
+    height: 200px;
+  }
+  .h4,
+  h4 {
+    font-size: 5.5rem;
+  }
+  .modal-content {
+    text-align: center;
+    border: white solid 2px;
+    color: white;
+    opacity: 0.9;
+    display: inline-block;
+    font-size: 40px;
+    height: 500px;
+    width: 500px;
+  }
+  .btn-secondary {
+    width: 50%;
+    padding: 15px;
+    font-size: 30px;
+  }
+  .btn-primary {
+    width: 50%;
+    padding: 15px;
+    font-size: 30px;
   }
 }
