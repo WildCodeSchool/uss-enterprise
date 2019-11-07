@@ -1,4 +1,4 @@
-import React from "react";
+import React from "./node_modules/react";
 import "./HomePage.css";
 import planet from "./earth.png";
 import saturn from "./saturn.png";
