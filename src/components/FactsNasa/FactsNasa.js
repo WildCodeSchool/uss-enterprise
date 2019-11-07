@@ -6,7 +6,8 @@ class FactsNasa extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      fact: null
+      fact: null,
+      isLoading: true,
     };
     //binding not arrow function
     //this.getQuote = this.getQuote.bind(this);
@@ -36,6 +37,11 @@ class FactsNasa extends React.Component {
         this.setState({
           fact: nasaFact
         });
+        setTimeout(() => {
+          this.setState({
+            isLoading:false,
+          })
+        },1000)
       });
   };
 
@@ -46,10 +52,10 @@ class FactsNasa extends React.Component {
   render() {
     return (
       <div className="FactsNasa">
-        {this.state.fact ? (
-          <FactDetail {...this.state.fact} />
-        ) : (
-          <SpaceTravel/>
+        {this.state.isLoading ? (
+            <SpaceTravel/>
+          ) : (
+            <FactDetail {...this.state.fact} />
         )}
       </div>
     );
