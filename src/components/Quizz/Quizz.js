@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Quizz.css";
 import QuizzStars from "../QuizzStars/QuizzStars";
 import QuizzPropositions from "../QuizzPropositions/QuizzPropositions";
 
-class Quizz extends React.Component {
+class Quizz extends Component {
   state = {
     question: null,
     correctAnswer: null,
