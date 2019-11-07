@@ -7,15 +7,13 @@ class ModalContent extends React.Component {
     super(props);
     this.state = {
       show: false,
-      idChoosen:0,
-
-
+      idChoosen: 0
     };
   }
 
   handleClose = () => {
     this.setState({
-      show: false,
+      show: false
     });
   };
 
@@ -29,26 +27,28 @@ class ModalContent extends React.Component {
     const { show } = this.state;
     return (
       <div id="modal__fade">
-
         {/*console.log(this.props[0])*/}
 
         {this.props.planetsList.map(planet => {
           return (
             <Button
               key={planet.id}
-            variant="none"
-              onClick={e => { 
+              variant="none"
+              onClick={e => {
                 this.setState({
-                  idChoosen:planet.id,
-                })
-                this.handleShow()
-              }
-        }
-            type="button"
-            id="planetclick"
-          >
-            <img className="planets" src={planet.planetURL} alt={planet.id}></img>
-          </Button>
+                  idChoosen: planet.id
+                });
+                this.handleShow();
+              }}
+              type="button"
+              id="planetclick"
+            >
+              <img
+                className="planets"
+                src={planet.planetURL}
+                alt={planet.id}
+              ></img>
+            </Button>
           );
         })}
         <Modal show={show} onHide={this.handleClose}>

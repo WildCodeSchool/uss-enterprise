@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import SolarSystem from "./Components/map_progression/SolarSystem/SolarSystem.js";
+import SolarSystem from "./components/map_progression/SolarSystem/SolarSystem.js";
 
 
 function App() {
