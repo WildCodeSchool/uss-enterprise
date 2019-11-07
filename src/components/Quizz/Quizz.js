@@ -63,7 +63,7 @@ class Quizz extends Component {
             incorrectAnswers={incorrectAnswers}
           />
         </div>
-        <p>prochaine texte</p>
+        <p className="test">prochaine texte</p>
         <QuizzStars
           difficulty={difficulty}
           changeDiffculty={this.changeDiffculty}

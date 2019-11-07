@@ -27,6 +27,14 @@
 
 .zoneReponse {
   border-radius: 20px;
+  width: 90%;
+  align-self: center;
+  margin: 30px 0;
+  background-color: #1f202fa1;
+  padding-top: 30px;
+}
+.test {
+  color: aliceblue;
 }
 
 @keyframes text-focus-in {
