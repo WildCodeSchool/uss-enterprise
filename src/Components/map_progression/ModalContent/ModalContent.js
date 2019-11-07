@@ -5,6 +5,7 @@ import "./ModalContent.css";
 class ModalContent extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       show: false,
       idChoosen: 0

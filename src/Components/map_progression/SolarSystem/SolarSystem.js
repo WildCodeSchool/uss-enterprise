@@ -9,7 +9,7 @@ class SolarSystem extends Component {
       planetList: [
         {
           id: 1,
-          done: false,
+          done: true,
           planetURL:
             "http://assets.stickpng.com/thumbs/5a00de530e8525eec2752fff.png"
         },
@@ -55,16 +55,18 @@ class SolarSystem extends Component {
           planetURL:
             "http://www.pngall.com/wp-content/uploads/2/Mercury-Planet.png"
         }
-      ]
+      ],
+      progression : "planet0",
     };
   }
 
   render() {
     return (
       <div className="content-planet">
-        <ModalContent planetsList={this.state.planetList} />
+        <ModalContent planetsList={this.state.planetList}/>
         <div className="status">
-          <span className={this.props.done ? "done" : "todo"}> </span>
+          {console.log(this.state.planetList)}
+          <span className={this.state.planetList[0].done ? "done" : "todo"}> </span>
         </div>
       </div>
     );

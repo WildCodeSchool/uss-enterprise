@@ -1,14 +1,11 @@
 /*Positionnement des planetes*/
 
-
-
 .content-planet {
   position: relative;
   padding: 0px;
   width: 100%;
   height: 100%;
 }
-
 
 .status .done,
 .status .todo {
@@ -20,17 +17,17 @@
   border: solid 2px;
 }
 .status .done {
-  background: #007bff;
+  background: linear-gradient(to bottom, grey 20%, green 80%);
 }
 
 .status .todo {
-  background: grey;
+  background: linear-gradient(to bottom, grey 100%, green 0%);
 }
+/*Progress Bar Planet Levels*/
 
 .content-planet {
   display: flex;
 }
-
 
 @-webkit-keyframes rotate-center {
   0% {
@@ -52,54 +49,10 @@
     transform: rotate(360deg);
   }
 }
+
 /*Boutton planète */
 #planetclick {
   padding: 0;
   border: none;
   background: none;
-}
-
-/*Media Query Tablette */
-@media screen and (min-width: 768px) {
-  .planets {
-    width: 110px;
-  }
-
-  .content-planet:nth-child(1) {
-    padding-left: 30%;
-  }
-  .content-planet:nth-child(2) {
-    padding-left: 50%;
-  }
-  .content-planet:nth-child(3) {
-    padding-left: 70%;
-  }
-  .content-planet:nth-child(4) {
-    padding-left: 50%;
-  }
-  .content-planet:nth-child(5) {
-    padding-left: 28%;
-  }
-  .content-planet:nth-child(6) {
-    padding-left: 15%;
-  }
-  .content-planet:nth-child(7) {
-    padding-left: 35%;
-  }
-  .content-planet:nth-child(8) {
-    padding-left: 50%;
-  }
-}
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
-  .content-planet {
-    display: flex;
-    flex-direction: row;
-  }
-  .content-planet:hover {
-    transform: scale(1.2);
-    transition: transform 0.2s;
-  }
-  .planets {
-    width: 150px;
-  }
 }
