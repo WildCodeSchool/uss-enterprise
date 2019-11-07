@@ -13,7 +13,7 @@ const HomePage = () => {
         <h1 className="game-title">Wild Space Odyssey</h1>
       </div>
 
-      <Link to="/quizz" className="circle-button">Start</Link>
+      <Link to="/intro" className="circle-button">Start</Link>
 
       <div className="planet-picture-div">
         <img className="earth-picture" src={planet} alt="planet" />

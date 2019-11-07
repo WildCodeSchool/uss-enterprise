@@ -1,6 +1,7 @@
 import React from "react";
 import "./IntroPage.css";
 import image from "./Alien.png";
+import { Link } from 'react-router-dom';
 
 function IntroPage() {
   return (
@@ -35,9 +36,9 @@ function IntroPage() {
             />
           </div>
           <div className="button_container">
-            <button className="button" type="submit">
+            <Link to="/quizz" className="button" type="submit">
               GO
-            </button>
+            </Link>
           </div>
         </form>
       </div>
