@@ -1,4 +1,5 @@
 import React from 'react';
+import IntroPage from './components/IntroPage/IntroPage'
 import './App.css';
 import HomePage from './components/HomePage/HomePage';
 import Quizz from './components/Quizz/Quizz';
@@ -11,6 +12,9 @@ function App() {
     <div className="App">
       <Route exact path="/">
         <HomePage />
+      </Route>
+      <Route path="/intro">
+        <IntroPage />
       </Route>
       <Route path="/quizz">
         <Quizz />
