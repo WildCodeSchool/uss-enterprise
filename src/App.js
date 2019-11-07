@@ -6,15 +6,18 @@ import { Route } from "react-router-dom";
 
 class App extends Component {
   state = {
-    points: 0,
+    points: 0
   };
 
   calcPoints = (questionResult, difficulty) => {
-    difficulty === "easy" ? this.setState({ points: this.state.points + 100 }) 
-    : difficulty === "medium" ? this.setState({ points: this.state.points + 200 }) 
-    : difficulty === "hard" ? this.setState({ points: this.state.points + 300 })
-    : console.log("je sait pas quoi faire")
-    }
+    difficulty === "easy"
+      ? this.setState({ points: this.state.points + 100 })
+      : difficulty === "medium"
+      ? this.setState({ points: this.state.points + 200 })
+      : difficulty === "hard"
+      ? this.setState({ points: this.state.points + 300 })
+      : console.log("je sait pas quoi faire");
+  };
 
   render() {
     return (
@@ -28,6 +31,5 @@ class App extends Component {
       </div>
     );
   }
-
 }
 export default App;
