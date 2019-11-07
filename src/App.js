@@ -5,6 +5,7 @@ import HomePage from './components/HomePage/HomePage';
 import Quizz from './components/Quizz/Quizz';
 import FactsNasa from './components/FactsNasa/FactsNasa';
 import { Route } from 'react-router-dom';
+import SolarSystem from "./components/map_progression/SolarSystem/SolarSystem";
 
 
 function App() {
@@ -15,6 +16,15 @@ function App() {
       </Route>
       <Route path="/intro">
         <IntroPage />
+      </Route>
+      <Route path="/map">
+        <div className="stars">
+          <div className="twinkling">
+            <div className="clouds">
+              <SolarSystem />
+            </div>
+          </div>
+        </div>
       </Route>
       <Route path="/quizz">
         <Quizz />
