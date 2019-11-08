@@ -2,6 +2,7 @@ import React from "./node_modules/react";
 import "./HomePage.css";
 import planet from "./earth.png";
 import saturn from "./saturn.png";
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   //-- obtenir une liste de planetes pour afficher random ;)
@@ -12,7 +13,7 @@ const HomePage = () => {
         <h1 className="game-title">Wild Space Odyssey</h1>
       </div>
 
-      <button className="circle-button">Start</button>
+      <Link to="/quizz" className="circle-button">Start</Link>
 
       <div className="planet-picture-div">
         <img className="earth-picture" src={planet} alt="planet" />
