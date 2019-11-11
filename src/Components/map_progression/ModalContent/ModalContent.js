@@ -1,5 +1,5 @@
-import React from "react";
-import { Button, Modal } from "react-bootstrap";
+import React from "./node_modules/react";
+import { Button, Modal } from "./node_modules/react-bootstrap";
 import "./ModalContent.css";
 
 class ModalContent extends React.Component {
