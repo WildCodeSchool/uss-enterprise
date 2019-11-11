@@ -1,0 +1,40 @@
+.proposition {
+  background-color: #0004046b;
+  border-radius: 20px;
+  border: black 3px solid;
+  padding: 10px;
+  color: aliceblue;
+  font-weight: 500;
+  display: block;
+  margin: 10px;
+  
+}
+.proposition:hover {
+  background-color: #3ce2f12c;
+}
+
+.buttonQuizz {
+  width: 60%;
+  align-self: center;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  border: 0px;
+  background-color: #0004046b;
+  font-family: "StarJedi";
+  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
+    -1px -1px 2px gold;
+}
+.buttonQuizz:hover {
+  background-color: #e6350d7a;
+  color: black;
+}
+
+.champReponse {
+  position: absolute;
+  left: -9999px;
+}
+
+.champReponse:checked + label {
+  background-color: rgba(10, 68, 117, 0.78);
+  color: gold;
+}

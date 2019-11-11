@@ -1,0 +1,118 @@
+.contentModalP {
+  background-color: #000000d1;
+  font-size: 1.7rem;
+  color: rgba(0, 0, 0, 0.966);
+  font-family: "Star Jedi", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
+    -1px -1px 2px gold;
+  font-family: "StarJedi";
+}
+
+.ContentPicModalOff {
+  position: absolute;
+  height: 1px;
+  left: 0px;
+  width: 100%;
+}
+
+.modal-wrapper {
+  position: relative;
+  background: black;
+  border: 2px solid gold;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  margin: 0 auto 0;
+  transition: all 2s;
+  width: 96%;
+  border-radius: 50px;
+  bottom: 240px;
+  transform:translateY(-100vh);
+  opacity:0;
+}
+
+.modal-wrapper-shown {
+  transform:translateY(0vh);
+  opacity:1;
+}
+
+.herosModal {
+  position: absolute;
+  bottom: 250px;
+  left: 1px;
+  height: 325px;
+  filter: drop-shadow(5px 5px 4px white);
+}
+
+.modal-body {
+  padding: 10px 15px;
+  text-align: center;
+  color: black;
+  font-size: 1.7rem;
+  font-family: "StarJedi";
+  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
+    -1px -1px 2px gold;
+}
+
+.modal-footer {
+  height: 35px;
+  margin: 15px 50px;
+}
+
+.close-modal-btn {
+  color: white;
+  cursor: pointer;
+  float: right;
+  font-size: 30px;
+  margin: 0;
+}
+
+.close-modal-btn:hover {
+  color: black;
+}
+
+.btn-cancel,
+.btn-continue {
+  background: coral;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+
+.btn-cancel {
+  background-color: #b71c1c;
+  float: left;
+}
+
+.btn-continue {
+  background-color: #1b5e20;
+  float: right;
+}
+
+.back-drop {
+  background-color: rgba(16, 16, 16, 0.82);
+  height: 798px;
+  position: absolute;
+  transition: all 1.3s;
+  width: 100%;
+  right: 0px;
+  top: -10px;
+}
+
+.open-modal-btn {
+  margin: 30px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+@media (min-width:750px) {
+  .herosModal {
+    bottom: 150px;
+  }
+}
