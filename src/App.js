@@ -1,5 +1,5 @@
 import React from 'react';
-import IntroPage from './components/IntroPage/IntroPage'
+import IntroPage from './components/IntroPage/IntroPage';
 import './App.css';
 import HomePage from './components/HomePage/HomePage';
 
