@@ -1,14 +1,9 @@
 import React from 'react';
-import IntroPage from './components/IntroPage/IntroPage';
 import './App.css';
-import HomePage from './components/HomePage/HomePage';
-
-import Quizz from './components/Quizz/Quizz';
 import { Route } from 'react-router-dom';
-import Info from './Components/Info/Info.js'
-import Intropage from './Components/Intropage/Intropage.js'
-
-
+import IntroPage from './components/IntroPage/IntroPage';
+import HomePage from './components/HomePage/HomePage';
+import Quizz from './components/Quizz/Quizz';
 
 
 function App() {
@@ -21,10 +16,10 @@ function App() {
         <Quizz />
       </Route>
       <Route path="/intro">
-        <Intropage/>
+        <IntroPage />
       </Route>
     </div>
-    )
+  );
 }
 
 export default App;
