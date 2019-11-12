@@ -3,6 +3,7 @@ import "./QuizzPropositions.css";
 import Modal from "../Modal/Modal";
 import Answer from "../Answers/Answer";
 import Points from "../Points/Points";
+import QuizzStars from "../QuizzStars/QuizzStars";
 
 class QuizzPropositions extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class QuizzPropositions extends Component {
     this.state = {
       isShowing: false,
       questionResult: false,
-      try: 0,
+      try: 0
     };
   }
 
@@ -20,6 +21,7 @@ class QuizzPropositions extends Component {
       isShowing: true,
       try: this.state.try + 1,
     });
+    this.props.calcPoints(this.state.questionResult, this.props.difficulty)
   };
 
   closeModal = () => {
@@ -30,11 +32,10 @@ class QuizzPropositions extends Component {
 
   checkCorrectAnswer = e => {
     const { correctAnswer } = this.props;
-    
+
     this.setState({
-        questionResult: e.currentTarget.outerText === correctAnswer
-    })
-    ;
+      questionResult: e.currentTarget.outerText === correctAnswer
+    });
   };
 
   renderAnswers() {
@@ -52,9 +53,13 @@ class QuizzPropositions extends Component {
         return 0;
       })
       .map((answer, i) => (
-        <Answer key={answer} answer={answer} id={`answer-${i}`} checkCorrectAnswer={this.checkCorrectAnswer}/>
+        <Answer
+          key={answer}
+          answer={answer}
+          id={`answer-${i}`}
+          checkCorrectAnswer={this.checkCorrectAnswer}
+        />
       ));
-      
 
     return randomlySortedAnswers;
   }
@@ -62,19 +67,32 @@ class QuizzPropositions extends Component {
   render() {
     const { isShowing, questionResult } = this.state;
     return (
-      <div>
-        {isShowing && (
-          <div onClick={this.closeModal} className="back-drop"></div>
-        )}
-        {this.renderAnswers()}
+      <>
+        <div className="zoneReponse">
+          {isShowing && (
+            <div onClick={this.closeModal} className="back-drop"></div>
+          )}
+          {this.renderAnswers()}
+          
+        </div>
+        <Points points={this.props.points} NumberTry={this.state.try} calcPoints={this.props.calcPoints} questionResult={this.state.questionResult} difficulty={this.props.difficulty} />
         <div>
-        <Points points={this.props.points} NumberTry={this.state.try} />
+          <div>
+
           <button
             className="open-modal-btn buttonQuizz"
             onClick={this.openModal}
           >
             submit your answer !
           </button>
+          </div>
+
+          <QuizzStars
+            difficulty={this.props.difficulty}
+            changeDifficulty={this.props.changeDifficulty}
+            NumberTry={this.state.try}
+          />
+
           <Modal
             className="modal"
             show={isShowing}
@@ -82,7 +100,7 @@ class QuizzPropositions extends Component {
             result={questionResult}
           ></Modal>
         </div>
-      </div>
+      </>
     );
   }
 }

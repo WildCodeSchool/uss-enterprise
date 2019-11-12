@@ -51,6 +51,10 @@
   border-radius: 10px;
 }
 
+.selectDifficultyHidden {
+  display: none;
+}
+
 .imageDifficulty {
   width: 70%;
   padding-top: 50px;

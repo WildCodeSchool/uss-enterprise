@@ -1,7 +1,7 @@
 import React from "react";
 import "./QuizzStars.css";
 
-const QuizzStars = ({ difficulty, changeDiffculty }) => {
+const QuizzStars = ({ difficulty, changeDifficulty, NumberTry }) => {
   return (
     <>
       <label htmlFor="difficulty-select" className="difficulty-label">
@@ -10,8 +10,8 @@ const QuizzStars = ({ difficulty, changeDiffculty }) => {
 
       <div>
         <select
-          onChange={changeDiffculty}
-          className="selectDifficulty "
+          onChange={changeDifficulty}
+          className= {NumberTry !== 0 ? 'selectDifficultyHidden' : "selectDifficulty"}
           name="difficulty"
           id="difficulty-select"
         >

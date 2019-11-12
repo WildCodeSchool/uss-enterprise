@@ -1,19 +1,16 @@
 import React, { Component } from "react";
 import "./Quizz.css";
-import QuizzStars from "../QuizzStars/QuizzStars";
 import QuizzPropositions from "../QuizzPropositions/QuizzPropositions";
 
-
 class Quizz extends Component {
-  constructor({ points }) {
-    super();
+  constructor({ props }) {
+    super(props);
   }
   state = {
     question: null,
     correctAnswer: null,
     incorrectAnswers: null,
-    difficulty: "easy",
-
+    difficulty: "easy"
   };
 
   componentDidMount() {
@@ -24,7 +21,7 @@ class Quizz extends Component {
     prevState.difficulty !== this.state.difficulty && this.getQuestion();
   }
 
-  changeDiffculty = e => {
+  changeDifficulty = e => {
     this.setState({
       difficulty: e.target.value
     });
@@ -63,17 +60,17 @@ class Quizz extends Component {
           may the force be with you !!!
         </h1>
         <p className="questionQuizz">{question}</p>
-        <div className="zoneReponse">
+        <div>
           <QuizzPropositions
             correctAnswer={correctAnswer}
             incorrectAnswers={incorrectAnswers}
             points={this.props.points}
+            calcPoints={this.props.calcPoints}
+            difficulty={difficulty}
+            changeDifficulty={this.changeDifficulty}
+            difficulty={this.state.difficulty}
           />
         </div>
-        
-        <QuizzStars
-          difficulty={difficulty}
-          changeDiffculty={this.changeDiffculty}
         />
       </div>
     );
