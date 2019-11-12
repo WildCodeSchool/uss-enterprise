@@ -3,7 +3,7 @@ import "./Modal.css";
 import palpatineSound from "./sound/palpatine.mp3";
 import yodaSound from "./sound/Yoda.mp3";
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import { Link } from 'react';
 
 const Modal = ({ show, close, result }) => {
   const data = result

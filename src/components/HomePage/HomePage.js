@@ -2,7 +2,7 @@ import React from "react";
 import "./HomePage.css";
 import planet from "./earth.png";
 import saturn from "./saturn.png";
-import { Link } from 'react-router-dom';
+import { Link } from 'react';
 
 const HomePage = () => {
   //-- obtenir une liste de planetes pour afficher random ;)

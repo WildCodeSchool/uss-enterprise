@@ -1,7 +1,7 @@
 import React from "react";
 import "./IntroPage.css";
 import image from "./Alien.png";
-import { Link } from 'react-router-dom';
+import { Link } from 'react';
 
 function IntroPage() {
   return (
