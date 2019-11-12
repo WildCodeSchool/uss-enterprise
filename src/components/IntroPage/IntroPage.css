@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 .IntroPage {
   background-image: url('./background.png');
+=======
+.alien_container {
+  background-image: url(./background.png);
+>>>>>>> c4a6e49afe70ce76b5edb73bda9a5b76f4656099
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -14,7 +19,10 @@
   filter: drop-shadow(5px 5px 4px white);
   -webkit-animation: alien 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: alien 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+<<<<<<< HEAD
   height : 35vh
+=======
+>>>>>>> c4a6e49afe70ce76b5edb73bda9a5b76f4656099
 }
 
 /*yoda slide*/
@@ -47,7 +55,11 @@
 .bubble_text_container {
   display: flex;
   justify-content: center;
+<<<<<<< HEAD
   height: 36vh;
+=======
+  height: 45vh;
+>>>>>>> c4a6e49afe70ce76b5edb73bda9a5b76f4656099
 }
 
 .yoda-guide{
@@ -60,7 +72,12 @@
   border-radius: 0.4em;
   height: 50%;
   font-size: 2rem;
+<<<<<<< HEAD
   color: white;
+=======
+  color: black;
+  text-shadow: -0.5px 0 yellow, 0 0.5px yellow, 0.5px 0 yellow, 0 0.5px yellow;
+>>>>>>> c4a6e49afe70ce76b5edb73bda9a5b76f4656099
   font-weight: 900;
   padding-left: 0;
   width: 70%;
@@ -342,16 +359,28 @@
   }
 
   .tell_name {
+<<<<<<< HEAD
     font-size: 2rem;
   }
 
   .hello_text {
     font-size: 1.8rem;
+=======
+    font-size: 1.7rem;
+  }
+
+  .hello_text {
+    font-size: 1.1rem;
+>>>>>>> c4a6e49afe70ce76b5edb73bda9a5b76f4656099
     padding-bottom:7% ;
   }
 
   .player-form-input {
+<<<<<<< HEAD
     height: 3vh;
+=======
+    height: 2.5vh;
+>>>>>>> c4a6e49afe70ce76b5edb73bda9a5b76f4656099
     width: 60%;
     margin-bottom: 10%;
     margin-top: 10%;
@@ -370,13 +399,18 @@
     width: 80%;
   }
 
+<<<<<<< HEAD
   .IntroPage {
+=======
+  .alien_container {
+>>>>>>> c4a6e49afe70ce76b5edb73bda9a5b76f4656099
     min-height: 100vh;
  }
  .button {
   height:8vh;
    width: 20%;
 }
+<<<<<<< HEAD
 }
 @media (min-width: 1024px) {
 
@@ -476,3 +510,6 @@
 
 }
 }
+=======
+}
+>>>>>>> c4a6e49afe70ce76b5edb73bda9a5b76f4656099
