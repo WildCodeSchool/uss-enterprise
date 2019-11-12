@@ -3,12 +3,17 @@ import "./Quizz.css";
 import QuizzStars from "../QuizzStars/QuizzStars";
 import QuizzPropositions from "../QuizzPropositions/QuizzPropositions";
 
+
 class Quizz extends Component {
+  constructor({ points }) {
+    super();
+  }
   state = {
     question: null,
     correctAnswer: null,
     incorrectAnswers: null,
-    difficulty: "easy"
+    difficulty: "easy",
+
   };
 
   componentDidMount() {
@@ -27,19 +32,20 @@ class Quizz extends Component {
 
   async getQuestion() {
     const response = await fetch(
-      "https://opentdb.com/api.php?amount=20&category=11&difficulty=" + this.state.difficulty
+      "https://opentdb.com/api.php?amount=20&category=11&difficulty=" +
+        this.state.difficulty
     );
     const data = await response.json();
     const {
       question,
       correct_answer: correctAnswer,
-      incorrect_answers: incorrectAnswers,
+      incorrect_answers: incorrectAnswers
     } = data.results[0];
 
     this.setState({
       question,
       correctAnswer,
-      incorrectAnswers,
+      incorrectAnswers
     });
   }
 
@@ -61,9 +67,10 @@ class Quizz extends Component {
           <QuizzPropositions
             correctAnswer={correctAnswer}
             incorrectAnswers={incorrectAnswers}
+            points={this.props.points}
           />
         </div>
-        <p className="test">prochaine texte</p>
+        
         <QuizzStars
           difficulty={difficulty}
           changeDiffculty={this.changeDiffculty}

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./QuizzPropositions.css";
 import Modal from "../Modal/Modal";
 import Answer from "../Answers/Answer";
+import Points from "../Points/Points";
 
 class QuizzPropositions extends Component {
   constructor(props) {
@@ -9,13 +10,15 @@ class QuizzPropositions extends Component {
 
     this.state = {
       isShowing: false,
-      questionResult: false
+      questionResult: false,
+      try: 0,
     };
   }
 
   openModal = () => {
     this.setState({
-      isShowing: true
+      isShowing: true,
+      try: this.state.try + 1,
     });
   };
 
@@ -65,6 +68,7 @@ class QuizzPropositions extends Component {
         )}
         {this.renderAnswers()}
         <div>
+        <Points points={this.props.points} NumberTry={this.state.try} />
           <button
             className="open-modal-btn buttonQuizz"
             onClick={this.openModal}
