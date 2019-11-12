@@ -55,17 +55,17 @@ class ModalContent extends React.Component {
         })}
         <Modal show={show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Niveau {this.state.idChoosen}</Modal.Title>
+            <Modal.Title>Level {this.state.idChoosen}</Modal.Title>
           </Modal.Header>
           <Modal.Body className="Modal__Body">
             Are you ready to travel to this planet?{" "}
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.handleClose}>
-              Non...
+              No...
             </Button>
-            <Link to="quizz" variant="primary" onClick={this.handleClose}>
-              Oui !
+            <Link to="quizz" className="btn btn-primary" variant="primary" onClick={this.handleClose}>
+              Yes !
             </Link>
           </Modal.Footer>
         </Modal>

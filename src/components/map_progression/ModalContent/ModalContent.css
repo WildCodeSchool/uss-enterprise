@@ -5,6 +5,23 @@
   top: -1500px;
   transition: 0.3s;
 }
+.h4,
+h4 {
+  text-shadow: 5px 5px 3px black;
+}
+.modal-body {
+  padding: 10px 15px;
+  text-align: center;
+  color: white;
+  font-size: 1.7rem;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  text-shadow: none;
+  font-weight: 600;
+  line-height: 2.5;
+  text-shadow: 5px 5px 3px black;
+}
 
 .modal.show {
   transition: 0.5s;
@@ -13,27 +30,32 @@
 
 .modal-content {
   text-align: center;
-  background-image: url(https://www.biography.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTM1MzQ3NTM2ODYzOTkyMjg2/milky-wayjpg.jpg);
+  background-image: url(https://media.giphy.com/media/hPrF1eW7qy9tpbgh1B/source.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
   border: white solid 2px;
   color: white;
   opacity: 0.9;
   display: inline-block;
-  font-size: 20px;
+  font-size: 1px;
 }
 .modal-header {
   display: flex;
   align-items: center;
-  padding-left: 6rem;
+  padding-left: 7rem;
 }
+
 .btn-primary {
   width: 50%;
-  padding: 15px;
+  padding: 10px;
   font-size: 20px;
+  box-shadow: 5px 5px 3px black;
 }
 .btn-secondary {
   width: 50%;
-  padding: 15px;
+  padding: 10px;
   font-size: 20px;
+  box-shadow: 5px 5px 3px black;
 }
 #modal__fade {
   display: flex;
@@ -41,6 +63,16 @@
   width: 100%;
   height: 100%;
   padding: 0 20% 10% 0;
+}
+.modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-top: none;
 }
 .planets {
   width: 70px;
@@ -100,18 +132,29 @@
   #modal__fade {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 1049px;
     padding: 0% 20% 4% 0%;
   }
   .modal-header {
     display: flex;
     align-items: center;
-    padding-left: 6rem;
+    padding-left: 11rem;
     height: 200px;
   }
   .h4,
   h4 {
     font-size: 4.5rem;
+    text-shadow: 5px 5px 3px black;
+  }
+  .modal-body {
+    padding: 10px 15px;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+      sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+    text-shadow: none;
   }
   .modal-content {
     text-align: center;
@@ -120,8 +163,8 @@
     opacity: 0.9;
     display: inline-block;
     font-size: 40px;
-    height: 500px;
-    width: 500px;
+    height: 610px;
+    width: 600px;
   }
   .btn-secondary {
     width: 50%;
@@ -133,16 +176,33 @@
     padding: 15px;
     font-size: 30px;
   }
+  .modal-footer {
+    height: 300px;
+    margin: -60px 5px;
+  }
+  .status .done,
+  .status .todo {
+    display: inline-block;
+    width: 55px;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    border: solid 2px;
+  }
+  .status .done {
+    background: linear-gradient(to bottom, grey 20%, green 80%);
+}
 }
 
 /*desktop*/
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 1025px) and (max-width: 1441px) {
   .planets {
     width: 130px;
   }
   #modal__fade {
     display: flex;
-    width: 100%;
+    flex-direction: row;
+    width: 21%;
     height: 100%;
     padding: 0% 20% 4% 0%;
   }
@@ -176,4 +236,43 @@
     padding: 15px;
     font-size: 30px;
   }
+  .btn-secondary:hover {
+    background-color: #3e8e41
+  }
+  .btn-primary:hover {
+    background-color: #3e8e41
+  }
+
+  #planetclick:nth-child(1) {
+    padding-top: 320px;
+  }
+  #planetclick:nth-child(2) {
+    padding-top: 150px;
+  }
+  #planetclick:nth-child(3) {
+    padding-top: 0px;
+  }
+  #planetclick:nth-child(4) {
+    padding-bottom: 200px;
+  }
+  #planetclick:nth-child(5) {
+    padding-top: 50px ;
+  }
+  #planetclick:nth-child(6) {
+    padding-top: 250px;
+  }
+  #planetclick:nth-child(7) {
+    padding-top: 35%;
+  }
+  #planetclick:nth-child(8) {
+    padding-bottom:  200px;
+  }
+  .status .done, .status .todo {
+    display: inline-block;
+    width: 55px;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    border: solid 2px;
+}
 }

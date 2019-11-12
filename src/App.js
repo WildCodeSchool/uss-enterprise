@@ -1,11 +1,11 @@
 import React from 'react';
-import IntroPage from './components/IntroPage/IntroPage'
+import IntroPage from './components/IntroPage/IntroPage';
 import './App.css';
 import HomePage from './components/HomePage/HomePage';
 import Quizz from './components/Quizz/Quizz';
 import FactsNasa from './components/FactsNasa/FactsNasa';
 import { Route } from 'react-router-dom';
-import SolarSystem from "./components/map_progression/SolarSystem/SolarSystem";
+import SolarSystem from './components/map_progression/SolarSystem/SolarSystem';
 
 
 function App() {
