@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import "./IntroPage.css";
-import image from "./Alien.png";
+import React, { Component } from 'react';
+import './IntroPage.css';
+import image from './Alien.png';
 
 
-class IntroPage extends React.Component {
+class IntroPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {value : ''}; 
+    this.state = { value: '' };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
-  
+
   render() {
     return (
       <div className="IntroPage">
@@ -28,23 +28,25 @@ class IntroPage extends React.Component {
                 READY ARE YOU? GO !
               </p>
               <p className="tell_name">
-                {" "}
+                {' '}
                 But if beguin you want, first your name you need to tell me
               </p>
             </div>
           </div>
           <div className="alien_container">
-            <img src={image} className="alien" alt="alien"></img>
+            <img src={image} className="alien" alt="alien" />
           </div>
         </div>
         <div className="form_container">
           <form method="post" className="player-form">
             <div className="p_container">
-              <label className="label"> </label>{" "}
+              <label htmlFor="inputButton" className="label"></label>
+              {' '}
               <input
-                value = {this.state.value}
-                onChange = {this.handleChange}
-                class="player-form-input"
+                id="inputButton"
+                value={this.state.value}
+                onChange={this.handleChange}
+                className="player-form-input"
                 type="text"
                 placeholder="Your Name"
                 name="pseudo"
