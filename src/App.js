@@ -2,7 +2,6 @@ import React from 'react';
 import IntroPage from './components/IntroPage/IntroPage'
 import './App.css';
 
-import IntroPage from './components/IntroPage/IntroPage';
 
 function App() {
   return (
