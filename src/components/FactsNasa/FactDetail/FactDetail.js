@@ -1,5 +1,6 @@
 import React from "react";
 import "./FactDetail.css";
+import { Link } from 'react-router-dom';
 
 const FactDetail = (fact) => {
   return (
@@ -17,6 +18,7 @@ const FactDetail = (fact) => {
           Did you know?
         </h4>
         <p className="FactDetail__explanation">{fact.explanation}</p>
+        <Link className="FactDetail__returnButton" to="/map">Retour</Link>
       </div>
     </div>
   );
