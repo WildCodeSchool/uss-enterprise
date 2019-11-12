@@ -1,5 +1,5 @@
-.alien_container {
-  background-image: url(./background.png);
+.IntroPage {
+  background-image: url('./background.png');
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,7 @@
   filter: drop-shadow(5px 5px 4px white);
   -webkit-animation: alien 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: alien 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  height : 35vh
 }
 
 /*yoda slide*/
@@ -46,7 +47,7 @@
 .bubble_text_container {
   display: flex;
   justify-content: center;
-  height: 45vh;
+  height: 36vh;
 }
 
 .yoda-guide{
@@ -59,8 +60,7 @@
   border-radius: 0.4em;
   height: 50%;
   font-size: 2rem;
-  color: black;
-  text-shadow: -0.5px 0 yellow, 0 0.5px yellow, 0.5px 0 yellow, 0 0.5px yellow;
+  color: white;
   font-weight: 900;
   padding-left: 0;
   width: 70%;
@@ -342,16 +342,16 @@
   }
 
   .tell_name {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
 
   .hello_text {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     padding-bottom:7% ;
   }
 
   .player-form-input {
-    height: 2.5vh;
+    height: 3vh;
     width: 60%;
     margin-bottom: 10%;
     margin-top: 10%;
@@ -370,11 +370,109 @@
     width: 80%;
   }
 
-  .alien_container {
+  .IntroPage {
     min-height: 100vh;
  }
  .button {
   height:8vh;
    width: 20%;
+}
+}
+@media (min-width: 1024px) {
+
+.IntroPage {
+  background-image: url('./background.png');
+  background-size: cover;
+ 
+  width: 100%;
+  min-height: 100vh;
+  }
+ 
+.bubble_text {
+   margin-top: 2%;
+}
+
+ .bubble_text_container {
+  height: 35vh;
+}
+
+
+.tell_name {
+  font-size: 1.8rem;
+}
+
+.hello_text {
+  font-size: 1.6rem;
+  padding-bottom:3% ;
+}
+
+.player-form-input {
+  height: 3vh;
+  width: 60%;
+}
+
+.alien {
+  -webkit-animation: alien 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: alien 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  width : 40%;
+  margin-left:70%
+}
+
+@-webkit-keyframes alien {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes alien {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.bubble_text {
+  width: 50%;
+  height: 80%;
+  background: #00001a;
+  position: relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.bubble_text:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 26px;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid #00001a;
+  border-bottom: 13px solid transparent;
+}
+
+.bubble_text:after {
+  display: none;
+}
+
+.top_container {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row-reverse;
+
 }
 }
