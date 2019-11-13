@@ -72,7 +72,7 @@
 @media (min-width: 1100px) {
   .FactDetail {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
   .FactDetail__picture {
     width: 30%;
