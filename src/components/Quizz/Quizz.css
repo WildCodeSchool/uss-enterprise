@@ -25,8 +25,9 @@
   text-transform: uppercase;
 }
 
-.zoneReponse {
-  border-radius: 20px;
+
+.test {
+  color: aliceblue;
 }
 
 @keyframes text-focus-in {

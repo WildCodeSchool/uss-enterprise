@@ -1,25 +1,39 @@
-import React from 'react';
-import './App.css';
-import { Route } from 'react-router-dom';
-import IntroPage from './components/IntroPage/IntroPage';
-import HomePage from './components/HomePage/HomePage';
-import Quizz from './components/Quizz/Quizz';
+import React, { Component } from "react";
+import "./App.css";
+import { Route } from "react-router-dom";
+import IntroPage from "./components/IntroPage/IntroPage";
+import HomePage from "./components/HomePage/HomePage";
+import Quizz from "./components/Quizz/Quizz";
 
+class App extends Component {
+  state = {
+    points: 0
+  };
 
-function App() {
-  return (
-    <div className="App">
-      <Route exact path="/">
-        <HomePage />
-      </Route>
-      <Route path="/quizz">
-        <Quizz />
-      </Route>
-      <Route path="/intro">
-        <IntroPage />
-      </Route>
-    </div>
-  );
+  calcPoints = (questionResult, difficulty) => {
+    difficulty === "easy"
+      ? this.setState({ points: this.state.points + 100 })
+      : difficulty === "medium"
+      ? this.setState({ points: this.state.points + 200 })
+      : difficulty === "hard"
+      ? this.setState({ points: this.state.points + 300 })
+      : console.log("je sait pas quoi faire");
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route path="/quizz">
+          <Quizz points={this.state.points} calcPoints={this.calcPoints} />
+        </Route>
+        <Route path="/intro">
+          <IntroPage />
+        </Route>
+      </div>
+    );
+  }
 }
-
 export default App;
