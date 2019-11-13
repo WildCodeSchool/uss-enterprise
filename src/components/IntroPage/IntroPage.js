@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './IntroPage.css';
+import { Link } from 'react-router-dom';
 import image from './Alien.png';
 
 
@@ -56,9 +57,9 @@ class IntroPage extends Component {
               {' '}
             </div>
             <div className="button_container">
-              <button className="button" type="submit">
+              <Link to="/map" className="button">
                 GO
-              </button>
+              </Link>
             </div>
           </form>
         </div>
