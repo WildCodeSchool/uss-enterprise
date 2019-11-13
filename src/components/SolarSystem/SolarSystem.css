@@ -1,33 +1,3 @@
-/*Positionnement des planetes*/
-
-.content-planet {
-  position: relative;
-  padding: 0px;
-  width: 100%;
-  height: 100%;
-}
-
-.status .done,
-.status .todo {
-  display: inline-block;
-  width: 30px;
-  height: 100%;
-  left: 0px;
-  position: absolute;
-  border: solid 2px;
-}
-.status .done {
-  background: linear-gradient(to bottom, grey 20%, green 80%);
-}
-
-.status .todo {
-  background: linear-gradient(to bottom, grey 100%, green 0%);
-}
-/*Progress Bar Planet Levels*/
-
-.content-planet {
-  display: flex;
-}
 
 @-webkit-keyframes rotate-center {
   0% {
@@ -72,7 +42,7 @@
 
 .modal-content {
   text-align: center;
-  background-image: url(https://www.biography.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTM1MzQ3NTM2ODYzOTkyMjg2/milky-wayjpg.jpg);
+  background-image: url(https://media.giphy.com/media/TEHahsqxibXc4/giphy.gif);
   border: white solid 2px;
   color: white;
   opacity: 0.9;
@@ -83,23 +53,51 @@
   display: flex;
   align-items: center;
   padding-left: 6rem;
+  border-bottom: none;
+  font-family: "StarJedi";
+  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold, -1px -1px 2px gold;
+  color: black;
+}
+.modal-body {
+  padding: 10px 15px;
+  text-align: center;
+  color: white;
+  font-size: 1.7rem;
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  text-shadow: none;
 }
 .btn-primary {
   width: 50%;
   padding: 15px;
+  padding: 10px;
   font-size: 20px;
+  box-shadow: 5px 5px 3px black;
 }
 .btn-secondary {
   width: 50%;
   padding: 15px;
+  padding: 10px;
   font-size: 20px;
+  box-shadow: 5px 5px 3px black;
 }
 .modal__fade {
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
   height: 100%;
-  padding: 0 20% 10% 0;
+  padding: 30% 20% 10% 0;
+}
+.modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-top: none;
+  border-bottom-right-radius: .3rem;
+  border-bottom-left-radius: .3rem;
 }
 .planets {
   width: 70px;
@@ -160,7 +158,7 @@
     display: flex;
     width: 100%;
     height: 100%;
-    padding: 0% 20% 4% 0%;
+    padding: 30% 20% 4% 0%;
   }
   .modal-header {
     display: flex;
