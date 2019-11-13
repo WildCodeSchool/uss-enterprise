@@ -12,7 +12,7 @@ class QuizzPropositions extends Component {
     this.state = {
       isShowing: false,
       questionResult: false,
-      try: 0
+      try: 0,
     };
   }
 
@@ -21,7 +21,7 @@ class QuizzPropositions extends Component {
       isShowing: true,
       try: this.state.try + 1,
     });
-    this.props.calcPoints(this.state.questionResult, this.props.difficulty)
+    this.props.calcPoints(this.state.questionResult, this.props.difficulty, this.state.try)
   };
 
   closeModal = () => {

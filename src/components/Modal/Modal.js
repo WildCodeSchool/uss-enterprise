@@ -47,10 +47,15 @@ const Modal = ({ show, close, result }) => {
         </div>
 
         <div className="modal-footer">
-          <button className="btn-cancel" onClick={close}>
-            close
-          </button>
-          <button className="btn-continue">continue</button>
+          {result ? (
+              <button className="btn-continue">continue</button>
+           ) : (
+            <button className="btn-cancel" onClick={close}>
+              close
+            </button>
+            
+           )}
+          
         </div>
       </div>
     </div>

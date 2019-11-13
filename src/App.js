@@ -9,10 +9,10 @@ class App extends Component {
     points: 0,
   };
 
-  calcPoints = (questionResult, difficulty) => {
-    difficulty === "easy" ? this.setState({ points: this.state.points + 100 }) 
-    : difficulty === "medium" ? this.setState({ points: this.state.points + 200 }) 
-    : difficulty === "hard" ? this.setState({ points: this.state.points + 300 })
+  calcPoints = (questionResult, difficulty,NumberTry) => {
+    difficulty === "easy" && !questionResult ? this.setState({ points: this.state.points + 100 }) 
+    : difficulty === "medium" && !questionResult ? this.setState({ points: this.state.points + 200 }) 
+    : difficulty === "hard" && !questionResult ? this.setState({ points: this.state.points + 300 })
     : console.log("je sait pas quoi faire")
     }
 
