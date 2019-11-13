@@ -15,6 +15,7 @@ class IntroPage extends Component {
   }
 
   render() {
+    const { value } = this.state;
     return (
       <div className="IntroPage">
         <div className="top_container">
@@ -40,17 +41,19 @@ class IntroPage extends Component {
         <div className="form_container">
           <form method="post" className="player-form">
             <div className="p_container">
-              <label htmlFor="inputButton" className="label"></label>
+              <label htmlFor="inputButton" className="label">
+                <span className="sr-only">Name</span>
+                <input
+                  id="inputButton"
+                  value={value}
+                  onChange={this.handleChange}
+                  className="player-form-input"
+                  type="text"
+                  placeholder="Your Name"
+                  name="pseudo"
+                />
+              </label>
               {' '}
-              <input
-                id="inputButton"
-                value={this.state.value}
-                onChange={this.handleChange}
-                className="player-form-input"
-                type="text"
-                placeholder="Your Name"
-                name="pseudo"
-              />
             </div>
             <div className="button_container">
               <button className="button" type="submit">
