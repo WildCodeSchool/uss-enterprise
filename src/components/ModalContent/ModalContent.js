@@ -1,6 +1,10 @@
 import React from "react";
-import { Button, Modal } from "react";
+import { Button, Modal } from "react-bootstrap";
 import "./ModalContent.css";
+<<<<<<< HEAD:src/components/map_progression/ModalContent/ModalContent.js
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> fix problems:src/components/ModalContent/ModalContent.js
 
 class ModalContent extends React.Component {
   constructor(props) {
