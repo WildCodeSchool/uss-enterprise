@@ -4,7 +4,6 @@ import HomePage from "./components/HomePage/HomePage";
 import Quizz from "./components/Quizz/Quizz";
 import { Route } from "react-router-dom";
 
-
 class App extends Component {
   state = {
     points: 0
