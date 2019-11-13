@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./Quizz.css";
+
+import QuizzStars from "../QuizzStars/QuizzStars";
 import QuizzPropositions from "../QuizzPropositions/QuizzPropositions";
 
 class Quizz extends Component {
@@ -29,8 +31,7 @@ class Quizz extends Component {
 
   async getQuestion() {
     const response = await fetch(
-      "https://opentdb.com/api.php?amount=20&category=11&difficulty=" +
-        this.state.difficulty
+      "https://opentdb.com/api.php?amount=20&category=11&difficulty=" + this.state.difficulty
     );
     const data = await response.json();
     const {
@@ -71,6 +72,10 @@ class Quizz extends Component {
             difficulty={this.state.difficulty}
           />
         </div>
+        <p>prochaine texte</p>
+        <QuizzStars
+          difficulty={difficulty}
+          changeDiffculty={this.changeDiffculty}
         />
       </div>
     );
