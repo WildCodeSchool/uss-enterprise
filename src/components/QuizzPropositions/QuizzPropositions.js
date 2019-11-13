@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import "./QuizzPropositions.css";
 import Modal from "../Modal/Modal";
 import Answer from "../Answers/Answer";
-import Points from "../Points/Points";
-import QuizzStars from "../QuizzStars/QuizzStars";
 
 class QuizzPropositions extends Component {
   constructor(props) {
@@ -37,10 +35,11 @@ class QuizzPropositions extends Component {
 
   checkCorrectAnswer = e => {
     const { correctAnswer } = this.props;
-
+    
     this.setState({
-      questionResult: e.currentTarget.outerText === correctAnswer
-    });
+        questionResult: e.currentTarget.outerText === correctAnswer
+    })
+    ;
   };
 
   renderAnswers() {
@@ -58,13 +57,9 @@ class QuizzPropositions extends Component {
         return 0;
       })
       .map((answer, i) => (
-        <Answer
-          key={answer}
-          answer={answer}
-          id={`answer-${i}`}
-          checkCorrectAnswer={this.checkCorrectAnswer}
-        />
+        <Answer key={answer} answer={answer} id={`answer-${i}`} checkCorrectAnswer={this.checkCorrectAnswer}/>
       ));
+      
 
     return randomlySortedAnswers;
   }

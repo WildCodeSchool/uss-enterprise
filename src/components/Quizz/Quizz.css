@@ -25,6 +25,10 @@
   text-transform: uppercase;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/dev
 @keyframes text-focus-in {
   0% {
     filter: blur(12px);
