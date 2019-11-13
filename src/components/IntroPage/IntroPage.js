@@ -29,7 +29,7 @@ class IntroPage extends Component {
               </p>
               <p className="tell_name">
                 {' '}
-                But if beguin you want, first your name you need to tell me
+                But if begin you want, first your name you need to tell me
               </p>
             </div>
           </div>
