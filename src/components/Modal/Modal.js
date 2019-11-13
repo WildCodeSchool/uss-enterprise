@@ -48,10 +48,22 @@ const Modal = ({ show, close, result }) => {
         </div>
 
         <div className="modal-footer">
+<<<<<<< HEAD
+          {result ? (
+              <button className="btn-continue">continue</button>
+           ) : (
+            <button className="btn-cancel" onClick={close}>
+              close
+            </button>
+            
+           )}
+          
+=======
           <button className="btn-cancel" onClick={close}>
             close
           </button>
           <Link to="/nasa" className="btn-continue">continue</Link>
+>>>>>>> origin/dev
         </div>
       </div>
     </div>
