@@ -27,6 +27,9 @@
   transition: all 2s;
   width: 96%;
   border-radius: 50px;
+  bottom: 716px;
+  transform:translateY(-100vh);
+  opacity:0;
   bottom: 240px;
   transform:translateY(-100vh);
   opacity:0;
