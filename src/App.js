@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import IntroPage from './components/IntroPage/IntroPage'
 import './App.css';
+import IntroPage from './components/IntroPage/IntroPage'
 import HomePage from './components/HomePage/HomePage';
 import Quizz from './components/Quizz/Quizz';
 import FactsNasa from './components/FactsNasa/FactsNasa';
