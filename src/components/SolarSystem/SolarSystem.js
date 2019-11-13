@@ -97,7 +97,7 @@ class SolarSystem extends Component {
                   className="planets"
                   src={planet.planetURL}
                   alt={planet.id}
-                ></img>
+                />
               </Button>
             );
           })}
@@ -112,7 +112,7 @@ class SolarSystem extends Component {
               <Button variant="secondary" onClick={this.handleClose}>
                 Non...
               </Button>
-              <Link to="quizz" variant="primary" onClick={this.handleClose}>
+              <Link to="/quizz" variant="primary" onClick={this.handleClose}>
                 Oui !
               </Link>
             </Modal.Footer>
