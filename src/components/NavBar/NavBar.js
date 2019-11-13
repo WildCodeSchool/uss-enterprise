@@ -8,11 +8,13 @@ const NavBar = () => {
         <li className="cadet-name-nav">
           &#10026; [Your name] - [Name or niveau]
         </li>
-        <div className="lifes-li-nav">
-          <li className="life-on-nav">&#10084;</li>
-          <li className="life-on-nav">&#10084;</li>
-          <li className="life-off-nav">&#10084;</li>
-        </div>
+        <li>
+          <ul className="lifes-li-nav">
+            <li className="life-on-nav">&#10084;</li>
+            <li className="life-on-nav">&#10084;</li>
+            <li className="life-off-nav">&#10084;</li>
+          </ul>
+        </li>
       </ul>
     </div>
   );
