@@ -48,9 +48,6 @@ class App extends Component {
         <Route path="/nasa">
           <FactsNasa />
         </Route>
-        <Route path="/intro">
-          <IntroPage />
-        </Route>
       </div>
     );
   }
