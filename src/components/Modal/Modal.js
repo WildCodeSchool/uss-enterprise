@@ -3,6 +3,7 @@ import "./Modal.css";
 import palpatineSound from "./sound/palpatine.mp3";
 import yodaSound from "./sound/Yoda.mp3";
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
 const Modal = ({ show, close, result }) => {
   const data = result
@@ -50,7 +51,7 @@ const Modal = ({ show, close, result }) => {
           <button className="btn-cancel" onClick={close}>
             close
           </button>
-          <button className="btn-continue">continue</button>
+          <Link to="/nasa" className="btn-continue">continue</Link>
         </div>
       </div>
     </div>

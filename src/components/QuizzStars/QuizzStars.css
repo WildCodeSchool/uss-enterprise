@@ -38,20 +38,26 @@
 
 .divStars {
   align-self: center;
-  padding: 0px;
+  padding: 30px;
 }
 
 .selectDifficulty {
-  align-self: center;
   background-color: #191818a8;
   color: gold;
   font-weight: bold;
   font-size: 1.2rem;
   text-transform: uppercase;
   border: none;
-  appearance: none;
-  padding: 0.6em 1.4em 0.5em 0.8em;
   border-radius: 10px;
+}
+
+.selectDifficultyHidden {
+  display: none;
+}
+
+.imageDifficulty {
+  width: 70%;
+  padding-top: 50px;
 }
 
 .selectDifficulty:-internal-list-box {
@@ -59,5 +65,22 @@
 }
 
 .difficulty-label {
-  color:white
+  background-color: #0004046b;
+  font-family: "StarJedi";
+  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
+    -1px -1px 2px gold;
+  margin: 30px 10px;
+  font-size: 1.5rem;
+}
+
+@media (min-width:750px) {
+  .imageDifficulty {
+    width: 40%;
+  }
+}
+
+@media (min-width:850px) {
+  .imageDifficulty {
+    width: 20%;
+  }
 }
