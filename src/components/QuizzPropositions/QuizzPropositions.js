@@ -13,15 +13,20 @@ class QuizzPropositions extends Component {
       isShowing: false,
       questionResult: false,
       try: 0,
+      difficultyIsChoose: false
     };
   }
 
   openModal = () => {
     this.setState({
       isShowing: true,
-      try: this.state.try + 1,
+      try: this.state.try + 1
     });
-    this.props.calcPoints(this.state.questionResult, this.props.difficulty, this.state.try)
+    this.props.calcPoints(
+      this.state.questionResult,
+      this.props.difficulty,
+      this.state.try
+    );
   };
 
   closeModal = () => {
@@ -73,24 +78,31 @@ class QuizzPropositions extends Component {
             <div onClick={this.closeModal} className="back-drop"></div>
           )}
           {this.renderAnswers()}
-          
         </div>
-        <Points points={this.props.points} NumberTry={this.state.try} calcPoints={this.props.calcPoints} questionResult={this.state.questionResult} difficulty={this.props.difficulty} />
+        <Points
+          points={this.props.points}
+          NumberTry={this.state.try}
+          calcPoints={this.props.calcPoints}
+          questionResult={this.state.questionResult}
+          difficulty={this.props.difficulty}
+          difficultyIsChoose={this.state.difficultyIsChoose}
+        />
         <div>
           <div>
-
-          <button
-            className="open-modal-btn buttonQuizz"
-            onClick={this.openModal}
-          >
-            submit your answer !
-          </button>
+            <button
+              className="open-modal-btn buttonQuizz"
+              onClick={this.openModal}
+            >
+              submit your answer !
+            </button>
           </div>
 
           <QuizzStars
             difficulty={this.props.difficulty}
             changeDifficulty={this.props.changeDifficulty}
             NumberTry={this.state.try}
+            givePoints={this.props.givePoints}
+            difficultyIsChoose={this.props.difficultyIsChoose}
           />
 
           <Modal

@@ -1,17 +1,17 @@
 import React from "react";
 import "./QuizzStars.css";
 
-const QuizzStars = ({ difficulty, changeDifficulty, NumberTry }) => {
+const QuizzStars = ({ difficulty, changeDifficulty, NumberTry, givePoints, difficultyIsChoose }) => {
   return (
     <>
-      <label htmlFor="difficulty-select" className="difficulty-label">
+      <button onClick={() => givePoints(difficulty, difficultyIsChoose)} htmlFor="difficulty-select" className="difficulty-label">
         Choose a difficulty
-      </label>
+      </button>
 
       <div>
         <select
           onChange={changeDifficulty}
-          className= {NumberTry !== 0 ? 'selectDifficultyHidden' : "selectDifficulty"}
+          className= {difficultyIsChoose ? 'selectDifficultyHidden' : "selectDifficulty"}
           name="difficulty"
           id="difficulty-select"
         >

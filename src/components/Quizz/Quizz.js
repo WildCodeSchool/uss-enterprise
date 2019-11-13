@@ -68,6 +68,8 @@ class Quizz extends Component {
             calcPoints={this.props.calcPoints}
             difficulty={difficulty}
             changeDifficulty={this.changeDifficulty}
+            givePoints={this.props.givePoints}
+            difficultyIsChoose={this.props.difficultyIsChoose}
             
           />
         </div>

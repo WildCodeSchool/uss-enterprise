@@ -25,11 +25,6 @@
   text-transform: uppercase;
 }
 
-
-.test {
-  color: aliceblue;
-}
-
 @keyframes text-focus-in {
   0% {
     filter: blur(12px);
