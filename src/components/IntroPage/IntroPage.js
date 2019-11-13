@@ -36,11 +36,7 @@ function IntroPage() {
             />
           </div>
           <div className="button_container">
-<<<<<<< HEAD
-            <Link to="/quizz" className="button" type="submit">
-=======
             <Link to="/map" className="button" type="submit">
->>>>>>> cb4c3ab07b1b4ad913b8d043ea23df62160e4bc7
               GO
             </Link>
           </div>

@@ -51,17 +51,11 @@
 }
 
 /*Boutton planète */
-<<<<<<< HEAD
-#planetclick {
-=======
 .planetclick {
->>>>>>> cb4c3ab07b1b4ad913b8d043ea23df62160e4bc7
   padding: 0;
   border: none;
   background: none;
 }
-<<<<<<< HEAD
-=======
 
 .modal {
   display: flex !important;
@@ -242,4 +236,3 @@
     font-size: 30px;
   }
 }
->>>>>>> cb4c3ab07b1b4ad913b8d043ea23df62160e4bc7
