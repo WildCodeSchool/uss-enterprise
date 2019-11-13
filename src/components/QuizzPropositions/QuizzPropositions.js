@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./QuizzPropositions.css";
 import Modal from "../Modal/Modal";
 import Answer from "../Answers/Answer";
+import Points from '../Points/Points';
+import QuizzStars from '../QuizzStars/QuizzStars';
 
 class QuizzPropositions extends Component {
   constructor(props) {
