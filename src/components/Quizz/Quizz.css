@@ -26,13 +26,6 @@
 }
 
 
-<<<<<<< HEAD:src/components/Quizz/Quizz.css
-.test {
-  color: aliceblue;
-}
-
-=======
->>>>>>> sauvegarde + indentation avant PR:src/Components/Quizz/Quizz.css
 @keyframes text-focus-in {
   0% {
     filter: blur(12px);
