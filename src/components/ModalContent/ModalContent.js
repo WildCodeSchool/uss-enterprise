@@ -1,7 +1,7 @@
 import React from "react";
-import { Button, Modal } from "react";
+import { Button, Modal } from "react-bootstrap";
 import "./ModalContent.css";
-import { Link } from 'react';
+import { Link } from 'react-router-dom';
 
 class ModalContent extends React.Component {
   constructor(props) {

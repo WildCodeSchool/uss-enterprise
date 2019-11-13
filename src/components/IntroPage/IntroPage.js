@@ -1,7 +1,7 @@
 import React from "react";
 import "./IntroPage.css";
 import image from "./Alien.png";
-import { Link } from 'react';
+import { Link } from 'react-router-dom';
 
 function IntroPage() {
   return (
@@ -9,10 +9,10 @@ function IntroPage() {
       <div className="bubble_text_container">
         <div className="bubble_text">
           <p className="hello_text">
-            <div className="yoda-guide">
+            <span className="yoda-guide">
               Hello ! I'm YODA, your guide. Travel from planets to planets,
               answer the questions to complete your journey
-            </div>
+            </span><br/>
             READY ARE YOU? GO !
           </p>
           <p className="tell_name">
@@ -29,7 +29,7 @@ function IntroPage() {
           <div className="p_container">
             <label className="label"> </label>{" "}
             <input
-              class="player-form-input"
+              className="player-form-input"
               type="text"
               placeholder="Your Name"
               name="pseudo"
