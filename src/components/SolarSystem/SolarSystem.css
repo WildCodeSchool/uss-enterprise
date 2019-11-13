@@ -51,8 +51,188 @@
 }
 
 /*Boutton planète */
-#planetclick {
+.planetclick {
   padding: 0;
   border: none;
   background: none;
+}
+
+.modal {
+  display: flex !important;
+  align-items: center;
+  position: absolute;
+  top: -1500px;
+  transition: 0.3s;
+}
+
+.modal.show {
+  transition: 0.5s;
+  top: 0px;
+}
+
+.modal-content {
+  text-align: center;
+  background-image: url(https://www.biography.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTM1MzQ3NTM2ODYzOTkyMjg2/milky-wayjpg.jpg);
+  border: white solid 2px;
+  color: white;
+  opacity: 0.9;
+  display: inline-block;
+  font-size: 20px;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  padding-left: 6rem;
+}
+.btn-primary {
+  width: 50%;
+  padding: 15px;
+  font-size: 20px;
+}
+.btn-secondary {
+  width: 50%;
+  padding: 15px;
+  font-size: 20px;
+}
+.modal__fade {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  height: 100%;
+  padding: 0 20% 10% 0;
+}
+.planets {
+  width: 70px;
+  animation: rotate-center 25s linear infinite both;
+  animation: rotate-center 25s linear infinite both;
+}
+.planetclick:nth-child(1) {
+  padding-left: 10%;
+}
+.planetclick:nth-child(2) {
+  padding-left: 50%;
+}
+.planetclick:nth-child(3) {
+  padding-left: 80%;
+}
+.planetclick:nth-child(4) {
+  padding-left: 50%;
+}
+.planetclick:nth-child(5) {
+  padding-left: 18%;
+}
+.planetclick:nth-child(6) {
+  padding-left: 0%;
+}
+.planetclick:nth-child(7) {
+  padding-left: 35%;
+}
+.planetclick:nth-child(8) {
+  padding-left: 50%;
+}
+@-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}
+
+/*Media Query Tablette */
+@media screen and (min-width: 767px) {
+  .planets {
+    width: 130px;
+  }
+  .modal__fade {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0% 20% 4% 0%;
+  }
+  .modal-header {
+    display: flex;
+    align-items: center;
+    padding-left: 6rem;
+    height: 200px;
+  }
+  .h4,
+  h4 {
+    font-size: 4.5rem;
+  }
+  .modal-content {
+    text-align: center;
+    border: white solid 2px;
+    color: white;
+    opacity: 0.9;
+    display: inline-block;
+    font-size: 40px;
+    height: 500px;
+    width: 500px;
+  }
+  .btn-secondary {
+    width: 50%;
+    padding: 15px;
+    font-size: 30px;
+  }
+  .btn-primary {
+    width: 50%;
+    padding: 15px;
+    font-size: 30px;
+  }
+}
+
+/*desktop*/
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .planets {
+    width: 130px;
+  }
+  .modal__fade {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0% 20% 4% 0%;
+  }
+  .modal-header {
+    display: flex;
+    align-items: center;
+    padding-left: 6rem;
+    height: 200px;
+  }
+  .h4,
+  h4 {
+    font-size: 5.5rem;
+  }
+  .modal-content {
+    text-align: center;
+    border: white solid 2px;
+    color: white;
+    opacity: 0.9;
+    display: inline-block;
+    font-size: 40px;
+    height: 500px;
+    width: 500px;
+  }
+  .btn-secondary {
+    width: 50%;
+    padding: 15px;
+    font-size: 30px;
+  }
+  .btn-primary {
+    width: 50%;
+    padding: 15px;
+    font-size: 30px;
+  }
 }

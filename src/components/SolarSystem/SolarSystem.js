@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import "./SolarSystem.css";
-import ModalContent from "../ModalContent/ModalContent";
+import { Button, Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 class SolarSystem extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      show: false,
+      idChoosen: 0,
       planetList: [
         {
           id: 1,
@@ -55,18 +58,65 @@ class SolarSystem extends Component {
           planetURL:
             "http://www.pngall.com/wp-content/uploads/2/Mercury-Planet.png"
         }
-      ],
-      progression : "planet0",
+      ]
     };
   }
 
+  handleClose = () => {
+    this.setState({
+      show: false
+    });
+  };
+
+  handleShow = () => {
+    this.setState({
+      show: true
+    });
+  };
+
   render() {
+    const { show, planetList, idChoosen } = this.state;
     return (
       <div className="content-planet">
-        <ModalContent planetsList={this.state.planetList}/>
-        <div className="status">
-          {console.log(this.state.planetList)}
-          <span className={this.state.planetList[0].done ? "done" : "todo"}> </span>
+        <div className="modal__fade">
+          {planetList.map(planet => {
+            return (
+              <Button
+                key={planet.id}
+                variant="none"
+                onClick={e => {
+                  this.setState({
+                    idChoosen: planet.id
+                  });
+                  this.handleShow();
+                }}
+                type="button"
+                className="planetclick"
+              >
+                <img
+                  className="planets"
+                  src={planet.planetURL}
+                  alt={planet.id}
+                ></img>
+              </Button>
+            );
+          })}
+          <Modal show={show} onHide={this.handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Niveau {idChoosen}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="Modal__Body">
+              Are you ready to travel to this planet?{" "}
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={this.handleClose}>
+                Non...
+              </Button>
+              <Link to="quizz" variant="primary" onClick={this.handleClose}>
+                Oui !
+              </Link>
+            </Modal.Footer>
+          </Modal>
         </div>
       </div>
     );
