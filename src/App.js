@@ -13,6 +13,7 @@ class App extends Component {
     points: 0,
     difficultyIsChoose: false,
     name: '' ,
+    displayAnswers: false,
   };
 
   handleChange = (event) => {
@@ -34,12 +35,15 @@ class App extends Component {
     if (difficulty === "easy" && !difficultyIsChoose) {
       this.setState({ points: this.state.points + 50 });
       this.setState({ difficultyIsChoose: true });
+      this.setState({ displayAnswers: true });
     } else if (difficulty === "medium" && !difficultyIsChoose) {
       this.setState({ points: this.state.points + 100 });
       this.setState({ difficultyIsChoose: true });
+      this.setState({ displayAnswers: true });
     } else if (difficulty === "hard" && !difficultyIsChoose) {
       this.setState({ points: this.state.points + 150 });
       this.setState({ difficultyIsChoose: true });
+      this.setState({ displayAnswers: true });
     }
   };
 
@@ -70,6 +74,7 @@ class App extends Component {
             givePoints={this.givePoints}
             difficultyIsChoose={this.state.difficultyIsChoose}
             name={this.state.name}
+            displayAnswers={this.state.displayAnswers}
           />
         </Route>
         <Route path="/nasa">

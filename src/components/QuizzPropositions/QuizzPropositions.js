@@ -70,7 +70,7 @@ class QuizzPropositions extends Component {
     const { isShowing, questionResult } = this.state;
     return (
       <>
-        <div className="zoneReponse">
+        <div className={this.props.displayAnswers === false ? "zoneReponseNotVisible" : "zoneReponse"}>
           {isShowing && (
             <div onClick={this.closeModal} className="back-drop"></div>
           )}
