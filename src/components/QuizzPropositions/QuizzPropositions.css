@@ -45,3 +45,6 @@
   background-color: #1f202fa1;
   padding: 15px 10px;
 }
+.zoneReponseNotVisible {
+  display: none;
+}
