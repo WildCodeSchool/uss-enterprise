@@ -1,12 +1,19 @@
 import React from "react";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = ({ points }) => {
+
   return (
+
     <div className="nav-bar">
+      {console.log(points)}
       <ul className="ul-nav">
         <li className="cadet-name-nav">
-          &#10026; [Your name] - [Name or niveau]
+          <div>
+            &#10026; [Your name] -[Points:
+            {points}
+            ]
+          </div>
         </li>
         <li>
           <ul className="lifes-li-nav">

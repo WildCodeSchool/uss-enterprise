@@ -50,7 +50,7 @@ class App extends Component {
           <div className="stars">
             <div className="twinkling">
               <div className="clouds">
-                <NavBar />
+                <NavBar points={this.state.points}/>
                 <SolarSystem />
               </div>
             </div>
