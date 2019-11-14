@@ -46,6 +46,7 @@ class IntroPage extends Component {
                   type="text"
                   placeholder="Your Name"
                   name="pseudo"
+                  required
                 />
               </label>
               {' '}
