@@ -243,7 +243,8 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-left:20%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .button_container {
@@ -304,6 +305,7 @@
 }
 
 .label {
+  display: flex;
   -webkit-animation: button 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 10s both;
   animation: button 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 10s both;
 }
@@ -338,6 +340,7 @@
   .player_form {
     height: 10%;
     width: 50%;
+    
   }
 
   .bubble_text_container {
@@ -358,6 +361,8 @@
     width: 60%;
     margin-bottom: 10%;
     margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .bubble_text {
@@ -366,7 +371,7 @@
 
   .label {
     font-size: 2rem;
-    margin-right: 5%;
+   
   }
 
   .player-form {
@@ -381,6 +386,7 @@
    width: 20%;
 }
 }
+
 @media (min-width: 1025px) {
 
 .IntroPage {
@@ -484,7 +490,6 @@
 }
 .p_container{
   margin-top: 7%;
-  margin-left: 10%;
   margin-bottom: 5%;
 }
 }
