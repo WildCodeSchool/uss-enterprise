@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./SolarSystem.css";
 import { Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "../ProgressBar/ProgressionBar.css";
 
 class SolarSystem extends Component {
   constructor(props) {
@@ -75,7 +76,7 @@ class SolarSystem extends Component {
   };
 
   render() {
-    const { show, planetList, idChoosen } = this.state;
+    const { show, planetList, idChoosen, done } = this.state;
     return (
       <div className="content-planet">
         <div className="modal__fade">
@@ -112,7 +113,12 @@ class SolarSystem extends Component {
               <Button variant="secondary" onClick={this.handleClose}>
                 Non...
               </Button>
-              <Link to="/quizz" className="btn btn-primary" variant="primary" onClick={this.handleClose}>
+              <Link
+                to="/quizz"
+                className="btn btn-primary"
+                variant="primary"
+                onClick={this.handleClose}
+              >
                 Oui !
               </Link>
             </Modal.Footer>

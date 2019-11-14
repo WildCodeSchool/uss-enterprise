@@ -1,4 +1,3 @@
-
 @-webkit-keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
@@ -20,12 +19,14 @@
   }
 }
 
+
 /*Boutton planète */
 .planetclick {
   padding: 0;
   border: none;
   background: none;
 }
+
 
 .modal {
   display: flex !important;
@@ -55,7 +56,8 @@
   padding-left: 6rem;
   border-bottom: none;
   font-family: "StarJedi";
-  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold, -1px -1px 2px gold;
+  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
+    -1px -1px 2px gold;
   color: black;
 }
 .modal-body {
@@ -63,7 +65,8 @@
   text-align: center;
   color: white;
   font-size: 1.7rem;
-  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-shadow: none;
 }
 .btn-primary {
@@ -96,8 +99,8 @@
   justify-content: flex-end;
   padding: 1rem;
   border-top: none;
-  border-bottom-right-radius: .3rem;
-  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
 }
 .planets {
   width: 70px;

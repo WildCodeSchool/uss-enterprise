@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	
+		
+    <title>Progress Bar</title>
+	
+  </head>
+  <body>
+	<!-- Container -->
+	<div class="container">
+	
+    <h1>This Process bar is animated using <br>JavaScript!</h1>
+	<br>
+	
+	<!-- Div For Progress Bar -->
+	<div class="progress">
+		<div class="progress-bar progress-bar-striped" role="progressbar"  style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progressbar" >0%</div>
+	</div>
+	
+	<br>
+	<!-- Buttons -->
+	<button type="button" class="btn btn-primary" onclick = "increment()">Increment</button>
+	<button type="button" class="btn btn-dark" onclick="resetButton()">Reset</button>
+	<button type="button" class="btn btn-success" onclick="decrement()">Decrement</button>
+	<button type="button" class="btn btn-warning" onclick="">Start Auto Progress!</button>
+	<button type="button" class="btn btn-danger" onclick="">Stop Auto Progress!</button>
+	
+	<p id="value"> </p>
+	<!-- End of Container -->
+	</div>
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<script src="Assignment4.js"></script>
+ </body>
+</html>
+
+<script>
+function getProgress() {
+	return document.getElementById("progressbar").getAttribute("aria-valuenow");
+	return document.getElementById("progressbar").getAttribute("style","width");
+	return document.getElementById("progressbar").innerHTML;
+	}
+
+function setProgress(value) {
+	document.getElementById("progressbar").setAttribute("aria-valuenow",value);
+	document.getElementById("progressbar").setAttribute("style","width: " +value+ "%");	
+	document.getElementById("progressbar").innerHTML = (value+ "%"); 
+}
+
+function increment() {
+	var i = getProgress();
+	if(i < 100){
+		i++;
+		setProgress(i);	
+	}else{
+		alert("Progress Complete!");
+	}
+}
+
+function decrement() {
+	var d = getProgress();
+	setProgress(d - 1);
+}
+
+function resetButton() {
+	var r = getProgress();
+	setProgress(r = 0);
+}</script>
