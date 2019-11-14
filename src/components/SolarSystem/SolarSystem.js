@@ -12,49 +12,49 @@ class SolarSystem extends Component {
       planetList: [
         {
           id: 1,
-          done: true,
+          status: true,
           planetURL:
             "http://assets.stickpng.com/thumbs/5a00de530e8525eec2752fff.png"
         },
         {
           id: 2,
-          done: false,
+          status: false,
           planetURL:
             "https://space-facts.com/wp/wp-content/uploads/mercury-transparent.png"
         },
         {
           id: 3,
-          done: false,
+          status: false,
           planetURL:
             "https://space-facts.com/wp-content/uploads/mars-transparent.png"
         },
         {
           id: 4,
-          done: false,
+          status: false,
           planetURL:
             "https://cdn.pixabay.com/photo/2018/10/22/01/00/blue-3764277_960_720.png"
         },
         {
           id: 5,
-          done: false,
+          status: false,
           planetURL:
             "http://pngimg.com/uploads/mars_planet/mars_planet_PNG27.png"
         },
         {
           id: 6,
-          done: false,
+          status: false,
           planetURL:
             "http://www.pngmart.com/files/3/Space-Planet-PNG-Transparent-Image.png"
         },
         {
           id: 7,
-          done: true,
+          status: false,
           planetURL:
             "https://i1.wp.com/freepngimages.com/wp-content/uploads/2016/04/saturn-transparent-background-planet-1.png?fit=797%2C620"
         },
         {
           id: 8,
-          done: true,
+          status: false,
           planetURL:
             "http://www.pngall.com/wp-content/uploads/2/Mercury-Planet.png"
         }
@@ -79,7 +79,8 @@ class SolarSystem extends Component {
     return (
       <div className="content-planet">
         <div className="modal__fade">
-          {planetList.map(planet => {
+          {
+          planetList.map(planet => {
             return (
               <Button
                 key={planet.id}
@@ -92,6 +93,7 @@ class SolarSystem extends Component {
                 }}
                 type="button"
                 className="planetclick"
+                disabled={!planet.status}
               >
                 <img
                   className="planets"
@@ -99,6 +101,8 @@ class SolarSystem extends Component {
                   alt={planet.id}
                 />
               </Button>
+              
+             
             );
           })}
           <Modal show={show} onHide={this.handleClose}>
