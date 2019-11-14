@@ -2,23 +2,20 @@ import React from "react";
 import "./NavBar.css";
 
 const NavBar = ({ points, name }) => {
-
   return (
 
     <div className="nav-bar">
       <ul className="ul-nav">
+        <li className="gameTitle">
+          Wild space odyssey
+        </li>
         <li className="cadet-name-nav">
           <div>
+            <span className="icon">
             &#10026;
-            {`[${name}] -[Points:${points}]`}
+            </span>
+            {`     ${name} -   Points:  ${points}`}
           </div>
-        </li>
-        <li>
-          <ul className="lifes-li-nav">
-            <li className="life-on-nav">&#10084;</li>
-            <li className="life-on-nav">&#10084;</li>
-            <li className="life-off-nav">&#10084;</li>
-          </ul>
         </li>
       </ul>
     </div>
