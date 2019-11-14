@@ -16,13 +16,13 @@ class IntroPage extends Component {
         <div className="top_container">
           <div className="bubble_text_container">
             <div className="bubble_text">
-              <p className="hello_text">
+              <div className="hello_text">
                 <div className="yoda-guide">
                   Hello ! I'm YODA, your guide. Travel from planets to planets,
                   answer the questions to complete your journey
                 </div>
                 READY ARE YOU? GO !
-              </p>
+              </div>
               <p className="tell_name">
                 {' '}
                 But if begin you want, first your name you need to tell me
