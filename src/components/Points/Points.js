@@ -7,8 +7,8 @@ const Points = ({ points , NumberTry }) => {
 
         <div className="points">
             
-            <p>vous avez {points} Points</p>
-            <p>c'est votre {NumberTry} tentatives </p> 
+            <p>{points} Points</p>
+            <p>{NumberTry} tentatives </p> 
         </div>
     )
 

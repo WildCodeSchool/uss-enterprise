@@ -76,14 +76,7 @@ class QuizzPropositions extends Component {
           )}
           {this.renderAnswers()}
         </div>
-        <Points
-          points={this.props.points}
-          NumberTry={this.state.try}
-          calcPoints={this.props.calcPoints}
-          questionResult={this.state.questionResult}
-          difficulty={this.props.difficulty}
-          difficultyIsChoose={this.state.difficultyIsChoose}
-        />
+        
         <div>
           <div>
             <button
@@ -92,6 +85,14 @@ class QuizzPropositions extends Component {
             >
               submit your answer !
             </button>
+            <Points
+          points={this.props.points}
+          NumberTry={this.state.try}
+          calcPoints={this.props.calcPoints}
+          questionResult={this.state.questionResult}
+          difficulty={this.props.difficulty}
+          difficultyIsChoose={this.state.difficultyIsChoose}
+        />
           </div>
 
           <QuizzStars
