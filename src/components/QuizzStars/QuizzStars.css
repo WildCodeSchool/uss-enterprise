@@ -1,0 +1,94 @@
+.starsHalf {
+  background-position: -38px 0;
+  background-image: url(https://static.aliasdmc.fr/img/widgets/review.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 36px;
+  overflow: hidden;
+  text-indent: 999px;
+  width: 36px;
+}
+
+.starsEmpty {
+  background-position: -76px 0;
+  background-image: url(https://static.aliasdmc.fr/img/widgets/review.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 36px;
+  overflow: hidden;
+  text-indent: 999px;
+  width: 36px;
+}
+
+.starsFull {
+  background-image: url(https://static.aliasdmc.fr/img/widgets/review.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 36px;
+  overflow: hidden;
+  text-indent: 999px;
+  width: 36px;
+}
+
+.divStars {
+  align-self: center;
+  padding: 30px;
+}
+
+.selectDifficulty {
+  background-color: #191818a8;
+  color: gold;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+}
+
+.selectDifficultyHidden {
+  display: none;
+}
+
+.imageDifficulty {
+  align-self: center;
+  width: 60%;
+}
+
+.divImageDifficulty {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.selectDifficulty:-internal-list-box {
+  background-color: red;
+}
+
+.difficulty-label {
+  background-color: #0004046b;
+  font-family: "StarJedi";
+  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
+    -1px -1px 2px gold;
+  margin: 30px 10px;
+  font-size: 1.5rem;
+  color: black;
+  border: 2px solid gold;
+}
+
+@media (min-width: 750px) {
+  .imageDifficulty {
+    width: 40%;
+  }
+}
+
+@media (min-width: 850px) {
+  .imageDifficulty {
+    width: 20%;
+  }
+}
