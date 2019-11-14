@@ -11,8 +11,14 @@ import NavBar from "./components/NavBar/NavBar";
 class App extends Component {
   state = {
     points: 0,
-    difficultyIsChoose: false
+    difficultyIsChoose: false,
+    name: '' ,
   };
+
+  handleChange = (event) => {
+    this.setState({ name: event.target.value });
+  }
+
 
   calcPoints = (questionResult, difficulty, NumberTry) => {
     if (difficulty === "easy" && !questionResult) {
@@ -44,7 +50,7 @@ class App extends Component {
           <HomePage />
         </Route>
         <Route path="/intro">
-          <IntroPage />
+          <IntroPage handleChange={this.handleChange} name={this.state.name} />
         </Route>
         <Route path="/map">
           <div className="stars">
@@ -62,6 +68,7 @@ class App extends Component {
             calcPoints={this.calcPoints}
             givePoints={this.givePoints}
             difficultyIsChoose={this.state.difficultyIsChoose}
+            name={this.state.name}
           />
         </Route>
         <Route path="/nasa">

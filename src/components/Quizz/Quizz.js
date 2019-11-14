@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./Quizz.css";
-
-import QuizzStars from "../QuizzStars/QuizzStars";
 import QuizzPropositions from "../QuizzPropositions/QuizzPropositions";
 
 class Quizz extends Component {
@@ -58,6 +56,7 @@ class Quizz extends Component {
     return (
       <div className="contentQuizz">
         <h1 className="titleQuizz text-focus-in">
+          {this.props.name}<br />
           may the force be with you !!!
         </h1>
         <p className="questionQuizz">{question}</p>
@@ -74,11 +73,6 @@ class Quizz extends Component {
             
           />
         </div>
-        <p>prochaine texte</p>
-        <QuizzStars
-          difficulty={difficulty}
-          changeDiffculty={this.changeDiffculty}
-        />
       </div>
     );
   }

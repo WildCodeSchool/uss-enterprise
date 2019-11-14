@@ -13,6 +13,7 @@
   letter-spacing: 3px;
   font-family: "StarJedi";
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  padding: 20px 5px;
 }
 
 .questionQuizz {
@@ -25,10 +26,6 @@
   text-transform: uppercase;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/dev
 @keyframes text-focus-in {
   0% {
     filter: blur(12px);

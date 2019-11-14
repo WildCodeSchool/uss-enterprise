@@ -6,17 +6,11 @@ import image from './Alien.png';
 
 class IntroPage extends Component {
   constructor(props) {
-    super(props);
-    this.state = { value: '' };
-    this.handleChange = this.handleChange.bind(this);
+    super();
   }
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
+  
   render() {
-    const { value } = this.state;
     return (
       <div className="IntroPage">
         <div className="top_container">
@@ -46,8 +40,8 @@ class IntroPage extends Component {
                 <span className="sr-only">Name</span>
                 <input
                   id="inputButton"
-                  value={value}
-                  onChange={this.handleChange}
+                  value={this.props.value}
+                  onChange={this.props.handleChange}
                   className="player-form-input"
                   type="text"
                   placeholder="Your Name"
