@@ -67,12 +67,21 @@ class SolarSystem extends Component {
       show: false
     });
   };
-
-  handleShow = () => {
-    this.setState({
-      show: true
+  
+  handleShow = (idChoosen) => {
+    const planetList = this.state.planetList.map(planet => {
+      if (planet.id === idChoosen+1) {
+        return { ...planet, status: true }
+      }
+      return planet
     });
-  };
+    this.setState({
+      show: true,
+      idChoosen,
+      planetList
+    });
+  }
+
 
   render() {
     const { show, planetList, idChoosen } = this.state;
@@ -80,17 +89,15 @@ class SolarSystem extends Component {
       <div className="content-planet">
         <div className="modal__fade">
           {
-          planetList.map(planet => {
+          planetList.map((planet, index) => {
             return (
               <Button
                 key={planet.id}
                 variant="none"
                 onClick={e => {
-                  this.setState({
-                    idChoosen: planet.id
-                  });
-                  this.handleShow();
+                  this.handleShow(planet.id);
                 }}
+                value = {planet.id}
                 type="button"
                 className="planetclick"
                 disabled={!planet.status}
