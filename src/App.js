@@ -4,9 +4,10 @@ import IntroPage from "./components/IntroPage/IntroPage";
 import HomePage from "./components/HomePage/HomePage";
 import Quizz from "./components/Quizz/Quizz";
 import FactsNasa from "./components/FactsNasa/FactsNasa";
-import { Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import SolarSystem from "./components/SolarSystem/SolarSystem";
 import NavBar from "./components/NavBar/NavBar";
+import NoMatch from "./components/NoMatch/NoMatch";
 
 class App extends Component {
   state = {
@@ -51,35 +52,40 @@ class App extends Component {
     const { points, name } = this.state;
     return (
       <div className="App">
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route path="/intro">
-          <IntroPage handleChange={this.handleChange} name={this.state.name} />
-        </Route>
-        <Route path="/map">
-          <div className="stars">
-            <div className="twinkling">
-              <div className="clouds">
-                <NavBar points={points} name={name}/>
-                <SolarSystem />
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/intro">
+            <IntroPage handleChange={this.handleChange} name={this.state.name} />
+          </Route>
+          <Route path="/map">
+            <div className="stars">
+              <div className="twinkling">
+                <div className="clouds">
+                  <NavBar points={points} name={name}/>
+                  <SolarSystem />
+                </div>
               </div>
             </div>
-          </div>
-        </Route>
-        <Route path="/quizz">
-          <Quizz
-            points={this.state.points}
-            calcPoints={this.calcPoints}
-            givePoints={this.givePoints}
-            difficultyIsChoose={this.state.difficultyIsChoose}
-            name={this.state.name}
-            displayAnswers={this.state.displayAnswers}
-          />
-        </Route>
-        <Route path="/nasa">
-          <FactsNasa />
-        </Route>
+          </Route>
+          <Route path="/quizz">
+            <Quizz
+              points={this.state.points}
+              calcPoints={this.calcPoints}
+              givePoints={this.givePoints}
+              difficultyIsChoose={this.state.difficultyIsChoose}
+              name={this.state.name}
+              displayAnswers={this.state.displayAnswers}
+            />
+          </Route>
+          <Route path="/nasa">
+            <FactsNasa />
+          </Route>
+          <Route path="*">
+            <NoMatch />
+          </Route>
+        </Switch>
       </div>
     );
   }
