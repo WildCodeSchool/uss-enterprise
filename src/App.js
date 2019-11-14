@@ -44,6 +44,7 @@ class App extends Component {
   };
 
   render() {
+    const { points, name } = this.state;
     return (
       <div className="App">
         <Route exact path="/">
@@ -56,7 +57,7 @@ class App extends Component {
           <div className="stars">
             <div className="twinkling">
               <div className="clouds">
-                <NavBar points={this.state.points}/>
+                <NavBar points={points} name={name}/>
                 <SolarSystem />
               </div>
             </div>
