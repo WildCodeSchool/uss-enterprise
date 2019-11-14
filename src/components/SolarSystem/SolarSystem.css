@@ -1,4 +1,3 @@
-
 @-webkit-keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
@@ -55,7 +54,8 @@
   padding-left: 6rem;
   border-bottom: none;
   font-family: "StarJedi";
-  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold, -1px -1px 2px gold;
+  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
+    -1px -1px 2px gold;
   color: black;
 }
 .modal-body {
@@ -63,7 +63,8 @@
   text-align: center;
   color: white;
   font-size: 1.7rem;
-  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-shadow: none;
 }
 .btn-primary {
@@ -85,7 +86,7 @@
   flex-direction: column-reverse;
   width: 100%;
   height: 100%;
-  padding: 30% 20% 10% 0;
+  padding: 30% 30% 10% 0;
 }
 .modal-footer {
   display: -ms-flexbox;
@@ -96,11 +97,11 @@
   justify-content: flex-end;
   padding: 1rem;
   border-top: none;
-  border-bottom-right-radius: .3rem;
-  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
 }
 .planets {
-  width: 70px;
+  width: 125px;
   animation: rotate-center 25s linear infinite both;
   animation: rotate-center 25s linear infinite both;
 }
@@ -150,21 +151,32 @@
 }
 
 /*Media Query Tablette */
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .planets {
-    width: 130px;
+    width: 250px;
   }
   .modal__fade {
     display: flex;
     width: 100%;
     height: 100%;
-    padding: 30% 20% 4% 0%;
+    padding: 30% 22% 4% 0%;
   }
   .modal-header {
     display: flex;
     align-items: center;
     padding-left: 6rem;
     height: 200px;
+  }
+  .modal-content {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .modal-body {
+    font-size: 2.7rem;
+    padding: 5%;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
   }
   .h4,
   h4 {
@@ -181,38 +193,33 @@
     width: 500px;
   }
   .btn-secondary {
-    width: 50%;
-    padding: 15px;
+    width: 60%;
+    padding: 25px;
     font-size: 30px;
   }
   .btn-primary {
-    width: 50%;
-    padding: 15px;
+    width: 60%;
+    padding: 25px;
     font-size: 30px;
   }
 }
 
 /*desktop*/
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 1025px){
   .planets {
-    width: 130px;
-  }
-  .modal__fade {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding: 0% 20% 4% 0%;
-  }
-  .modal-header {
-    display: flex;
-    align-items: center;
-    padding-left: 6rem;
-    height: 200px;
+    width: 150px;
   }
   .h4,
   h4 {
     font-size: 5.5rem;
   }
+  .modal__fade {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 30% 20% 4% 0%;
+    flex-direction: row;
+}
   .modal-content {
     text-align: center;
     border: white solid 2px;
@@ -232,5 +239,33 @@
     width: 50%;
     padding: 15px;
     font-size: 30px;
+  }
+  .planetclick:nth-child(1) {
+    padding-bottom:  30%;
+  }
+  .planetclick:nth-child(2) {
+    padding-left:  0%;
+  }
+  .planetclick:nth-child(3) {
+    padding-left: 0%;
+    padding-top: 20%;
+  }
+  .planetclick:nth-child(4) {
+    padding-left:  0%;
+  }
+  .planetclick:nth-child(5) {
+    padding-left:  0%;
+    padding-bottom: 35%;
+  }
+  .planetclick:nth-child(6) {
+    padding-left: 0%;
+  }
+  .planetclick:nth-child(7) {
+    padding-left:  0%;
+    padding-top: 25%;
+  }
+  .planetclick:nth-child(8) {
+    padding-left:  0%;
+    padding-bottom: 5%;
   }
 }
