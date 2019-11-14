@@ -27,7 +27,7 @@
   transition: all 2s;
   width: 96%;
   border-radius: 50px;
-  bottom: 716px;
+  bottom: 950px;
   transform:translateY(-100vh);
   opacity:0;
 }
@@ -48,6 +48,14 @@
 .modal-body {
   padding: 10px 15px;
   text-align: center;
+  color: black;
+  font-size: 1.7rem;
+  font-family: "StarJedi";
+  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
+    -1px -1px 2px gold;
+}
+
+.modal-body p {
   color: black;
   font-size: 1.7rem;
   font-family: "StarJedi";
@@ -97,7 +105,7 @@
 
 .back-drop {
   background-color: rgba(16, 16, 16, 0.82);
-  height: 798px;
+  height: 105vh;
   position: absolute;
   transition: all 1.3s;
   width: 100%;

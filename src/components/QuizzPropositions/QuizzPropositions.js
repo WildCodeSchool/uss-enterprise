@@ -80,7 +80,7 @@ class QuizzPropositions extends Component {
         <div>
           <div>
             <button
-              className="open-modal-btn buttonQuizz"
+              className={this.props.displayAnswers === false ? "zoneReponseNotVisible" : "open-modal-btn buttonQuizz"}
               onClick={this.openModal}
             >
               submit your answer !
@@ -108,6 +108,7 @@ class QuizzPropositions extends Component {
             show={isShowing}
             close={this.closeModal}
             result={questionResult}
+            name={this.props.name}
           ></Modal>
         </div>
       </>
