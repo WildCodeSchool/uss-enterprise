@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Redirect } from "react";
 import "./IntroPage.css";
 import { Link } from "react-router-dom";
 import image from "./Alien.png";
