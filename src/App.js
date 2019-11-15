@@ -75,7 +75,7 @@ class App extends Component {
               <div className="twinkling">
                 <div className="clouds">
                   <NavBar points={points} name={name} />
-                  <SolarSystem />
+                  <SolarSystem name={name}/>
                 </div>
               </div>
             </div>

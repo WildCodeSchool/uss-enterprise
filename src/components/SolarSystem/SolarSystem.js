@@ -110,7 +110,7 @@ class SolarSystem extends Component {
              <Modal.Title>Niveau {idChoosen}</Modal.Title>
            </Modal.Header>
            <Modal.Body className="Modal__Body">
-             Are you ready to travel to this planet?{" "}
+             {this.props.name},<br/> are you ready to travel to this planet?
            </Modal.Body>
            <Modal.Footer>
              <Button variant="secondary" onClick={this.handleClose}>

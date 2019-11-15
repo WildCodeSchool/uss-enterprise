@@ -43,7 +43,12 @@
 
 
 @media screen and (min-width: 767px) {
-   
+  .gameTitle {
+    font-size: 4vh;
+    margin-top: 3%;
+    font-family: "StarJedi";
+    text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold, -1px -1px 2px gold;
+}
 }
 @media (min-width: 1200px) {
   .ul-nav {
