@@ -29,7 +29,7 @@ class Quizz extends Component {
 
   async getQuestion() {
     const response = await fetch(
-      "https://opentdb.com/api.php?amount=20&category=15&difficulty=" + this.state.difficulty
+      "https://opentdb.com/api.php?amount=20&category=11&difficulty=" + this.state.difficulty
     );
     const data = await response.json();
     const {

@@ -1,6 +1,6 @@
 import React, { Component, Redirect } from "react";
 import "./IntroPage.css";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import image from "./Alien.png";
 
 class IntroPage extends Component {

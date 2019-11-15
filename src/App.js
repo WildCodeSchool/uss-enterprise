@@ -26,16 +26,16 @@ class App extends Component {
     if (difficulty === "easy" && !questionResult) {
       this.setState({ points: this.state.points - 25 });
     } else if (difficulty === "medium" && !questionResult) {
-      this.setState({ points: this.state.points - 50 });
-    } else if (difficulty === "hard" && !questionResult) {
       this.setState({ points: this.state.points - 75 });
+    } else if (difficulty === "hard" && !questionResult) {
+      this.setState({ points: this.state.points - 200 });
     }
     if (difficulty === "easy" && questionResult) {
-      this.setState({ points: this.state.points + 25 });
-    } else if (difficulty === "medium" && questionResult) {
       this.setState({ points: this.state.points + 50 });
+    } else if (difficulty === "medium" && questionResult) {
+      this.setState({ points: this.state.points + 100 });
     } else if (difficulty === "hard" && questionResult) {
-      this.setState({ points: this.state.points + 75 });
+      this.setState({ points: this.state.points + 200 });
     }
     
     
@@ -43,15 +43,12 @@ class App extends Component {
 
   givePoints = (difficulty, difficultyIsChoose) => {
     if (difficulty === "easy" && !difficultyIsChoose ) {
-      this.setState({ points: this.state.points + 50 });
       this.setState({ difficultyIsChoose: true });
       this.setState({ displayAnswers: true });
     } else if (difficulty === "medium" && !difficultyIsChoose) {
-      this.setState({ points: this.state.points + 100 });
       this.setState({ difficultyIsChoose: true });
       this.setState({ displayAnswers: true });
     } else if (difficulty === "hard" && !difficultyIsChoose) {
-      this.setState({ points: this.state.points + 150 });
       this.setState({ difficultyIsChoose: true });
       this.setState({ displayAnswers: true });
     }
