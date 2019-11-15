@@ -2,15 +2,26 @@ import React, { Component } from 'react';
 import './IntroPage.css';
 import { Link } from 'react-router-dom';
 import image from './Alien.png';
+import { Redirect } from 'react-router-dom';
 
 
 class IntroPage extends Component {
   constructor(props) {
     super();
+    this.state = {shoulRedirect : false}
+  
   }
 
-  
+  handleSubmit(event){
+    this.setState({shoulRedirect : true})
+    event.preventDefault();
+  }
+
   render() {
+    if (this.state.shoulRedirect){
+      return <Redirect to ='/Map'></Redirect>
+    }
+
     return (
       <div className="IntroPage">
         <div className="top_container">
@@ -34,7 +45,7 @@ class IntroPage extends Component {
           </div>
         </div>
         <div className="form_container">
-          <form method="post" className="player-form">
+          <form method="post" className="player-form" onSubmit={(e)=> this.props.value && this.handleSubmit(e)}>
             <div className="p_container">
               <label htmlFor="inputButton" className="label">
                 <span className="sr-only">Name</span>
