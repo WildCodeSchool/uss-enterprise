@@ -119,10 +119,12 @@
 @media (min-width:650px) {
   .herosModal {
     bottom: 293px;
+    width: 45%;
   }
 }
 @media (min-width:700px) {
   .modal-wrapper {
     bottom: 1400px;
+    width: 70%;
   }
 }
