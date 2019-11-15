@@ -44,16 +44,16 @@ class IntroPage extends Component {
                   onChange={this.props.handleChange}
                   className="player-form-input"
                   type="text"
+                  required="required"
                   placeholder="Your Name"
                   name="pseudo"
-                  required
                 />
               </label>
               {' '}
             </div>
             <div className="button_container">
               <Link to="/map" className="button">
-                GO
+                <span className="go_button"> GO </span>
               </Link>
             </div>
           </form>
