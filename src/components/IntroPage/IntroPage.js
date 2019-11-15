@@ -1,6 +1,6 @@
 import React, { Component, Redirect } from "react";
 import "./IntroPage.css";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import image from "./Alien.png";
 
 class IntroPage extends Component {
@@ -43,7 +43,8 @@ class IntroPage extends Component {
           </div>
         </div>
         <div className="form_container">
-          <form method="post" className="player-form" onSubmit={(e)=> this.props.value && this.handleSubmit(e)}>
+          {/* <form method="post" className="player-form" onSubmit={(e) => this.props.value && this.handleSubmit(e)}> */}
+          <form method="post" className="player-form" onSubmit={(e) => { e.preventDefault(); }}>
             <div className="p_container">
               <label htmlFor="inputButton" className="label">
                 <span className="sr-only">Name</span>
