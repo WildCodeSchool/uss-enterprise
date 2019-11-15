@@ -17,12 +17,11 @@
   width: 60%;
   align-self: center;
   border-radius: 20px;
-  font-size: 1.5rem;
+  font-size: 2.9rem;
   border: 0px;
   background-color: #0004046b;
   font-family: "StarJedi";
-  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
-    -1px -1px 2px gold;
+  text-shadow: 1px 1px 2px gold, 1px -1px 7px gold, -1px 1px 2px gold, -1px -1px 6px gold;
 }
 .buttonQuizz:hover {
   background-color: #e6350d7a;

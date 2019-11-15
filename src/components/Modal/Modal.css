@@ -27,7 +27,7 @@
   transition: all 2s;
   width: 96%;
   border-radius: 50px;
-  bottom: 950px;
+  bottom: 1550px;
   transform:translateY(-100vh);
   opacity:0;
 }
@@ -41,7 +41,6 @@
   position: absolute;
   bottom: 250px;
   left: 1px;
-  height: 325px;
   filter: drop-shadow(5px 5px 4px white);
 }
 
@@ -51,16 +50,14 @@
   color: black;
   font-size: 1.7rem;
   font-family: "StarJedi";
-  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
-    -1px -1px 2px gold;
+  text-shadow: 1px 1px 2px gold, 1px -1px 7px gold, -1px 1px 2px gold, -1px -1px 6px gold;
 }
 
 .modal-body p {
   color: black;
-  font-size: 1.7rem;
+  font-size: 2.3rem;
   font-family: "StarJedi";
-  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
-    -1px -1px 2px gold;
+  text-shadow: 1px 1px 2px gold, 1px -1px 7px gold, -1px 1px 2px gold, -1px -1px 6px gold;
 }
 
 .modal-footer {
@@ -119,8 +116,13 @@
   font-weight: bold;
 }
 
-@media (min-width:750px) {
+@media (min-width:650px) {
   .herosModal {
-    bottom: 150px;
+    bottom: 293px;
+  }
+}
+@media (min-width:700px) {
+  .modal-wrapper {
+    bottom: 1400px;
   }
 }

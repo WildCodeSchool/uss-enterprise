@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
-import './IntroPage.css';
-import { Link } from 'react-router-dom';
-import image from './Alien.png';
-
+import React, { Component } from "react";
+import "./IntroPage.css";
+import { Link } from "react-router-dom";
+import image from "./Alien.png";
 
 class IntroPage extends Component {
   constructor(props) {
     super();
   }
 
-  
   render() {
     return (
       <div className="IntroPage">
@@ -24,7 +22,7 @@ class IntroPage extends Component {
                 READY ARE YOU? GO !
               </div>
               <p className="tell_name">
-                {' '}
+                {" "}
                 But if begin you want, first your name you need to tell me
               </p>
             </div>
@@ -48,9 +46,9 @@ class IntroPage extends Component {
                   name="pseudo"
                   required
                 />
-              </label>
-              {' '}
+              </label>{" "}
             </div>
+
             <div className="button_container">
               <Link to="/map" className="button">
                 GO

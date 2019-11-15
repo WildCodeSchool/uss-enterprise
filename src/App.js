@@ -13,14 +13,14 @@ class App extends Component {
   state = {
     points: 0,
     difficultyIsChoose: false,
-    name: '' ,
+    name: "",
     displayAnswers: false,
+    activeSound: true
   };
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({ name: event.target.value });
-  }
-
+  };
 
   calcPoints = (questionResult, difficulty, NumberTry) => {
     if (difficulty === "easy" && !questionResult) {
@@ -52,18 +52,29 @@ class App extends Component {
     const { points, name } = this.state;
     return (
       <div className="App">
+        {this.state.name !== "" && (
+          <audio autoPlay loop>
+            <source
+              src="http://users.du.se/~dbe/mp3/Star%20Wars%20Soundtrack/Star%20Wars%20III%20-%20Anakin%20Vs.%20Obi-Wan.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+        )}
         <Switch>
           <Route exact path="/">
             <HomePage />
           </Route>
           <Route path="/intro">
-            <IntroPage handleChange={this.handleChange} name={this.state.name} />
+            <IntroPage
+              handleChange={this.handleChange}
+              name={this.state.name}
+            />
           </Route>
           <Route path="/map">
             <div className="stars">
               <div className="twinkling">
                 <div className="clouds">
-                  <NavBar points={points} name={name}/>
+                  <NavBar points={points} name={name} />
                   <SolarSystem />
                 </div>
               </div>

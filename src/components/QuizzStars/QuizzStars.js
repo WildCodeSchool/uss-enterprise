@@ -37,12 +37,12 @@ const QuizzStars = ({
 
         <div className="divImageDifficulty">
           <img
-            className="imageDifficulty"
+            className="imageDifficulty flip-2-ver-right-fwd"
             src={
               difficulty === "easy"
                 ? "http://iconbug.com/data/f8/256/fde579446855b2c35fcb817e46fbed9e.png"
                 : difficulty === "medium"
-                ? "https://www.stickpng.com/assets/images/585d13c2cb11b227491c32b9.png"
+                ? "https://purepng.com/public/uploads/large/purepng.com-stormtrooperstormtrooperfictional-soldierstar-warsground-forcegalactic-empire-17015278276492ncw5.png"
                 : "https://img.pngio.com/hd-star-wars-anakin-skywalker-transparent-background-star-wars-anakin-skywalker-png-3990_3815.png"
             }
             alt="user difficulty"

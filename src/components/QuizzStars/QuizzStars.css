@@ -38,7 +38,7 @@
 
 .divStars {
   align-self: center;
-  padding: 30px;
+  padding: 40px 10px 318px 10px;
 }
 
 .selectDifficulty {
@@ -49,6 +49,8 @@
   text-transform: uppercase;
   border: none;
   border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .selectDifficultyHidden {
@@ -61,6 +63,7 @@
 }
 
 .divImageDifficulty {
+  padding: 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -68,28 +71,26 @@
 
 .selectDifficulty:-internal-list-box {
   background-color: red;
-
 }
 
 .difficulty-label {
-  background-color: #0004046b;
+  padding: 15px;
+  background-color: transparent;
   font-family: "StarJedi";
-  text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
-    -1px -1px 2px gold;
+  text-shadow: 1px 1px 2px gold, 1px -1px 7px gold, -1px 1px 2px gold, -1px -1px 6px gold;
   margin: 30px 10px;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: black;
   border: 2px solid gold;
 }
 
-@media (min-width: 750px) {
+.difficulty-label:hover {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 900px) {
   .imageDifficulty {
-    width: 40%;
+    width: 35%;
   }
 }
 
-@media (min-width: 850px) {
-  .imageDifficulty {
-    width: 20%;
-  }
-}

@@ -51,12 +51,14 @@
 .modal-header {
   display: flex;
   align-items: center;
-  padding-left: 6rem;
   border-bottom: none;
   font-family: "StarJedi";
   text-shadow: 1px 1px 2px gold, 1px -1px 2px gold, -1px 1px 2px gold,
     -1px -1px 2px gold;
   color: black;
+}
+.modal-title {
+  margin-left: auto;
 }
 .modal-body {
   padding: 10px 15px;
@@ -67,6 +69,7 @@
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-shadow: none;
 }
+
 .btn-primary {
   width: 50%;
   padding: 15px;
@@ -99,6 +102,18 @@
   border-top: none;
   border-bottom-right-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem;
+  margin-top: 55px;
+}
+.modal-footer>:not(:first-child) {
+  margin-left: 1.45rem;
+}
+
+.modal-dialog {
+  margin-left: auto;
+  margin-right: auto
+  ;
+    width: 100%;
+    font-size: 1vh;
 }
 .planets {
   width: 125px;
@@ -128,6 +143,10 @@
 }
 .planetclick:nth-child(8) {
   padding-left: 50%;
+}
+
+.btn:focus {
+  box-shadow: none;
 }
 @-webkit-keyframes slide-fwd-center {
   0% {
@@ -161,12 +180,7 @@
     height: 100%;
     padding: 30% 22% 4% 0%;
   }
-  .modal-header {
-    display: flex;
-    align-items: center;
-    padding-left: 6rem;
-    height: 200px;
-  }
+
   .modal-content {
     background-repeat: no-repeat;
     background-size: cover;
