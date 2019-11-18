@@ -120,6 +120,15 @@
   animation: rotate-center 25s linear infinite both;
   animation: rotate-center 25s linear infinite both;
 }
+
+.planets-hidden {
+  opacity: 0.3;
+  width: 125px;
+  animation: rotate-center 25s linear infinite both;
+  animation: rotate-center 25s linear infinite both;
+}
+
+
 .planetclick:nth-child(1) {
   padding-left: 10%;
 }
@@ -222,6 +231,9 @@
 @media screen and (min-width: 1025px){
   .planets {
     width: 150px;
+  }
+  .planets-hidden {
+    width: 140px;
   }
   .h4,
   h4 {

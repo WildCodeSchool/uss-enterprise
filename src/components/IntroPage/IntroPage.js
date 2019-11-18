@@ -6,45 +6,37 @@ import image from "./Alien.png";
 class IntroPage extends Component {
   constructor(props) {
     super();
-    this.state = {shoulRedirect : false}
-  
+    this.state = { shoulRedirect: false };
   }
 
-  handleSubmit(event){
-    this.setState({shoulRedirect : true})
+  handleSubmit(event) {
+    this.setState({ shoulRedirect: true });
     event.preventDefault();
   }
 
   render() {
-    if (this.state.shoulRedirect){
-      return <Redirect to ='/Map'></Redirect>
+    if (this.state.shoulRedirect) {
+      return <Redirect to="/Map"></Redirect>;
     }
 
     return (
       <div className="IntroPage">
-        <div className="top_container">
-          <div className="bubble_text_container">
-            <div className="bubble_text">
-              <div className="hello_text">
-                <div className="yoda-guide">
-                  Hello ! I'm YODA, your guide. Travel from planets to planets,
-                  answer the questions to complete your journey
-                </div>
-                READY ARE YOU? GO !
-              </div>
-              <p className="tell_name">
-                {" "}
-                But if begin you want, first your name you need to tell me
-              </p>
-            </div>
-          </div>
-          <div className="alien_container">
-            <img src={image} className="alien" alt="alien" />
-          </div>
+        <div className="yoda-text bubble_text">
+          <p className="text-yoda"></p>
         </div>
+
+        <div className="alien-container">
+          <img src={image} className="alien" alt="alien" />
+        </div>
+
         <div className="form_container">
-          {/* <form method="post" className="player-form" onSubmit={(e) => this.props.value && this.handleSubmit(e)}> */}
-          <form method="post" className="player-form" onSubmit={(e) => { e.preventDefault(); }}>
+          <form
+            method="post"
+            className="player-form"
+            onSubmit={e => {
+              e.preventDefault();
+            }}
+          >
             <div className="p_container">
               <label htmlFor="inputButton" className="label">
                 <span className="sr-only">Name</span>
@@ -58,11 +50,11 @@ class IntroPage extends Component {
                   placeholder="Your Name"
                   name="pseudo"
                 />
-              </label>{" "}
+              </label>
             </div>
 
-            <div className="button_container">
-              <Link to="/map" className="button">
+            <div className="button-container-intro">
+              <Link to="/map" className="button-intro">
                 <span className="go_button"> GO </span>
               </Link>
             </div>

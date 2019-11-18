@@ -112,7 +112,7 @@ class SolarSystem extends Component {
                 disabled={!planet.status}
               >
                 <img
-                  className="planets"
+                  className={ planet.status ? "planets" : "planets-hidden"}
                   src={planet.planetURL}
                   alt={planet.id}
                 />
