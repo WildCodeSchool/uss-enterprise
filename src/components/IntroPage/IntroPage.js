@@ -1,16 +1,25 @@
-import React, { Component } from 'react';
-import './IntroPage.css';
-import { Link } from 'react-router-dom';
-import image from './Alien.png';
-
+import React, { Component, Redirect } from "react";
+import "./IntroPage.css";
+import { Link } from "react-router-dom";
+import image from "./Alien.png";
 
 class IntroPage extends Component {
   constructor(props) {
     super();
+    this.state = {shoulRedirect : false}
+  
   }
 
-  
+  handleSubmit(event){
+    this.setState({shoulRedirect : true})
+    event.preventDefault();
+  }
+
   render() {
+    if (this.state.shoulRedirect){
+      return <Redirect to ='/Map'></Redirect>
+    }
+
     return (
       <div className="IntroPage">
         <div className="top_container">
@@ -24,7 +33,7 @@ class IntroPage extends Component {
                 READY ARE YOU? GO !
               </div>
               <p className="tell_name">
-                {' '}
+                {" "}
                 But if begin you want, first your name you need to tell me
               </p>
             </div>
@@ -34,7 +43,8 @@ class IntroPage extends Component {
           </div>
         </div>
         <div className="form_container">
-          <form method="post" className="player-form">
+          {/* <form method="post" className="player-form" onSubmit={(e) => this.props.value && this.handleSubmit(e)}> */}
+          <form method="post" className="player-form" onSubmit={(e) => { e.preventDefault(); }}>
             <div className="p_container">
               <label htmlFor="inputButton" className="label">
                 <span className="sr-only">Name</span>
@@ -44,15 +54,16 @@ class IntroPage extends Component {
                   onChange={this.props.handleChange}
                   className="player-form-input"
                   type="text"
+                  required="required"
                   placeholder="Your Name"
                   name="pseudo"
                 />
-              </label>
-              {' '}
+              </label>{" "}
             </div>
+
             <div className="button_container">
               <Link to="/map" className="button">
-                GO
+                <span className="go_button"> GO </span>
               </Link>
             </div>
           </form>

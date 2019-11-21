@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./SolarSystem.css";
 import { Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
 class SolarSystem extends Component {
   constructor(props) {
     super(props);
@@ -62,34 +61,44 @@ class SolarSystem extends Component {
     };
   }
 
+  componentDidMount() {
+    const idChoosen = localStorage.getItem("idChoosenUpdate");
+
+    if (idChoosen) {
+      const planetList = this.state.planetList.map(planet => planet.id <= idChoosen ? ({ ...planet, status: true }) : planet)
+      this.setState({ idChoosen, planetList })
+    }
+  }
+
   handleClose = () => {
     this.setState({
       show: false
     });
   };
-  
-  handleShow = (idChoosen) => {
+
+  handleShow = idChoosen => {
     const planetList = this.state.planetList.map(planet => {
-      if (planet.id === idChoosen+1) {
-        return { ...planet, status: true }
+      if (planet.id === idChoosen + 1) {
+        return { ...planet, status: true };
       }
-      return planet
+      return planet;
     });
+
     this.setState({
       show: true,
-      idChoosen,
-      planetList
+      planetList,
+      idChoosen: idChoosen + 1
     });
-  }
 
+    localStorage.setItem("idChoosenUpdate", idChoosen + 1);
+  };
 
   render() {
     const { show, planetList, idChoosen } = this.state;
     return (
       <div className="content-planet">
         <div className="modal__fade">
-          {
-          planetList.map((planet, index) => {
+          {planetList.map((planet, index) => {
             return (
               <Button
                 key={planet.id}
@@ -97,7 +106,7 @@ class SolarSystem extends Component {
                 onClick={e => {
                   this.handleShow(planet.id);
                 }}
-                value = {planet.id}
+                value={planet.id}
                 type="button"
                 className="planetclick"
                 disabled={!planet.status}
@@ -108,22 +117,25 @@ class SolarSystem extends Component {
                   alt={planet.id}
                 />
               </Button>
-              
-             
             );
           })}
           <Modal show={show} onHide={this.handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>Niveau {idChoosen}</Modal.Title>
+              <Modal.Title>Niveau {idChoosen - 1}</Modal.Title>
             </Modal.Header>
             <Modal.Body className="Modal__Body">
-              Are you ready to travel to this planet?{" "}
+              {this.props.name},<br/> Are you ready to travel to this planet?{" "}
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={this.handleClose}>
                 Non...
               </Button>
-              <Link to="/quizz" className="btn btn-primary" variant="primary" onClick={this.handleClose}>
+              <Link
+                to="/quizz"
+                className="btn btn-primary"
+                variant="primary"
+                onClick={this.handleClose}
+              >
                 Oui !
               </Link>
             </Modal.Footer>
@@ -133,5 +145,4 @@ class SolarSystem extends Component {
     );
   }
 }
-
 export default SolarSystem;

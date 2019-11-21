@@ -5,7 +5,7 @@ import yodaSound from "./sound/Yoda.mp3";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 
-const Modal = ({ show, close, result }) => {
+const Modal = ({ show, close, result, name }) => {
   const data = result
     ? {
         image:
@@ -37,11 +37,11 @@ const Modal = ({ show, close, result }) => {
         <div className="modal-body">
           {result ? (
             <p>
-              CoNGRaTuLaTioN !!! <br /> votre réponse est bonne !!!
+              CoNGRaTuLaTioN {name} !!! <br /> your answer is very good  !!!
             </p>
           ) : (
             <p>
-              NUL !!! <br /> Germain Nul Nul Nul
+              Bad Answer {name} !!! <br /> join me on the dark side.
             </p>
           )}
         </div>

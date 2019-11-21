@@ -2,6 +2,7 @@ import React from "react";
 import FactDetail from "./FactDetail/FactDetail";
 import SpaceTravel from "../WarpSpeed/SpaceTravel";
 
+
 class FactsNasa extends React.Component {
   constructor(props) {
     super(props);

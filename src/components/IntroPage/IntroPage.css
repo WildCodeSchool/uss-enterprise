@@ -1,10 +1,11 @@
 .IntroPage {
-  background-image: url('./background.png');
+  background-image: url('./background.jpeg');
   background-size: cover;
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  
 }
 
 .alien {
@@ -57,7 +58,7 @@
 .bubble_text {
   position: relative;
   background: #00001a;
-  border-radius: 0.4em;
+  border-radius: 1em;
   height: 50%;
   font-size: 2rem;
   color: white;
@@ -66,6 +67,7 @@
   width: 70%;
   text-align: center;
   padding: 2%;
+  border: 1px white solid
 }
 
 .bubble_text:after {
@@ -76,7 +78,7 @@
   width: 0;
   height: 0;
   border: 20px solid transparent;
-  border-top-color: #00001a;
+  border-top-color: white;
   border-bottom: 0;
   margin-left: -20px;
   margin-bottom: -20px;
@@ -126,7 +128,7 @@
 
 /* hello text animation*/
 .hello_text {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-stretch: 200%;
   height: 2rem;
   -webkit-animation: hello_text 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) 8s
@@ -189,7 +191,6 @@
   }
 }
 
-
 .player-form-input {
   color:black;
   font-weight: bold;
@@ -204,6 +205,7 @@
   -webkit-animation: player-form-input 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 10s
     both;
   animation: player-form-input 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 10s both;
+  padding: 5%;
 }
 
 @-webkit-keyframes player-form-input {
@@ -241,6 +243,8 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .button_container {
@@ -249,26 +253,31 @@
 }
 
 .button {
-  background-color: red;
+  background-color: rgb(0,123,255);
   height:8vh;
   width: 30%;
   -webkit-animation: button 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 10s both;
   animation: button 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 10s both;
-  
+  vertical-align: middle;
   text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999
+  box-shadow: 0 9px #999;
 }
 
-.button:hover {background-color: #990000;
+.go_button{
+  font-size: 3rem;
+  margin-top: 10%;
+}
+
+.button:hover {background-color: #003166;
   cursor: pointer;}
 
 .button:active {
-  background-color: #990000;
+  background-color: #003166;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 
@@ -301,6 +310,7 @@
 }
 
 .label {
+  display: flex;
   -webkit-animation: button 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 10s both;
   animation: button 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 10s both;
 }
@@ -335,6 +345,7 @@
   .player_form {
     height: 10%;
     width: 50%;
+    
   }
 
   .bubble_text_container {
@@ -346,7 +357,7 @@
   }
 
   .hello_text {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding-bottom:7% ;
   }
 
@@ -355,6 +366,8 @@
     width: 60%;
     margin-bottom: 10%;
     margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .bubble_text {
@@ -363,7 +376,7 @@
 
   .label {
     font-size: 2rem;
-    margin-right: 5%;
+   
   }
 
   .player-form {
@@ -378,10 +391,11 @@
    width: 20%;
 }
 }
-@media (min-width: 1024px) {
+
+@media (min-width: 1025px) {
 
 .IntroPage {
-  background-image: url('./background.png');
+  background-image: url('./background.jpeg');
   background-size: cover;
  
   width: 100%;
@@ -409,13 +423,15 @@
 .player-form-input {
   height: 3vh;
   width: 60%;
+  
 }
 
 .alien {
   -webkit-animation: alien 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: alien 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  width : 40%;
-  margin-left:70%
+  width : 70%;
+  margin-left:70%;
+  height: 50vh;
 }
 
 @-webkit-keyframes alien {
@@ -448,9 +464,11 @@
   height: 80%;
   background: #00001a;
   position: relative;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  border: 1px white solid;
+  margin-top: 5%;
 }
 
 .bubble_text:before {
@@ -461,8 +479,9 @@
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
-  border-right: 26px solid #00001a;
+  border-right: 26px solid white;
   border-bottom: 13px solid transparent;
+
 }
 
 .bubble_text:after {
@@ -473,6 +492,9 @@
   justify-content: space-around;
   display: flex;
   flex-direction: row-reverse;
-
+}
+.p_container{
+  margin-top: 7%;
+  margin-bottom: 5%;
 }
 }

@@ -10,16 +10,8 @@ const QuizzStars = ({
 }) => {
   return (
     <>
-      <button
-        onClick={() => givePoints(difficulty, difficultyIsChoose)}
-        htmlFor="difficulty-select"
-        className="difficulty-label"
-      >
-        Choose a difficulty
-      </button>
-
-      <div>
-        <select
+    <div>
+    <select
           onChange={changeDifficulty}
           className={
             difficultyIsChoose ? "selectDifficultyHidden" : "selectDifficulty"
@@ -31,15 +23,26 @@ const QuizzStars = ({
           <option value="medium">medium</option>
           <option value="hard">hard</option>
         </select>
+        </div>
+      <button
+        onClick={() => givePoints(difficulty, difficultyIsChoose)}
+        htmlFor="difficulty-select"
+        className="difficulty-label"
+      >
+        Choose a difficulty
+      </button>
+
+      <div>
+        
 
         <div className="divImageDifficulty">
           <img
-            className="imageDifficulty"
+            className="imageDifficulty flip-2-ver-right-fwd"
             src={
               difficulty === "easy"
                 ? "http://iconbug.com/data/f8/256/fde579446855b2c35fcb817e46fbed9e.png"
                 : difficulty === "medium"
-                ? "https://i0.wp.com/freepngimages.com/wp-content/uploads/2015/10/Watto-star-wars-character.png?fit=450%2C600"
+                ? "https://purepng.com/public/uploads/large/purepng.com-stormtrooperstormtrooperfictional-soldierstar-warsground-forcegalactic-empire-17015278276492ncw5.png"
                 : "https://img.pngio.com/hd-star-wars-anakin-skywalker-transparent-background-star-wars-anakin-skywalker-png-3990_3815.png"
             }
             alt="user difficulty"

@@ -1,5 +1,17 @@
-.points {
-    color: aliceblue;
-    font-size: 1.5rem;
+.points{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1f202fa1;
+    border-radius: 70px;
+    margin: 25px 10px;
+    padding: 17px;
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.points p {
+   color: aliceblue;
+    font-size: 2.5vh;
+}

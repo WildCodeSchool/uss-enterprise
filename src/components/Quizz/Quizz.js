@@ -59,7 +59,7 @@ class Quizz extends Component {
           {this.props.name}<br />
           may the force be with you !!!
         </h1>
-        <p className="questionQuizz">{question}</p>
+        <p className={this.props.displayAnswers === false ? "questionQuizzNotVisible" : "questionQuizz"}>{question}</p>
         <div>
           <QuizzPropositions
             correctAnswer={correctAnswer}
@@ -71,6 +71,7 @@ class Quizz extends Component {
             givePoints={this.props.givePoints}
             difficultyIsChoose={this.props.difficultyIsChoose}
             displayAnswers={this.props.displayAnswers}
+            name={this.props.name}
             
           />
         </div>
